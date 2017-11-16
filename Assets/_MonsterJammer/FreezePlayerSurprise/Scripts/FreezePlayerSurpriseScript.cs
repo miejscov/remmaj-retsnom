@@ -24,7 +24,7 @@ public class FreezePlayerSurpriseScript : MonoBehaviour {
 		_boxCollider.enabled = false;
 		_meshRenderer.enabled = false;
 
-		//_player.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
 		_player.GetComponent<Animator>().SetBool("Freeze", true);
 		Invoke("UnfreezePlayer", SlowMotionTime * Time.deltaTime);
 	}
@@ -32,7 +32,7 @@ public class FreezePlayerSurpriseScript : MonoBehaviour {
 	private void UnfreezePlayer()
 	{
 		_player.GetComponent<Animator>().SetBool("Freeze", false);
-		//_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
 		Destroy(gameObject);
 	}
 }

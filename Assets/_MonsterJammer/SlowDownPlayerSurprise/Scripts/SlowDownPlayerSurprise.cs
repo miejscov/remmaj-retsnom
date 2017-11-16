@@ -2,7 +2,6 @@
 
 public class SlowDownPlayerSurprise : MonoBehaviour
 {
-
 	private PlayerRbMoveScript _playerRbMove;
 	private BoxCollider _boxCollider;
 	private MeshRenderer _meshRenderer;
@@ -13,8 +12,8 @@ public class SlowDownPlayerSurprise : MonoBehaviour
 	private void Start ()
 	{
 		_gameControl = GameObject.Find("GameControl").GetComponent<GameControlScript>();
-		_boxCollider = GetComponent<BoxCollider>();
-		_meshRenderer = GetComponent<MeshRenderer>();
+		_boxCollider = GetComponentInChildren<BoxCollider>();
+		_meshRenderer = GetComponentInChildren<MeshRenderer>();
 	}
 	
 	public void Set()

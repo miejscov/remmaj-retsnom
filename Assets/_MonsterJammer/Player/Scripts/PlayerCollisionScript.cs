@@ -11,10 +11,7 @@ public class PlayerCollisionScript : MonoBehaviour
 	
 	public bool OnCrate() {return _onCrate;}
 
-	public void ResetOnCrate()
-	{
-		_onCrate = false;
-	}
+	public void ResetOnCrate(){_onCrate = false;}
 
 	private void Start()
 	{
@@ -53,6 +50,16 @@ public class PlayerCollisionScript : MonoBehaviour
 			_playerStatus.AddPlayerScore(5);
 			other.gameObject.GetComponent<SpeedUpPlayerSurprise>().Set();
 		}
+		else if (other.gameObject.name.Contains("InvertControl"))
+        {
+        	_playerStatus.AddPlayerScore(5);
+        	other.gameObject.GetComponent<InvertControlSurpriseScript>().Set();
+        }
+        else if (other.gameObject.name.Contains("FreezePlayer"))
+        {
+        	_playerStatus.AddPlayerScore(5);
+        	other.gameObject.GetComponent<FreezePlayerSurpriseScript>().Set();
+        }
 	}
 
 	private void OnCollisionExit(Collision other)

@@ -14,8 +14,8 @@ public class SpeedUpPlayerSurprise : MonoBehaviour {
 	private void Start ()
 	{
 		_gameControl = GameObject.Find("GameControl").GetComponent<GameControlScript>();
-		_boxCollider = GetComponent<BoxCollider>();
-		_meshRenderer = GetComponent<MeshRenderer>();
+		_boxCollider = GetComponentInChildren<BoxCollider>();
+		_meshRenderer = GetComponentInChildren<MeshRenderer>();
 	}
 	
 	public void Set()

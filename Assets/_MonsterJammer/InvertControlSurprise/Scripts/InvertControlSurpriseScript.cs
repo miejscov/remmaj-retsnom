@@ -20,7 +20,7 @@ public class InvertControlSurpriseScript : MonoBehaviour
 	public void Set()
 	{
 		_playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControlScript>();
-		//_playerControl.SetInvertControl(true);
+		_playerControl.SetInvertControl(true);
 		_boxCollider.enabled = false;
 		_meshRenderer.enabled = false;
 		
@@ -29,7 +29,7 @@ public class InvertControlSurpriseScript : MonoBehaviour
 
 	private void StopInvertControl()
 	{
-		//_playerControl.SetInvertControl(false);
+		_playerControl.SetInvertControl(false);
 		Destroy(gameObject);
 	}
 }
