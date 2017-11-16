@@ -12,7 +12,6 @@ public class CanvasScript : MonoBehaviour
 	private void Awake()
 	{
 		_texts = Canvas.gameObject.GetComponentsInChildren <Text> ();
-//		_playerStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatusScript>();
 	}
 
 	private void Update () {
@@ -20,18 +19,16 @@ public class CanvasScript : MonoBehaviour
         if (_playerStatus == null)
 
         {
-
             _playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
-
-            Debug.Log("Canvas p[layer null");
-
         }
     }
 
 	private void ShowGui()
 	{
 		if (_playerStatus == null) return;
-		_texts[0].text = "Lives: " + _playerStatus.GetNumberOfLives();
+		var numberOfLives = _playerStatus.GetNumberOfLives();
+
+		_texts[0].text = "Lives: " + numberOfLives;
 		_texts[1].text = "Energy: " + _playerStatus.GetAmountOfEnergy();
 		_texts[2].text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
 		_texts[3].text = "Total score: " + _playerStatus.GetPlayerScore();
