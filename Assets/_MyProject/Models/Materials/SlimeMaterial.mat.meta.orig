@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: c24ad5c651633449f8d28a836ebc5f81
+timeCreated: 1510614039
+=======
+guid: acfa33034f6e3fa4eb40858c5ba7b1d9
+timeCreated: 1510601249
+>>>>>>> remotes/origin/entryexit
+licenseType: Free
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.2/system/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_monsterjammer.336979225.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="GameControlScript.cs" t="Include" />
+        <e p="Gem" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="Gem.shader" t="Include" />
+          </e>
+        </e>
+        <e p="GemExample" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="DemoTimeOfDay.cs" t="Include" />
+            <e p="Orbit.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Gems Ultimate Pack" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="AnimationScript.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Pixelplacement" t="Include">
+            <e p="iTween" t="Include">
+              <e p="iTween.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SerializePlayerStatus.cs" t="Include" />
+        <e p="Standard Assets" t="Include">
+          <e p="ParticleSystems" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="AfterburnerPhysicsForce.cs" t="Include" />
+              <e p="ExplosionFireAndDebris.cs" t="Include" />
+              <e p="ExplosionPhysicsForce.cs" t="Include" />
+              <e p="ExtinguishableParticleSystem.cs" t="Include" />
+              <e p="FireLight.cs" t="Include" />
+              <e p="Hose.cs" t="Include" />
+              <e p="ParticleSystemMultiplier.cs" t="Include" />
+              <e p="SmokeParticles.cs" t="Include" />
+              <e p="WaterHoseParticles.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StoneKeep" t="Include">
+          <e p="Readme.txt" t="Include" />
+        </e>
+        <e p="_MonsterJammer" t="Include">
+          <e p="Canvas" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="CanvasScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Crate" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="CrateCollisionScript.cs" t="Include" />
+              <e p="CrateControlScript.cs" t="Include" />
+              <e p="CrateRayCheck.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Diamond" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DiamondControlScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ExtraLife" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ExtraLifeScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Food" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="FoodControlScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Player" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="AudioControlScript.cs" t="Include" />
+              <e p="PlayerAnimationControlScript.cs" t="Include" />
+              <e p="PlayerAudioControlScript.cs" t="Include" />
+              <e p="PlayerBlendAnimationScript.cs" t="Include" />
+              <e p="PlayerCollisionScript.cs" t="Include" />
+              <e p="PlayerControlScript.cs" t="Include" />
+              <e p="PlayerGameOverScript.cs" t="Include" />
+              <e p="PlayerPushingScript.cs" t="Include" />
+              <e p="PlayerRayCastHit.cs" t="Include" />
+              <e p="PlayerRbMoveScript.cs" t="Include" />
+              <e p="PlayerRotationScript.cs" t="Include" />
+              <e p="PlayerStatusScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SlowDownPlayerSurprise" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="SlowDownPlayerSurprise.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SpeedUpPlayerSurprise" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="SpeedUpPlayerSurprise.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SurpriseMaker" t="Include">
+            <e p="SurpriseMaker.cs" t="Include" />
+          </e>
+        </e>
+        <e p="_MyProject" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ButtonContolScript.cs" t="Include" />
+            <e p="CameraFollowScript.cs" t="Include" />
+            <e p="CrateMovementScript.cs" t="Include" />
+            <e p="DiamondControlScript1.cs" t="Include" />
+            <e p="ItemGeneratorScript.cs" t="Include" />
+            <e p="LevelGeneratorScript.cs" t="Include" />
+            <e p="MonsterAudioScript.cs" t="Include" />
+            <e p="MonsterControlScript.cs" t="Include" />
+            <e p="MonsterKillPlayerScript.cs" t="Include" />
+            <e p="MonsterRbMoveScript.cs" t="Include" />
+            <e p="MonsterRotationScript.cs" t="Include" />
+            <e p="MonsterTriggerBackScript.cs" t="Include" />
+            <e p="MonsterTriggerFrontScript.cs" t="Include" />
+            <e p="MonsterTriggerLeftScript.cs" t="Include" />
+            <e p="MonsterTriggerPivotScript.cs" t="Include" />
+            <e p="MonsterTriggerRightScript.cs" t="Include" />
+            <e p="MoveColliderBoxScript.cs" t="Include" />
+            <e p="MoveColliderTriggerScript.cs" t="Include" />
+            <e p="PauseScript.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+      <e p="monsterjammer.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
