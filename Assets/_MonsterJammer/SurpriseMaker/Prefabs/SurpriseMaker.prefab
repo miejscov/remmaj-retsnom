@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 1768353844662046, guid: 44aa44dc2e3c540688d7db7f40cbd9f8, type: 2}
   - {fileID: 1955225748501054, guid: 8ed6444d1a268437a8df863768d72c12, type: 2}
   - {fileID: 1489069127198684, guid: 53f4d9397289643d3a3d5e03fd9d0800, type: 2}
-  - {fileID: 1782896836210566, guid: 4b28bb46e18a14b3db1ba663a5e9ffb3, type: 2}
+  - {fileID: 1345268976852062, guid: 4661c079373e81b4594af2432228777c, type: 2}
   - {fileID: 1507267482267692, guid: 7387a83e2c9da40a49d06fb7c3871e19, type: 2}
   _objectList: []
-  _chanceForNothing: 3
+  _chanceForNothing: 10

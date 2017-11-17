@@ -2825,7 +2825,7 @@ MonoBehaviour:
   DestroyCrate: {fileID: 8300000, guid: 89e0f69e3ad999a4aa99111f0765d6b7, type: 3}
   GetDiamond: {fileID: 8300000, guid: 28e9b4a6c3d32174983bf47e70dcb41b, type: 3}
   PlayerIsDying: {fileID: 8300000, guid: 1b6269b3ea023754eba2452f564971b2, type: 3}
-  GetFood: {fileID: 8300000, guid: ab6850659b1264a8a8de37a637c5507f, type: 3}
+  GetFood: {fileID: 8300000, guid: 2c7b2c49367d740698e69cb13c62bf1c, type: 3}
 --- !u!136 &136083809845492206
 CapsuleCollider:
   m_ObjectHideFlags: 1

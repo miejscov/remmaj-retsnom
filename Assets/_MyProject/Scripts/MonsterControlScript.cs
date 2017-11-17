@@ -76,6 +76,7 @@ public class MonsterControlScript : MonoBehaviour
                     if (!_itemsOnMap)
                     {
                         GetComponent<ItemGeneratorScript>().generateDiamonds();
+                        GetComponent<ItemGeneratorScript>().GeneratePrefAtPlace("food");
                         _itemsOnMap = true;
                     }
                     //               Debug.Log("Sinking!!!");

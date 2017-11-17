@@ -12,18 +12,27 @@ public class ItemGeneratorScript : MonoBehaviour
     public GameObject diamondPref;
     public int numberOfDiamonds = 3;
     public int numberOfFood = 2;
+    public float heighOfDiamonds = 0f;
+    public float heighOfFood = 0f;
 
     private GameObject collid;
     private float[] corners = new float[4]; // 0 - (ujemne x), 1 - (dodatnie x), 2 - (ujemne z), 3 - (dodatnie z)
 
     public void generateDiamonds()
-    {generatePref(numberOfFood, foodPref);
+    {
+        generatePref(numberOfFood, foodPref);
         generatePref(numberOfDiamonds, diamondPref);
-        
+
     }
 
     private void generatePref(int count, GameObject prefab)
     {
+        float heigh = 0f;
+        if (prefab.gameObject.CompareTag("Food"))
+            heigh = heighOfFood;
+        else if (prefab.gameObject.CompareTag("Diamond"))
+            heigh = heighOfDiamonds;
+
         for (int i = 0; i < count; i++)
         {
             Vector3 wherePutDiamond = Vector3.zero;
@@ -31,7 +40,7 @@ public class ItemGeneratorScript : MonoBehaviour
             {
                 float x = (int)Random.Range(corners[0], corners[1]);
                 float y = (int)Random.Range(corners[2], corners[3]);
-                wherePutDiamond = new Vector3(x, 0f, y);
+                wherePutDiamond = new Vector3(x, heigh, y);
                 Collider[] hitColliders = Physics.OverlapSphere(wherePutDiamond + Vector3.up * 0.4f, .2f);
                 foreach (Collider col in hitColliders)
                     print(col.name);
@@ -47,19 +56,40 @@ public class ItemGeneratorScript : MonoBehaviour
                 pref.GetComponent<FoodControlScript>().SetFoodCollider(collid);
             else if (prefab.gameObject.CompareTag("Diamond"))
                 pref.GetComponent<DiamondControlScript1>().SetDiamondsCollider(collid);
-            else 
+            else
                 pref.GetComponent<ExtraLifeScript>().SetExtraLifeCollider(collid);
 
 
-            pref.transform.position = new Vector3(transform.position.x, .5f, transform.position.z);
+            pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
             collid.GetComponent<MeshRenderer>().enabled = false;
 
             iTween.MoveAdd(pref, iTween.Hash("amount", wherePutDiamond - transform.position, "time", lobUpTime + lobDownTime, "easeType", iTween.EaseType.linear));
             iTween.MoveBy(pref, iTween.Hash("y", lobHeigh, "time", lobUpTime, "easeType", iTween.EaseType.easeOutQuad));
-          //iTween.MoveBy(pref, iTween.Hash("y", -lobHeigh, "time", lobDownTime, "delay", lobUpTime, "easeType", iTween.EaseType.easeInCubic));
+            //iTween.MoveBy(pref, iTween.Hash("y", -lobHeigh, "time", lobDownTime, "delay", lobUpTime, "easeType", iTween.EaseType.easeInCubic));
             iTween.MoveBy(pref, iTween.Hash("y", -lobHeigh, "time", lobDownTime, "delay", lobUpTime, "easeType", iTween.EaseType.easeInCubic, "oncomplete", "destroyCollider", "oncompletetarget", this.gameObject, "oncompleteparams", collid));
             //           Destroy(collid.gameObject, lobDownTime + lobUpTime);
         }
+    }
+
+    public void GeneratePrefAtPlace(string prefab)
+    {
+        float heigh = 0f;
+        GameObject obj = null;
+
+        if (prefab == "food")
+        {
+            heigh = heighOfFood;
+            obj = foodPref;
+        }
+        else if (prefab == "diamond")
+        {
+            heigh = heighOfDiamonds;
+            obj = diamondPref;
+        }
+
+        GameObject pref = (GameObject)Instantiate(obj);
+        pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
+
     }
 
     void Start()
