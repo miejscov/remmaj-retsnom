@@ -24,6 +24,7 @@
             <e p="AnimationScript.cs" t="Include" />
           </e>
         </e>
+        <e p="LevelControlScript.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -92,6 +93,11 @@
             <e p="Scripts" t="Include">
               <e p="InvertControlSurpriseScript.cs" t="Include" />
             </e>
+          </e>
+          <e p="LevelControl" t="Include">
+            <e p="Level_1_Script.cs" t="Include" />
+            <e p="Level_2_Script.cs" t="Include" />
+            <e p="Level_3_Script.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Scripts" t="Include">

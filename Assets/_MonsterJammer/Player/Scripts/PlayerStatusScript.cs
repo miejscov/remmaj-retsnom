@@ -3,6 +3,9 @@
 public class PlayerStatusScript : MonoBehaviour
 {
     private int _numberOfLives;
+    private int _extraLifeScore = 0;
+    private int _extraLifeScoreThreshold = 50;
+    
     private bool _isDead = false;
     public int _energy;
     private int _score;
@@ -65,8 +68,19 @@ public class PlayerStatusScript : MonoBehaviour
 
     // score
     public int GetPlayerScore() { return _score; }
-    public void SetPlayerScore(int score) { _score = score; }
-    public void AddPlayerScore(int score) { _score += score; }
+    public void SetPlayerScore(int score) {_score = score; }
+
+    public void AddPlayerScore(int score)
+    {
+        _score += score;
+        _extraLifeScore += score;
+        if (_extraLifeScore >= _extraLifeScoreThreshold)
+        {
+            AddPlayerLife();
+            _extraLifeScore = 0;
+        }
+            
+    }
 
     // diamonds
     public int GetDiamondsAmount() { return _diamonds; }
