@@ -10,6 +10,8 @@ public class ButtonContolScript : MonoBehaviour
     {
         try
         {
+            if (Time.timeScale == 0f)
+                Time.timeScale = 1f;
             SceneManager.LoadScene(name);
         }
         catch
@@ -43,6 +45,6 @@ public class ButtonContolScript : MonoBehaviour
     public void PlayGame()
     {
         isStarting = true;
-        GetComponent<ButtonContolScript>().Load("Scene001");
+        Load("Scene001");
     }
 }
