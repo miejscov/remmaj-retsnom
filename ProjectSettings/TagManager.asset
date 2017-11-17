@@ -13,6 +13,7 @@ TagManager:
   - Ground
   - Bonus
   - Surprise
+  - Floor
   layers:
   - Default
   - TransparentFX

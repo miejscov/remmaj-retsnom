@@ -8,9 +8,11 @@ public class CanvasScript : MonoBehaviour
 	public Canvas Canvas;
 	private Text [] _texts;
 	private PlayerStatusScript _playerStatus;
+	private LevelControlScript _levelControl;
 
 	private void Awake()
 	{
+		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 		_texts = Canvas.gameObject.GetComponentsInChildren <Text> ();
 	}
 
@@ -32,6 +34,6 @@ public class CanvasScript : MonoBehaviour
 		_texts[1].text = "Energy: " + _playerStatus.GetAmountOfEnergy();
 		_texts[2].text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
 		_texts[3].text = "Total score: " + _playerStatus.GetPlayerScore();
-		_texts[4].text = "Level: 1";
+		_texts[4].text = "Level: "+ _levelControl.GetCurrentLevel();
 	}
 }

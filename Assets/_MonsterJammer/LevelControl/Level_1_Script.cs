@@ -19,4 +19,5 @@ public class Level_1_Script : MonoBehaviour
 	private int _wall = 20;
 
 	public int GetTargetAmountOfDiamonds(){return TargetAmountOfDiamonds;}
+	
 }

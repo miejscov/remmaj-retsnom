@@ -1106,6 +1106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 881963683}
   - component: {fileID: 881963682}
+  - component: {fileID: 881963684}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -1156,6 +1157,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881963684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881963681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36eac5eac37c42768e7400cd949a20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053535482 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1490632260101672, guid: 640cb6801aa26714f931746fdbc304bf,

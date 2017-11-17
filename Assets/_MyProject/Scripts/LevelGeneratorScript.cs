@@ -56,8 +56,20 @@ public class LevelGeneratorScript : MonoBehaviour {
     //private int[] mapIndexTile;
 
     int[,] map;
-    // Use this for initialization
-    void Start()
+
+
+    public void SetLabirynthParameters(int MapSize, int MaxTunelCount, int MinTunelLength, int AmountOfCrates,
+        int AmountsOfMonster)
+    {
+        mapSize = MapSize;
+        maxTunnelCount = MaxTunelCount;
+        minTunnelLength = MinTunelLength;
+        cratesAmount = AmountOfCrates;
+        monstersAmount = AmountsOfMonster;
+    }
+    
+
+    public void GenerateLabirynth()
     {
         GenerateMap();
         GeneratePlayer();
@@ -295,7 +307,6 @@ public class LevelGeneratorScript : MonoBehaviour {
                 map[y, x] = TILE_MONSTER;
                 monsters++;
             }
-
 
         }
     }

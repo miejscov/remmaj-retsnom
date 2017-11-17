@@ -10,17 +10,20 @@ public class LevelControlScript : MonoBehaviour
 
 	private int _targetAmountOfDiamonds = 0;
 	private int _numberOfLevels;
-	private Component _level;
-	
+
+	private LevelGeneratorScript _levelGenerator;
+	private LabirynthDestroyScript _labirynthDestroy;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		var levelGenerator = GameObject.Find("LevelGenerator");
+		_levelGenerator = levelGenerator.GetComponent<LevelGeneratorScript>();
+		_labirynthDestroy = levelGenerator.GetComponent<LabirynthDestroyScript>();
 		_currentLevel = 1;
 		SetLevel(_currentLevel);
 	}
 
-	// Update is called once per frame
 	
 	public void SetLevel(int level)
 	{
@@ -28,7 +31,9 @@ public class LevelControlScript : MonoBehaviour
 		switch (level)
 		{
 			case 1:
-				_targetAmountOfDiamonds = GetComponent<Level_1_Script>().GetTargetAmountOfDiamonds();
+				Level_1_Script level_1 = GetComponent<Level_1_Script>();
+				_targetAmountOfDiamonds = level_1.GetTargetAmountOfDiamonds();
+				_levelGenerator.SetLabirynthParameters(20, 300, 2, 10, 1);
 				break;
 			case 2:
 				_targetAmountOfDiamonds = GetComponent<Level_2_Script>().GetTargetAmountOfDiamonds();
@@ -37,14 +42,7 @@ public class LevelControlScript : MonoBehaviour
 				_targetAmountOfDiamonds = GetComponent<Level_3_Script>().GetTargetAmountOfDiamonds();
 				break;
 		}
-
-	
-	}
-
-
-	public void ResetLevel(Component level)
-	{
-		
+		_levelGenerator.GenerateLabirynth();
 	}
 
 	public void SetNextLevel()
@@ -56,5 +54,10 @@ public class LevelControlScript : MonoBehaviour
 	public int GetTargetAmountOfDiamonds()
 	{
 		return _targetAmountOfDiamonds;
+	}
+
+	public int GetCurrentLevel()
+	{
+		return _currentLevel;
 	}
 }
