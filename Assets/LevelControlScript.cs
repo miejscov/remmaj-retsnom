@@ -7,7 +7,6 @@ public class LevelControlScript : MonoBehaviour
 {
 
 	private int _currentLevel;
-	private PlayerStatusScript _playerStatus;
 
 	private int _targetAmountOfDiamonds = 0;
 	private int _numberOfLevels;
@@ -17,22 +16,16 @@ public class LevelControlScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		_playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
 		_currentLevel = 1;
 		SetLevel(_currentLevel);
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if (_targetAmountOfDiamonds >= _playerStatus.GetDiamondsAmount())
-		{
-			SetNextLevel();
-		}
-	}
 	
 	public void SetLevel(int level)
 	{
-		switch (_currentLevel)
+		
+		switch (level)
 		{
 			case 1:
 				_targetAmountOfDiamonds = GetComponent<Level_1_Script>().GetTargetAmountOfDiamonds();
@@ -58,5 +51,10 @@ public class LevelControlScript : MonoBehaviour
 	{
 		_currentLevel += 1;
 		SetLevel(_currentLevel);
+	}
+
+	public int GetTargetAmountOfDiamonds()
+	{
+		return _targetAmountOfDiamonds;
 	}
 }

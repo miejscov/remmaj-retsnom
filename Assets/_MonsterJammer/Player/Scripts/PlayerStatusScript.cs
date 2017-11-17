@@ -19,11 +19,13 @@ public class PlayerStatusScript : MonoBehaviour
     private PlayerAudioControlScript _playerAudio;
     private CapsuleCollider _capsuleCollider;
     private SerializePlayerStatus _serializePlayer;
+    private LevelControlScript _levelControl;
 
     private void Start()
     {
         _serializePlayer = GetComponent<SerializePlayerStatus>();
         _playerAudio = GetComponent<PlayerAudioControlScript>();
+        _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 
         if(ButtonContolScript.isStarting)
         {
@@ -89,6 +91,12 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _diamonds += 1;
         _playerAudio.PlayGetDiamondSound();
+        if (_diamonds >= _levelControl.GetTargetAmountOfDiamonds())
+        {
+            Debug.Log("target: " + _levelControl.GetTargetAmountOfDiamonds());
+            Debug.Log("next level");
+        }
+        
     }
 
     // energy
