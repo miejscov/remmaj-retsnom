@@ -11,7 +11,7 @@ public class Level_1_Script : MonoBehaviour
 	private int _amountOfCrates = 100;
 	private int _amountsOfMonster = 10;
 
-	private const int TargetAmountOfDiamonds = 4;
+	private const int TargetAmountOfDiamonds = 1;
 
 	private int _amountOfCratesOnStart = 10;
 	private int _amountOfMonstersOnStart = 2;

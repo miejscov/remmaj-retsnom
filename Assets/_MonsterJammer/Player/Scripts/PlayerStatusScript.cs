@@ -95,6 +95,7 @@ public class PlayerStatusScript : MonoBehaviour
         {
             Debug.Log("target: " + _levelControl.GetTargetAmountOfDiamonds());
             Debug.Log("next level");
+            GameObject.Find("GameControl").GetComponent<GameControlScript>().SetNextLevel();
         }
         
     }

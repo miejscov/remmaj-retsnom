@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,5 +34,33 @@ public class GameControlScript : MonoBehaviour {
 	{
 		_currentCrateSpeed = speed;
 	}
+
+	public void SetNextLevel()
+	{
+		DestroyLabirynth();
+	}
 	
+	public void DestroyLabirynth()
+	{
+		DestroyAllObjectsWithTag("Wall");
+		DestroyAllObjectsWithTag("Monster");
+		DestroyAllObjectsWithTag("Ground");
+		DestroyAllObjectsWithTag("Crate");
+		DestroyAllObjectsWithTag("Floor");
+		DestroyAllObjectsWithTag("Food");
+		DestroyAllObjectsWithTag("Diamond");
+		DestroyAllObjectsWithTag("MoveCollider");
+	}
+
+	private void DestroyAllObjectsWithTag(String tag)
+	{
+		GameObject[] objectsToDestroy;
+
+		objectsToDestroy = GameObject.FindGameObjectsWithTag(tag);
+ 
+		foreach(var obj in objectsToDestroy)
+		{
+			Destroy(obj);
+		}
+	}
 }
