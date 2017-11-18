@@ -7,7 +7,7 @@ public class Level_1_Script : MonoBehaviour
 	private const int MapSize = 20;
 	private const int MaxTunelCount = 200;
 	private const int MinTunelLength = 4;
-	private const int AmountOfCrates = 50;
+	private const int AmountOfCrates = 80;
 	private const int AmountsOfMonster = 2;
 
 	private int[] _levelGeneratorParameters;

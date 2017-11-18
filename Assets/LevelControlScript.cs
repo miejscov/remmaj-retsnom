@@ -19,7 +19,7 @@ public class LevelControlScript : MonoBehaviour
 		var levelGenerator = GameObject.Find("LevelGenerator");
 		_levelGenerator = levelGenerator.GetComponent<LevelGeneratorScript>();
 		_labirynthDestroy = levelGenerator.GetComponent<LabirynthDestroyScript>();
-		_currentLevel = 2;
+		_currentLevel = 1;
 		SetLevel(_currentLevel);
 	}
 
@@ -52,7 +52,7 @@ public class LevelControlScript : MonoBehaviour
 				var level_4 = GetComponent<Level_4_Script>();
 				_targetAmountOfDiamonds = Level_4_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_4.GetLevelGeneratorParametersArray());
-				_levelGenerator.GenerateLabirynth();
+//				_levelGenerator.GenerateLabirynth();
 				break;
 		}
 //		_levelGenerator.GenerateLabirynth();
@@ -60,7 +60,6 @@ public class LevelControlScript : MonoBehaviour
 
 	public void SetNextLevel()
 	{
-		LabirynthDestroyScript.DestroyLabirynth();
 		_currentLevel += 1;
 		SetLevel(_currentLevel);
 	}

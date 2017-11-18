@@ -11,7 +11,7 @@ public class Level_3_Script : MonoBehaviour {
 
 	private int[] _levelGeneratorParameters;
 	
-	private const int TargetAmountOfDiamonds = 7;
+	private const int TargetAmountOfDiamonds = 3;
 
 	public static int GetTargetAmountOfDiamonds()
 	{
