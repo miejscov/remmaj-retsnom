@@ -58,14 +58,13 @@ public class LevelGeneratorScript : MonoBehaviour {
     int[,] map;
 
 
-    public void SetLabirynthParameters(int MapSize, int MaxTunelCount, int MinTunelLength, int AmountOfCrates,
-        int AmountsOfMonster)
+    public void SetLabirynthParameters(int[] paramArray)
     {
-        mapSize = MapSize;
-        maxTunnelCount = MaxTunelCount;
-        minTunnelLength = MinTunelLength;
-        cratesAmount = AmountOfCrates;
-        monstersAmount = AmountsOfMonster;
+        mapSize = paramArray[0];
+        maxTunnelCount = paramArray[1];
+        minTunnelLength = paramArray[2];
+        cratesAmount = paramArray[3];
+        monstersAmount = paramArray[4];
     }
     
 
@@ -439,9 +438,20 @@ public class LevelGeneratorScript : MonoBehaviour {
                         // Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
                         break;
                     case TILE_PLAYER:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
-                        Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
-                        Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                        if (!CheckObjectExist("Player"))
+                        {
+                            Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
+                        }
+                        else
+                        {
+                            GameObject.Find("Player1(Clone)").GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x, 0f, z));
+                        }
+                        if (!CheckObjectExist("MainCamera"))
+                        {
+                            Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                           
+                        }
+                            Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
 
                         break;
                     case TILE_ENTRANCE:
@@ -452,11 +462,18 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(Entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-
                 }
             }
         }
     }
+
+    private static bool CheckObjectExist(string objTag)
+    {
+        var exist = false;
+        exist = GameObject.FindGameObjectWithTag(objTag) != null;
+        return exist;
+    }
+
 
     private void InstantiateGround()
     {

@@ -231,6 +231,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1490632260101672, guid: 640cb6801aa26714f931746fdbc304bf, type: 2}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114412378319248898, guid: 640cb6801aa26714f931746fdbc304bf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 640cb6801aa26714f931746fdbc304bf, type: 2}
@@ -327,7 +331,7 @@ GameObject:
   - component: {fileID: 155342230}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,9 +470,11 @@ GameObject:
   - component: {fileID: 606016925}
   - component: {fileID: 606016924}
   - component: {fileID: 606016923}
+  - component: {fileID: 606016927}
+  - component: {fileID: 606016928}
   m_Layer: 0
   m_Name: LevelControl
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,6 +525,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &606016927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606016922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695a78198c223449da1ed7aff8aea25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &606016928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606016922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2749a3692eb874ba2a978d8aedfc4f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640669434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1042,10 @@ Prefab:
       propertyPath: _chanceForNothing
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1771372049826258, guid: 95a36eb477c624c518c46ae9f356f0dc, type: 2}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95a36eb477c624c518c46ae9f356f0dc, type: 2}
   m_IsPrefabParent: 0
@@ -1109,7 +1141,7 @@ GameObject:
   - component: {fileID: 881963684}
   m_Layer: 0
   m_Name: LevelGenerator
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1519,6 +1551,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1930094738941054, guid: cfaa4f2c0aed7264b98d55937f757ef4, type: 2}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfaa4f2c0aed7264b98d55937f757ef4, type: 2}
   m_IsPrefabParent: 0
@@ -1740,7 +1776,7 @@ GameObject:
   - component: {fileID: 1475192584}
   m_Layer: 0
   m_Name: Directional Light
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1808,7 +1844,7 @@ GameObject:
   - component: {fileID: 1502745215}
   m_Layer: 5
   m_Name: GameOver
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2039,7 +2075,7 @@ GameObject:
   - component: {fileID: 1681337739}
   m_Layer: 5
   m_Name: Pause
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,6 +2352,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1053535485}
+    - target: {fileID: 1908283471578886, guid: ed186c493199bf24d8facbb38fa7597a, type: 2}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed186c493199bf24d8facbb38fa7597a, type: 2}
   m_IsPrefabParent: 0
@@ -2456,12 +2496,12 @@ Prefab:
     - target: {fileID: 224105182613853966, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 512
+      value: 364
       objectReference: {fileID: 0}
     - target: {fileID: 224105182613853966, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 227.5
+      value: 125.5
       objectReference: {fileID: 0}
     - target: {fileID: 224105182613853966, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
@@ -2553,6 +2593,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1475425306242798, guid: f62081edcdc82408e9b372e34e1ef461, type: 2}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f62081edcdc82408e9b372e34e1ef461, type: 2}
   m_IsPrefabParent: 0
@@ -2567,7 +2611,7 @@ GameObject:
   - component: {fileID: 2089773085}
   m_Layer: 0
   m_Name: GameControl
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

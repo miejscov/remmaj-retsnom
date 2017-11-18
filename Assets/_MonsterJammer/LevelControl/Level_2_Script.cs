@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level_2_Script : MonoBehaviour {
+	private const int MapSize = 25;
+	private const int MaxTunelCount = 450;
+	private const int MinTunelLength = 2;
+	private const int AmountOfCrates = 30;
+	private const int AmountsOfMonster = 10;
 
-	private int _mapSize = 10;
-	private int _maxTunelCount = 450;
-	private int _minTunelLength = 2;
-	private int _amountOfCrates = 100;
-	private int _amountsOfMonster = 10;
+	private int[] _levelGeneratorParameters;
+	
+	private const int TargetAmountOfDiamonds = 4;
 
-	private const int TargetAmountOfDiamonds = 5;
+	public static int GetTargetAmountOfDiamonds()
+	{
+		return TargetAmountOfDiamonds;
+	}
 
-	private int _amountOfCratesOnStart = 10;
-	private int _amountOfMonstersOnStart = 2;
+	public int[] GetLevelGeneratorParametersArray()
+	{
+		Debug.Log("Level 2");
+		_levelGeneratorParameters = new int[5];
 
-	private int _wall = 20;
+		_levelGeneratorParameters[0] = MapSize;
+		_levelGeneratorParameters[1] = MaxTunelCount;
+		_levelGeneratorParameters[2] = MinTunelLength;
+		_levelGeneratorParameters[3] = AmountOfCrates;
+		_levelGeneratorParameters[4] = AmountsOfMonster;
 
-	public int GetTargetAmountOfDiamonds(){return TargetAmountOfDiamonds;}
+		return _levelGeneratorParameters;
+	}
 }

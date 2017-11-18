@@ -99,6 +99,7 @@
             <e p="Level_1_Script.cs" t="Include" />
             <e p="Level_2_Script.cs" t="Include" />
             <e p="Level_3_Script.cs" t="Include" />
+            <e p="Level_4_Script.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Scripts" t="Include">
@@ -162,7 +163,9 @@
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="remmaj-retsnom.sln" t="IncludeFlat" />

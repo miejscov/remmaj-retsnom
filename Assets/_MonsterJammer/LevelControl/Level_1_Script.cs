@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class Level_1_Script : MonoBehaviour
 {
+	private const int MapSize = 20;
+	private const int MaxTunelCount = 200;
+	private const int MinTunelLength = 4;
+	private const int AmountOfCrates = 50;
+	private const int AmountsOfMonster = 2;
 
-	private int _mapSize = 10;
-	private int _maxTunelCount = 450;
-	private int _minTunelLength = 2;
-	private int _amountOfCrates = 100;
-	private int _amountsOfMonster = 10;
-
+	private int[] _levelGeneratorParameters;
+	
 	private const int TargetAmountOfDiamonds = 1;
 
-	private int _amountOfCratesOnStart = 10;
-	private int _amountOfMonstersOnStart = 2;
+	public static int GetTargetAmountOfDiamonds()
+	{
+		return TargetAmountOfDiamonds;
+	}
 
-	private int _wall = 20;
+	public int[] GetLevelGeneratorParametersArray()
+	{
+		Debug.Log("Level 1");
+		_levelGeneratorParameters = new int[5];
 
-	public int GetTargetAmountOfDiamonds(){return TargetAmountOfDiamonds;}
-	
+		_levelGeneratorParameters[0] = MapSize;
+		_levelGeneratorParameters[1] = MaxTunelCount;
+		_levelGeneratorParameters[2] = MinTunelLength;
+		_levelGeneratorParameters[3] = AmountOfCrates;
+		_levelGeneratorParameters[4] = AmountsOfMonster;
+
+		return _levelGeneratorParameters;
+	}
 }

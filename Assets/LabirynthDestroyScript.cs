@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LabirynthDestroyScript : MonoBehaviour {
 
-	public void DestroyLabirynth()
+	public static void DestroyLabirynth()
 	{
 		DestroyAllObjectsWithTag("Wall");
 		DestroyAllObjectsWithTag("Monster");
@@ -14,14 +14,13 @@ public class LabirynthDestroyScript : MonoBehaviour {
 		DestroyAllObjectsWithTag("Food");
 		DestroyAllObjectsWithTag("Diamond");
 		DestroyAllObjectsWithTag("MoveCollider");
+		
 	}
 
-	private void DestroyAllObjectsWithTag(string tagToDestroy)
+	private static void DestroyAllObjectsWithTag(string tagToDestroy)
 	{
-		GameObject[] objectsToDestroy;
+		var objectsToDestroy = GameObject.FindGameObjectsWithTag(tagToDestroy);
 
-		objectsToDestroy = GameObject.FindGameObjectsWithTag(tagToDestroy);
- 
 		foreach(var obj in objectsToDestroy)
 		{
 			Destroy(obj);

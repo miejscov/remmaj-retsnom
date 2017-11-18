@@ -10,6 +10,7 @@ public class PlayerStatusScript : MonoBehaviour
     public int _energy;
     private int _score;
     private int _diamonds;
+    private int _diamondsLevelTarget;
 
     private const int _defaultNumberOfLives = 3;
     private const int _defaultEnergy = 5;
@@ -54,7 +55,7 @@ public class PlayerStatusScript : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         _isDead = dead;
 
-        GameObject obj = GameObject.Find("ButtonCtrl");
+        var obj = GameObject.Find("ButtonCtrl");
         obj.GetComponent<DeathCanvasScript>().ShowCanvas();
     }
 
@@ -93,8 +94,6 @@ public class PlayerStatusScript : MonoBehaviour
         _playerAudio.PlayGetDiamondSound();
         if (_diamonds >= _levelControl.GetTargetAmountOfDiamonds())
         {
-            Debug.Log("target: " + _levelControl.GetTargetAmountOfDiamonds());
-            Debug.Log("next level");
             _levelControl.SetNextLevel();
         }
         

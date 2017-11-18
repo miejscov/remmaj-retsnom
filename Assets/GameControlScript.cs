@@ -22,13 +22,5 @@ public class GameControlScript : MonoBehaviour {
 	public void ResetCrateSpeed(){_currentCrateSpeed = DefaultCrateSpeed;}
 
 	public void SetCurrentCrateSpeed(float speed){_currentCrateSpeed = speed;}
-
-//	public void SetNextLevel(){DestroyLabirynth();}
-	
-	
-	
-	
-	
-	
 	
 }
