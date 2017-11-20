@@ -1045,7 +1045,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1771372049826258, guid: 95a36eb477c624c518c46ae9f356f0dc, type: 2}
       propertyPath: m_TagString
-      value: GameController
+      value: Bonus
       objectReference: {fileID: 0}
     - target: {fileID: 114827792991945090, guid: 95a36eb477c624c518c46ae9f356f0dc,
         type: 2}
