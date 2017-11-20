@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level_3_Script : MonoBehaviour {
-	private const int MapSize = 25;
+	private const int MapSize = 31;
 	private const int MaxTunelCount = 450;
 	private const int MinTunelLength = 2;
 	private const int AmountOfCrates = 30;
@@ -11,7 +11,7 @@ public class Level_3_Script : MonoBehaviour {
 
 	private int[] _levelGeneratorParameters;
 	
-	private const int TargetAmountOfDiamonds = 7;
+	private const int TargetAmountOfDiamonds = 3;
 
 	public static int GetTargetAmountOfDiamonds()
 	{

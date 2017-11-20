@@ -6,6 +6,8 @@ using UnityEngine;
 public class LevelControlScript : MonoBehaviour
 {
 
+	public GameObject Generator;
+	private GameObject _generator;
 	private int _currentLevel;
 
 	private int _targetAmountOfDiamonds = 0;
@@ -16,53 +18,48 @@ public class LevelControlScript : MonoBehaviour
 	
 	private void Start ()
 	{
-		var levelGenerator = GameObject.Find("LevelGenerator");
-		_levelGenerator = levelGenerator.GetComponent<LevelGeneratorScript>();
-		_labirynthDestroy = levelGenerator.GetComponent<LabirynthDestroyScript>();
-		_currentLevel = 2;
-		SetLevel(_currentLevel);
+		_currentLevel = 0;
+		SetNextLevel();
+//		SetLevel();
 	}
 
 	
-	public void SetLevel(int level)
+	public void SetLevel()
 	{
 		LabirynthDestroyScript.DestroyLabirynth();
-		switch (level)
+		_generator = Instantiate(Generator);
+		_levelGenerator = _generator.GetComponent<LevelGeneratorScript>();
+		switch (_currentLevel)
 		{
 			case 1:
 				var level_1 = GetComponent<Level_1_Script>();
 				_targetAmountOfDiamonds = Level_1_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_1.GetLevelGeneratorParametersArray());
-				_levelGenerator.GenerateLabirynth();
 				break;
 			case 2:
 				var level_2 = GetComponent<Level_2_Script>();
 				_targetAmountOfDiamonds = Level_2_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_2.GetLevelGeneratorParametersArray());
-				_levelGenerator.GenerateLabirynth();
-				
 				break;
 			case 3:
 				var level_3 = GetComponent<Level_3_Script>();
 				_targetAmountOfDiamonds = Level_3_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_3.GetLevelGeneratorParametersArray());
-				_levelGenerator.GenerateLabirynth();
 				break;
 			case 4:
 				var level_4 = GetComponent<Level_4_Script>();
 				_targetAmountOfDiamonds = Level_4_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_4.GetLevelGeneratorParametersArray());
-				_levelGenerator.GenerateLabirynth();
 				break;
 		}
-//		_levelGenerator.GenerateLabirynth();
+		_levelGenerator.GenerateLabirynth();
 	}
 
 	public void SetNextLevel()
 	{
-		LabirynthDestroyScript.DestroyLabirynth();
+		Debug.Log("Set next level function");
 		_currentLevel += 1;
-		SetLevel(_currentLevel);
+		SetLevel();
 	}
 
 	public int GetTargetAmountOfDiamonds()

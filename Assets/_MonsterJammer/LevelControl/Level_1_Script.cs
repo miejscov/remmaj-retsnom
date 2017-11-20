@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Level_1_Script : MonoBehaviour
 {
-	private const int MapSize = 20;
-	private const int MaxTunelCount = 200;
-	private const int MinTunelLength = 4;
-	private const int AmountOfCrates = 50;
-	private const int AmountsOfMonster = 2;
+	private const int MapSize = 17;
+	private const int MaxTunelCount = 150;
+	private const int MinTunelLength = 2;
+	private const int AmountOfCrates = 10;
+	private const int AmountsOfMonster = 1;
 
 	private int[] _levelGeneratorParameters;
 	

@@ -6,14 +6,30 @@ public class LabirynthDestroyScript : MonoBehaviour {
 
 	public static void DestroyLabirynth()
 	{
-		DestroyAllObjectsWithTag("Wall");
+		Destroy(GameObject.Find("LevelGenerator"));
 		DestroyAllObjectsWithTag("Monster");
-		DestroyAllObjectsWithTag("Ground");
 		DestroyAllObjectsWithTag("Crate");
+		DestroyAllObjectsWithTag("Wall");
 		DestroyAllObjectsWithTag("Floor");
+		DestroyAllObjectsWithTag("Entrance");
+		DestroyAllObjectsWithTag("Ground");
+		DestroyAllObjectsWithTag("Surprise");
+		DestroyAllObjectsWithTag("MoveCollider");
 		DestroyAllObjectsWithTag("Food");
 		DestroyAllObjectsWithTag("Diamond");
-		DestroyAllObjectsWithTag("MoveCollider");
+		
+		
+
+//		GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+// 
+//		for (int i = 0; i < GameObjects.Length; i++)
+//		{
+//			if (!GameObjects[i].CompareTag("GameController") && !GameObjects[i].CompareTag("Player") && !GameObjects[i].CompareTag("MainCamera") && !GameObjects[i].CompareTag("Untagged"))
+//			{
+//				Debug.Log("destroy tag: " + GameObjects[i].tag + "name: " + GameObjects[i].name);
+//				Destroy(GameObjects[i]);
+//			}
+//		}
 		
 	}
 

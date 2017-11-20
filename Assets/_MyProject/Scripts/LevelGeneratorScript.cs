@@ -60,6 +60,13 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     public void SetLabirynthParameters(int[] paramArray)
     {
+        
+        Debug.Log("map size: " + paramArray[0]);
+        Debug.Log("map size: " + paramArray[1]);
+        Debug.Log("map size: " + paramArray[2]);
+        Debug.Log("map size: " + paramArray[3]);
+        Debug.Log("map size: " + paramArray[4]);
+        
         mapSize = paramArray[0];
         maxTunnelCount = paramArray[1];
         minTunnelLength = paramArray[2];
@@ -70,8 +77,10 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     public void GenerateLabirynth()
     {
+//        Player.SetActive(false);
         GenerateMap();
         GeneratePlayer();
+//        Player.SetActive(true);
         GenerateMonsters(monstersAmount);
         GenerateCrates(cratesAmount);
         GenerateExits();
@@ -445,6 +454,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                         else
                         {
                             GameObject.Find("Player1(Clone)").GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x, 0f, z));
+                            GameObject.Find("Player1(Clone)").GetComponent<PlayerRbMoveScript>().ResetSpeed();
                         }
                         if (!CheckObjectExist("MainCamera"))
                         {
@@ -485,7 +495,7 @@ public class LevelGeneratorScript : MonoBehaviour {
         
         grnd.transform.localScale = scale;
         grnd.GetComponent<MeshRenderer>().enabled = false;
-        Ground = grnd;
+//        Ground = grnd;
     }
     /*
     void OnDrawGizmos()
