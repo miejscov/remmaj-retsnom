@@ -52,10 +52,10 @@ public class PlayerRayCastHit : MonoBehaviour
 		_hitObject = null;
 		if (Physics.Raycast(transform.position, direction, out _hit, .8f))
 		{
-			Debug.DrawRay(transform.position, direction, Color.green, 3f);
+//			Debug.DrawRay(transform.position, direction, Color.green, 3f);
 			_objectTag = _hit.transform.gameObject.tag;
 			_hitObject = _hit.transform.gameObject;
-			Debug.Log("hit obj" + _hitObject);
+//			Debug.Log("hit obj" + _hitObject);
 		}
 
 		return _objectTag;

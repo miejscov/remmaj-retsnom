@@ -13,14 +13,14 @@ using UnityEngine;
 		
 		private void Start()
 		{
-			Player = GameObject.FindWithTag("Player");
-			_surpriseMaker = GameObject.FindWithTag("Bonus").GetComponent<SurpriseMaker>();
 			_meshRenderer = GetComponent<MeshRenderer>();
 		}
 	
 
 		public void DestroyCrate()
 		{
+			Player = GameObject.FindWithTag("Player");
+
 			ResetPlayerOnCrateCollision();
 			DeductPlayerEnergy();
 			AddPlayerScore();
@@ -36,6 +36,7 @@ using UnityEngine;
 		private void Destroy()
 		{
 			Destroy(gameObject);
+			_surpriseMaker = GameObject.Find("SurpriseMaker").GetComponent<SurpriseMaker>();
 			_surpriseMaker.PlaceBonus(transform.position);
 		}
 		

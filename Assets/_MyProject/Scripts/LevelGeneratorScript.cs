@@ -56,11 +56,31 @@ public class LevelGeneratorScript : MonoBehaviour {
     //private int[] mapIndexTile;
 
     int[,] map;
-    // Use this for initialization
-    void Start()
+
+
+    public void SetLabirynthParameters(int[] paramArray)
     {
+        
+        Debug.Log("map size: " + paramArray[0]);
+        Debug.Log("map size: " + paramArray[1]);
+        Debug.Log("map size: " + paramArray[2]);
+        Debug.Log("map size: " + paramArray[3]);
+        Debug.Log("map size: " + paramArray[4]);
+        
+        mapSize = paramArray[0];
+        maxTunnelCount = paramArray[1];
+        minTunnelLength = paramArray[2];
+        cratesAmount = paramArray[3];
+        monstersAmount = paramArray[4];
+    }
+    
+
+    public void GenerateLabirynth()
+    {
+//        Player.SetActive(false);
         GenerateMap();
         GeneratePlayer();
+//        Player.SetActive(true);
         GenerateMonsters(monstersAmount);
         GenerateCrates(cratesAmount);
         GenerateExits();
@@ -296,7 +316,6 @@ public class LevelGeneratorScript : MonoBehaviour {
                 monsters++;
             }
 
-
         }
     }
 
@@ -428,9 +447,21 @@ public class LevelGeneratorScript : MonoBehaviour {
                         // Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
                         break;
                     case TILE_PLAYER:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
-                        Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
-                        Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                        if (!CheckObjectExist("Player"))
+                        {
+                            Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
+                        }
+                        else
+                        {
+                            GameObject.Find("Player1(Clone)").GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x, 0f, z));
+                            GameObject.Find("Player1(Clone)").GetComponent<PlayerRbMoveScript>().ResetSpeed();
+                        }
+                        if (!CheckObjectExist("MainCamera"))
+                        {
+                            Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                           
+                        }
+                            Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
 
                         break;
                     case TILE_ENTRANCE:
@@ -441,11 +472,18 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(Entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-
                 }
             }
         }
     }
+
+    private static bool CheckObjectExist(string objTag)
+    {
+        var exist = false;
+        exist = GameObject.FindGameObjectWithTag(objTag) != null;
+        return exist;
+    }
+
 
     private void InstantiateGround()
     {
@@ -457,7 +495,7 @@ public class LevelGeneratorScript : MonoBehaviour {
         
         grnd.transform.localScale = scale;
         grnd.GetComponent<MeshRenderer>().enabled = false;
-        Ground = grnd;
+//        Ground = grnd;
     }
     /*
     void OnDrawGizmos()
