@@ -67,6 +67,11 @@ public class PlayerRbMoveScript : MonoBehaviour
     {
         _actualSpeed = MoveSpeed;
     }
+
+    public void SetPlayerPosition(Vector3 position)
+    {
+        transform.position = _targetPosition = position;
+    }
 }
 
 

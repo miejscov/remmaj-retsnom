@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,24 +15,12 @@ public class GameControlScript : MonoBehaviour {
 		_currentCrateSpeed = DefaultCrateSpeed;
 	}
 	
-	public float GetDefaultPlayerSpeed()
-	{
-		return DefaultPlayerSpeed;
-	}
+	public float GetDefaultPlayerSpeed(){return DefaultPlayerSpeed;}
 
-	public float GetCrateSpeed()
-	{
-		return _currentCrateSpeed;
-	}
+	public float GetCrateSpeed(){return _currentCrateSpeed;}
 
-	public void ResetCrateSpeed()
-	{
-		_currentCrateSpeed = DefaultCrateSpeed;
-	}
+	public void ResetCrateSpeed(){_currentCrateSpeed = DefaultCrateSpeed;}
 
-	public void SetCurrentCrateSpeed(float speed)
-	{
-		_currentCrateSpeed = speed;
-	}
+	public void SetCurrentCrateSpeed(float speed){_currentCrateSpeed = speed;}
 	
 }

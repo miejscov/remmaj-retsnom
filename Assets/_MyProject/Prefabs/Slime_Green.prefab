@@ -709,11 +709,13 @@ MonoBehaviour:
   lobHeigh: 5
   lobUpTime: 0.4
   lobDownTime: 0.4
-  foodPref: {fileID: 1782896836210566, guid: 4b28bb46e18a14b3db1ba663a5e9ffb3, type: 2}
+  foodPref: {fileID: 1345268976852062, guid: 4661c079373e81b4594af2432228777c, type: 2}
   diamondPref: {fileID: 1775191308137868, guid: 3e6f4e46523270e4a9016a5cc7516385,
     type: 2}
   numberOfDiamonds: 3
-  numberOfFood: 3
+  numberOfFood: 1
+  heighOfDiamonds: 0.3
+  heighOfFood: 0
 --- !u!114 &114697554975253580
 MonoBehaviour:
   m_ObjectHideFlags: 1
