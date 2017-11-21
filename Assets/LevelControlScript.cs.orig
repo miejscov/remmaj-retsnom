@@ -18,8 +18,17 @@ public class LevelControlScript : MonoBehaviour
 	
 	private void Start ()
 	{
+<<<<<<< HEAD
+		_currentLevel = 0;
 		SetNextLevel();
 //		SetLevel();
+=======
+		var levelGenerator = GameObject.Find("LevelGenerator");
+		_levelGenerator = levelGenerator.GetComponent<LevelGeneratorScript>();
+		_labirynthDestroy = levelGenerator.GetComponent<LabirynthDestroyScript>();
+		_currentLevel = 1;
+		SetLevel(_currentLevel);
+>>>>>>> 9c1ad7a7d6848a1f6994be6ac8c11299f240a960
 	}
 
 	
@@ -49,6 +58,10 @@ public class LevelControlScript : MonoBehaviour
 				var level_4 = GetComponent<Level_4_Script>();
 				_targetAmountOfDiamonds = Level_4_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_4.GetLevelGeneratorParametersArray());
+<<<<<<< HEAD
+=======
+//				_levelGenerator.GenerateLabirynth();
+>>>>>>> 9c1ad7a7d6848a1f6994be6ac8c11299f240a960
 				break;
 		}
 		_levelGenerator.GenerateLabirynth();
@@ -56,7 +69,10 @@ public class LevelControlScript : MonoBehaviour
 
 	public void SetNextLevel()
 	{
+<<<<<<< HEAD
 		Debug.Log("Set next level function");
+=======
+>>>>>>> 9c1ad7a7d6848a1f6994be6ac8c11299f240a960
 		_currentLevel += 1;
 		SetLevel();
 	}
@@ -69,20 +85,5 @@ public class LevelControlScript : MonoBehaviour
 	public int GetCurrentLevel()
 	{
 		return _currentLevel;
-	}
-
-	public void SetCurrentLevel(int level)
-	{
-		_currentLevel = level;
-	}
-
-
-	public void ResetLevel()
-	{
-		var player = GameObject.Find("Player1(Clone)");
-		player.GetComponent<PlayerAnimationControlScript>().PlayerIdle();
-		player.GetComponent<PlayerStatusScript>().SetPlayerDead(false);
-		
-		SetLevel();
 	}
 }

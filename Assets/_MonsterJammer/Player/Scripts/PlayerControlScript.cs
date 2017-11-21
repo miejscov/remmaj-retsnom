@@ -15,6 +15,12 @@
 		
 		private bool _invertControl;
 		private bool _freezePlayer;
+
+		public void ResetControl()
+		{
+			_invertControl = false;
+			_freezePlayer = false;
+		}
 		
 		public void SetInvertControl(bool invert)
 		{

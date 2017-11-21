@@ -37,6 +37,7 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void ResetPlayerStatus()
     {
+        _levelControl.SetCurrentLevel(1);
         _numberOfLives = _defaultNumberOfLives;
         _energy = _defaultEnergy;
         _score = _defaultScore;
@@ -47,12 +48,19 @@ public class PlayerStatusScript : MonoBehaviour
 
     public bool PlayerIsDead() { return _isDead; }
 
+    public void SetPlayerAlive()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        _isDead = false;
+        GetComponent<PlayerAnimationControlScript>().PlayerIdle();
+    }
+
     public void SetPlayerDead(bool dead)
     {
         DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
-        GetComponent<Rigidbody>().isKinematic = true;
+//        GetComponent<Rigidbody>().isKinematic = true;
         _isDead = dead;
 
         var obj = GameObject.Find("ButtonCtrl");
