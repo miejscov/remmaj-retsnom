@@ -4,15 +4,16 @@ using UnityEngine;
 public class SerializePlayerStatus : MonoBehaviour
 {
 	private PlayerStatusScript _playerStatus;
+	private LevelControlScript _levelControl;
 	
 	public int NumberOfLives;
 	public int Energy;
 	public int Diamonds;
 	public int Score;
+	public int CurrentLevel;
 
 	private void Start()
-    {
-       
+	{
 	    _playerStatus = GetComponent<PlayerStatusScript>();
     	 LoadObject ();
     }
@@ -28,13 +29,16 @@ public class SerializePlayerStatus : MonoBehaviour
 	    Diamonds = _playerStatus.GetDiamondsAmount();
 	    NumberOfLives = _playerStatus.GetNumberOfLives();
 	    Score = _playerStatus.GetPlayerScore();
-        
+	    
+		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
+	    CurrentLevel = _levelControl.GetCurrentLevel();
+	    
 	    var writter = new StreamWriter (outputPath);
     	writter.WriteLine (JsonUtility.ToJson (this));
     	writter.Close ();
    	}
 
-	private void LoadObject()
+	public void LoadObject()
    	{
    		var inputPath = Application.persistentDataPath + @"/PlayerStatus.json";
    		var reader = new StreamReader (inputPath);
@@ -46,5 +50,8 @@ public class SerializePlayerStatus : MonoBehaviour
 		_playerStatus.SetDiamondAmount(Diamonds);
 		_playerStatus.SetNumberOfLives(NumberOfLives);
 		_playerStatus.SetPlayerScore(Score);
+		   
+		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
+		_levelControl.SetCurrentLevel(CurrentLevel);
     }
 }

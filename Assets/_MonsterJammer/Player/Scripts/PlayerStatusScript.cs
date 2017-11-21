@@ -3,10 +3,14 @@
 public class PlayerStatusScript : MonoBehaviour
 {
     private int _numberOfLives;
+    private int _extraLifeScore = 0;
+    private int _extraLifeScoreThreshold = 50;
+    
     private bool _isDead = false;
     public int _energy;
     private int _score;
     private int _diamonds;
+    private int _diamondsLevelTarget;
 
     private const int _defaultNumberOfLives = 3;
     private const int _defaultEnergy = 5;
@@ -16,11 +20,13 @@ public class PlayerStatusScript : MonoBehaviour
     private PlayerAudioControlScript _playerAudio;
     private CapsuleCollider _capsuleCollider;
     private SerializePlayerStatus _serializePlayer;
+    private LevelControlScript _levelControl;
 
     private void Start()
     {
         _serializePlayer = GetComponent<SerializePlayerStatus>();
         _playerAudio = GetComponent<PlayerAudioControlScript>();
+        _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 
         if(ButtonContolScript.isStarting)
         {
@@ -31,6 +37,7 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void ResetPlayerStatus()
     {
+        _levelControl.SetCurrentLevel(1);
         _numberOfLives = _defaultNumberOfLives;
         _energy = _defaultEnergy;
         _score = _defaultScore;
@@ -41,15 +48,22 @@ public class PlayerStatusScript : MonoBehaviour
 
     public bool PlayerIsDead() { return _isDead; }
 
+    public void SetPlayerAlive()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        _isDead = false;
+        GetComponent<PlayerAnimationControlScript>().PlayerIdle();
+    }
+
     public void SetPlayerDead(bool dead)
     {
         DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
-        GetComponent<Rigidbody>().isKinematic = true;
+//        GetComponent<Rigidbody>().isKinematic = true;
         _isDead = dead;
 
-        GameObject obj = GameObject.Find("ButtonCtrl");
+        var obj = GameObject.Find("ButtonCtrl");
         obj.GetComponent<DeathCanvasScript>().ShowCanvas();
     }
 
@@ -65,8 +79,19 @@ public class PlayerStatusScript : MonoBehaviour
 
     // score
     public int GetPlayerScore() { return _score; }
-    public void SetPlayerScore(int score) { _score = score; }
-    public void AddPlayerScore(int score) { _score += score; }
+    public void SetPlayerScore(int score) {_score = score; }
+
+    public void AddPlayerScore(int score)
+    {
+        _score += score;
+        _extraLifeScore += score;
+        if (_extraLifeScore >= _extraLifeScoreThreshold)
+        {
+            AddPlayerLife();
+            _extraLifeScore = 0;
+        }
+            
+    }
 
     // diamonds
     public int GetDiamondsAmount() { return _diamonds; }
@@ -75,6 +100,11 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _diamonds += 1;
         _playerAudio.PlayGetDiamondSound();
+        if (_diamonds >= _levelControl.GetTargetAmountOfDiamonds())
+        {
+            _levelControl.SetNextLevel();
+        }
+        
     }
 
     // energy

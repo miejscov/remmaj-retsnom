@@ -54,7 +54,12 @@ public class DeathCanvasScript : MonoBehaviour
                     _buttonControl.GetComponent<PlayerGameOverScript>().GameOver();
                 }
                 else
-                    ButtonContolScript.LoadStatic("Scene001");
+                {
+                    _playerStatus.SetPlayerAlive();
+                    GameObject.Find("LevelControl").GetComponent<LevelControlScript>().ResetLevel();
+                    HideCanvas();
+                }
+//                    ButtonContolScript.LoadStatic("Scene001");
             }
         }
     }
