@@ -62,6 +62,7 @@ public class ItemGeneratorScript : MonoBehaviour
 
             pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
             collid.GetComponent<MeshRenderer>().enabled = false;
+            Physics.IgnoreCollision(collid.GetComponent<Collider>(), GameObject.Find("Player1(Clone)").GetComponent < Collider>());
 
             iTween.MoveAdd(pref, iTween.Hash("amount", wherePutDiamond - transform.position, "time", lobUpTime + lobDownTime, "easeType", iTween.EaseType.linear));
             iTween.MoveBy(pref, iTween.Hash("y", lobHeigh, "time", lobUpTime, "easeType", iTween.EaseType.easeOutQuad));
