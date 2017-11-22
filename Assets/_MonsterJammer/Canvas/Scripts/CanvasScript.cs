@@ -31,9 +31,9 @@ public class CanvasScript : MonoBehaviour
 
 	public void SetDiamonds(int diamonds)
 	{
-		_texts[3].text = "Diamonds: " + diamonds;
-		Debug.Log("setdiamond canv");
-		Canvas.ForceUpdateCanvases();
+//		_texts[3].text = "Diamonds: " + diamonds;
+//		Debug.Log("setdiamond canv");
+//		Canvas.ForceUpdateCanvases();
 	}
 	
 	public void SetDiamondsLeft(int diamonds)
@@ -47,13 +47,13 @@ public class CanvasScript : MonoBehaviour
 
 	public void SetTotalScore(int score)
 	{
-		_texts[5].text = "Total score: " + score;
+		_texts[4].text = "Total score: " + score;
 		Canvas.ForceUpdateCanvases();
 	}
 
 	public void SetLevel(int level)
 	{
-		_texts[4].text = "Level: " + level;
+		_texts[3].text = "Level: " + level;
 		Canvas.ForceUpdateCanvases();
 	}
 }
