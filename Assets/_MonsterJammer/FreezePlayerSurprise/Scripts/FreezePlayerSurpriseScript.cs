@@ -10,7 +10,7 @@ public class FreezePlayerSurpriseScript : MonoBehaviour {
 
 	private Animator _playerAnimator;
 
-	private const float SlowMotionTime = 400f;
+	private const float FreezeTime = 300f;
 
 	private void Start ()
 	{
@@ -26,7 +26,7 @@ public class FreezePlayerSurpriseScript : MonoBehaviour {
 
 		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
 		_player.GetComponent<Animator>().SetBool("Freeze", true);
-		Invoke("UnfreezePlayer", SlowMotionTime * Time.deltaTime);
+		Invoke("UnfreezePlayer", FreezeTime * Time.deltaTime);
 	}
 
 	private void UnfreezePlayer()
