@@ -37,7 +37,12 @@ public class CameraFollowScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if(target == null)
+        {
+            _player = GameObject.FindGameObjectWithTag("Player");
+            target = _player;
 
+        }
         // Create a postion the camera is aiming for based on the offset from the target.
         Vector3 targetCamPos = target.transform.position + offset;
 
