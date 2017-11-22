@@ -13,9 +13,12 @@ public class EntranceControlScript : MonoBehaviour {
 	private Vector3 _gateOpenPosition;
 	private PlayerRotationScript _playerRotation;
 	private PlayerControlScript _playerControl;
+	private CameraFollowScript _camera;
 	
 	private void Start()
 	{
+		_camera = GameObject.Find("Main Camera(Clone)").GetComponent<CameraFollowScript>();
+		_camera.SetCameraOnEntry();
 		player = GameObject.Find("Player1(Clone)");
 		player.GetComponent<PlayerRotationScript>().TurnRight();
 		_playerRbMove = player.GetComponent<PlayerRbMoveScript>();
@@ -40,7 +43,7 @@ public class EntranceControlScript : MonoBehaviour {
 		_gate.transform.position = _gateClosePosition;
 		_playerRbMove.ResetSpeed();
 		player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
-
+		_camera.ResetCamera();
 	}
 
 	private GameObject getChildGameObject(GameObject fromGameObject, string withName) {
