@@ -25,8 +25,8 @@ public class PlayerCollisionScript : MonoBehaviour
 			
 		else if (other.gameObject.CompareTag("Diamond"))
 		{
+            _playerStatus.AddPlayerScore(20);
 			_playerStatus.AddDiamond();
-			_playerStatus.AddPlayerScore(20);
 			other.gameObject.GetComponent<DiamondControlScript1>().DestroyDiamond();
 		}
 		else if (other.gameObject.CompareTag("Food"))
@@ -38,27 +38,27 @@ public class PlayerCollisionScript : MonoBehaviour
 		else if (other.gameObject.name.Contains("ExtraLife"))
 		{
 			_playerStatus.AddPlayerLife();
-			other.gameObject.GetComponent<ExtraLifeScript>().DestroyExtraLifeObject();
+            other.gameObject.GetComponent<ExtraLifeScript>().DestroyExtraLifeObject();
 		}
 		else if (other.gameObject.name.Contains("SlowDownPlayer"))
 		{
 			_playerStatus.AddPlayerScore(5);
-			other.gameObject.GetComponent<SlowDownPlayerSurprise>().Set();
+            other.gameObject.GetComponent<SlowDownPlayerSurprise>().Set();
 		}
 		else if (other.gameObject.name.Contains("SpeedUpPlayer"))
 		{
 			_playerStatus.AddPlayerScore(5);
-			other.gameObject.GetComponent<SpeedUpPlayerSurprise>().Set();
+            other.gameObject.GetComponent<SpeedUpPlayerSurprise>().Set();
 		}
 		else if (other.gameObject.name.Contains("InvertControl"))
         {
         	_playerStatus.AddPlayerScore(5);
-        	other.gameObject.GetComponent<InvertControlSurpriseScript>().Set();
+            other.gameObject.GetComponent<InvertControlSurpriseScript>().Set();
         }
         else if (other.gameObject.name.Contains("FreezePlayer"))
         {
         	_playerStatus.AddPlayerScore(5);
-        	other.gameObject.GetComponent<FreezePlayerSurpriseScript>().Set();
+            other.gameObject.GetComponent<FreezePlayerSurpriseScript>().Set();
         }
 	}
 
