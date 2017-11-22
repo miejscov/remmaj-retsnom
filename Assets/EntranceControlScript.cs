@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EntranceControlScript : MonoBehaviour
 {
 
 	private Collider _collider;
-	private Transform[] ts;
 	private GameObject _gate;
-	private GameObject player;
+	private GameObject _player;
 	private PlayerRbMoveScript _playerRbMove;
 	private Vector3 _gateClosePosition;
 	private Vector3 _gateOpenPosition;
@@ -16,34 +16,46 @@ public class EntranceControlScript : MonoBehaviour
 	private PlayerControlScript _playerControl;
 	private CameraFollowScript _camera;
 	
+	private Vector3 _targetPos;
+	
 	private void Start()
 	{
 		_camera = GameObject.Find("Main Camera(Clone)").GetComponent<CameraFollowScript>();
 		_camera.SetCameraOnEntry();
-		player = GameObject.Find("Player1(Clone)");
-		player.GetComponent<PlayerRotationScript>().TurnRight();
-		_playerRbMove = player.GetComponent<PlayerRbMoveScript>();
+		
+		_player = GameObject.Find("Player1(Clone)");
+		_player.GetComponent<PlayerRotationScript>().TurnRight();
+		_playerRbMove = _player.GetComponent<PlayerRbMoveScript>();
 		_playerRbMove.SetPlayerSpeed(1f);
-		player.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
-		_gate = getChildGameObject(this.gameObject, "Tunnel_Gate");
-		_gateClosePosition = _gate.transform.position;
-		Invoke("OpenGate", 2f);
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
+		
+		_gate = GetChildGameObject(gameObject, "Tunnel_Gate");
+		_targetPos = _gateClosePosition = _gate.transform.position;
+		
+		Invoke("OpenGate", 1f);
 	}
 
-	public void OpenGate()
+	private void OpenGate()
+	{
+		_targetPos = _gate.transform.position + Vector3.down * 2;
+		Invoke("PlayerIsComming", 1f);
+	}
+
+	private void PlayerIsComming()
 	{
 		_playerRbMove.SetPlayerTargetPosition(_gate.transform.position + Vector3.right);
-		_gate.transform.position = Vector3.down * 2;
-		Invoke("CloseGate", 3f);
+		
+		Invoke("CloseGate", 2f);
 	}
+	
+	
 
 	private void CloseGate()
 	{
-		Debug.Log("Close entry");
-		_gate.transform.position = _gateClosePosition;
 		_playerRbMove.ResetSpeed();
-		player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
-		Invoke("ResetCamera", 1f);
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
+		_targetPos = _gateClosePosition;
+		Invoke("ResetCamera", 2f);
 	}
 
 	private void ResetCamera()
@@ -51,9 +63,13 @@ public class EntranceControlScript : MonoBehaviour
 		_camera.ResetCamera();
 	}
 
-	private GameObject getChildGameObject(GameObject fromGameObject, string withName) {
-		Transform[] ts = fromGameObject.transform.GetComponentsInChildren<Transform>(true);
-		foreach (Transform t in ts) if (t.gameObject.name == withName) return t.gameObject;
-		return null;
+	private GameObject GetChildGameObject(GameObject fromGameObject, string withName) {
+		var ts = fromGameObject.transform.GetComponentsInChildren<Transform>(true);
+		return (from t in ts where t.gameObject.name == withName select t.gameObject).FirstOrDefault();
+	}
+
+	private void Update()
+	{
+		_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
 	}
 }
