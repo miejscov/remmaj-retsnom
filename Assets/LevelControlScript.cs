@@ -22,6 +22,12 @@ public class LevelControlScript : MonoBehaviour
 //		SetLevel();
 	}
 
+    private void SetParametersOfLevel(Level lvl)
+    {
+        _targetAmountOfDiamonds = lvl.GetTargetAmountOfDiamonds();
+        _levelGenerator.SetLabirynthParameters(lvl.GetLevelGeneratorParametersArray());
+    }
+
 	
 	public void SetLevel()
 	{
@@ -31,25 +37,17 @@ public class LevelControlScript : MonoBehaviour
 		switch (_currentLevel)
 		{
 			case 1:
-				var level_1 = GetComponent<Level_1_Script>();
-				_targetAmountOfDiamonds = Level_1_Script.GetTargetAmountOfDiamonds();
-				_levelGenerator.SetLabirynthParameters(level_1.GetLevelGeneratorParametersArray());
+               SetParametersOfLevel(new Level(17, 150, 2, 10, 1, 1));
 				break;
 			case 2:
-				var level_2 = GetComponent<Level_2_Script>();
-				_targetAmountOfDiamonds = Level_2_Script.GetTargetAmountOfDiamonds();
-				_levelGenerator.SetLabirynthParameters(level_2.GetLevelGeneratorParametersArray());
-				break;
+                SetParametersOfLevel(new Level(25, 450, 2, 30, 10, 2));
+                break;
 			case 3:
-				var level_3 = GetComponent<Level_3_Script>();
-				_targetAmountOfDiamonds = Level_3_Script.GetTargetAmountOfDiamonds();
-				_levelGenerator.SetLabirynthParameters(level_3.GetLevelGeneratorParametersArray());
-				break;
+                SetParametersOfLevel(new Level(31, 450, 2, 50, 10, 1));
+                break;
 			case 4:
-				var level_4 = GetComponent<Level_4_Script>();
-				_targetAmountOfDiamonds = Level_4_Script.GetTargetAmountOfDiamonds();
-				_levelGenerator.SetLabirynthParameters(level_4.GetLevelGeneratorParametersArray());
-				break;
+                SetParametersOfLevel(new Level(31, 450, 2, 50, 14, 1));
+                break;
 		}
 		_levelGenerator.GenerateLabirynth();
 	}
