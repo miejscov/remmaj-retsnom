@@ -26,7 +26,6 @@ public class SerializePlayerStatus : MonoBehaviour
         var outputPath = Application.persistentDataPath + @"/PlayerStatus.json";
 	    
 	    Energy = _playerStatus.GetAmountOfEnergy();
-//	    Diamonds = _playerStatus.GetDiamondsAmount();
 	    NumberOfLives = _playerStatus.GetNumberOfLives();
 	    Score = _playerStatus.GetPlayerScore();
 	    
@@ -47,7 +46,6 @@ public class SerializePlayerStatus : MonoBehaviour
    		reader.Close();
 		   
 		_playerStatus.SetPlayerEnergy(Energy);
-//		_playerStatus.SetDiamondAmount(Diamonds);
 		_playerStatus.SetNumberOfLives(NumberOfLives);
 		_playerStatus.SetPlayerScore(Score);
 		   

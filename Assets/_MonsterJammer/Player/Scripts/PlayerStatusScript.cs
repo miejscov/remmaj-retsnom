@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerStatusScript : MonoBehaviour
 {
-    private const int _defaultNumberOfLives = 3;
-    private const int _defaultEnergy = 5;
-    private const int _defaultScore = 0;
+    private const int DefaultNumberOfLives = 3;
+    private const int DefaultEnergy = 5;
+    private const int DefaultScore = 0;
     
     private int _numberOfLives;
     private int _extraLifeScore = 0;
@@ -24,6 +24,7 @@ public class PlayerStatusScript : MonoBehaviour
     private PlayerAudioControlScript _playerAudio;
     private CapsuleCollider _capsuleCollider;
     private SerializePlayerStatus _serializePlayer;
+    private ExitControlScript _exitControl;
 
     private void Start()
     {
@@ -46,9 +47,8 @@ public class PlayerStatusScript : MonoBehaviour
         ResetPlayerStatus();
     }
 
-    private void AfterLevelFinish()
+    public void AfterLevelFinish()
     {
-//        _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
         _diamondsCollectedInLevel = 0;
         _diamondsLeft = _diamondsLevelTarget;
         SetCanvasValue();
@@ -59,9 +59,9 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _diamondsCollectedInLevel = 0;
         _levelControl.SetCurrentLevel(1);
-        _numberOfLives = _defaultNumberOfLives;
-        _energy = _defaultEnergy;
-        _score = _defaultScore;
+        _numberOfLives = DefaultNumberOfLives;
+        _energy = DefaultEnergy;
+        _score = DefaultScore;
         _diamondsLevelTarget = _levelControl.GetTargetAmountOfDiamonds();
         _diamondsLeft = _diamondsLevelTarget;
         _serializePlayer.SavePlayerStatus();
@@ -75,11 +75,10 @@ public class PlayerStatusScript : MonoBehaviour
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 
         _canvas.SetDiamondsLeft(_diamondsLeft);
-        _canvas.SetEnergy(_defaultEnergy);
-        _canvas.SetTotalScore(_defaultScore);
+        _canvas.SetEnergy(DefaultEnergy);
+        _canvas.SetTotalScore(DefaultScore);
         _canvas.SetLevel(_levelControl.GetCurrentLevel());
         _canvas.SetLives(_numberOfLives);
-        _canvas.SetDiamonds(_diamondsCollectedInLevel);
     }
 
     public bool PlayerIsDead() { return _isDead; }
@@ -146,11 +145,12 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft -= 1;
         if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget !=0)
         {
-            _levelControl.SetNextLevel();
-            AfterLevelFinish();
+        _canvas.SetDiamondsLeft(_diamondsLeft);
+//            _levelControl.SetNextLevel();
+            _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
+            _exitControl.OpenExit();
         }
         _canvas.SetDiamondsLeft(_diamondsLeft);
-        _canvas.SetDiamonds(_diamondsCollectedInLevel);
     }
 
     public void SetDiamondTarget(int target)

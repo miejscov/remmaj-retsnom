@@ -24,13 +24,17 @@ public class LevelCompletedScript : MonoBehaviour
     {
         try
         {
-            int numberOfLives = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>().GetNumberOfLives();
-            _texts[1].text = "Collected diamonds: " + numberOfDiamonds;
-            _texts[2].text = "Collected score: " + score;
-            _texts[3].text = "Lives: " + numberOfLives;
+            var player = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
+            if (!player.PlayerIsDead())
+            {
+                int numberOfLives = player.GetNumberOfLives();
+                _texts[1].text = "Collected diamonds: " + numberOfDiamonds;
+                _texts[2].text = "Collected score: " + score;
+                _texts[3].text = "Lives: " + numberOfLives;
 
-            canvas.gameObject.SetActive(true);
-            _isCanvasShowed = true;
+                canvas.gameObject.SetActive(true);
+                _isCanvasShowed = true;
+            }
         }
         catch
         {

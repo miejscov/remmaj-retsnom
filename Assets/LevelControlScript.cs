@@ -39,7 +39,7 @@ public class LevelControlScript : MonoBehaviour
 		switch (_currentLevel)
 		{
 			case 1:
-               SetParametersOfLevel(new Level(17, 150, 2, 10, 1, 2));
+               SetParametersOfLevel(new Level(17, 150, 2, 14, 1, 1)); // mapSize, maxTunelCount, minTunelLength, amountOfCrates, amountsOfMonster, targetAmountOfDiamonds
 				break;
 			case 2:
                 SetParametersOfLevel(new Level(25, 450, 2, 30, 10, 2));
@@ -54,6 +54,7 @@ public class LevelControlScript : MonoBehaviour
 		_levelGenerator.GenerateLabirynth();
 		_playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
 		_playerStatus.SetDiamondTarget(_targetAmountOfDiamonds);
+		_playerStatus.AfterLevelFinish();
 	}
 
 	public void SetNextLevel()

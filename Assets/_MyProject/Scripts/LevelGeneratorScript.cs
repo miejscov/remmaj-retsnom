@@ -32,6 +32,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     public GameObject Crate;
     public GameObject Monster;
     public GameObject Entrance;
+    public GameObject Exit;
     public GameObject Ground;
 
     private int _playerX;
@@ -449,12 +450,12 @@ public class LevelGeneratorScript : MonoBehaviour {
                     case TILE_PLAYER:
                         if (!CheckObjectExist("Player"))
                         {
-                            Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
+                            Instantiate(Player, new Vector3(x-2, 0f, z), Quaternion.identity);
                         }
                         else
                         {
                             var player = GameObject.Find("Player1(Clone)");
-                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x, 0f, z));
+                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x-2, 0f, z));
                             player.GetComponent<PlayerRbMoveScript>().ResetSpeed();
                             player.GetComponent<PlayerControlScript>().ResetControl();
                         }
@@ -471,7 +472,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_EXIT:
-                        Instantiate(Entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
+                        Instantiate(Exit, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                 }
