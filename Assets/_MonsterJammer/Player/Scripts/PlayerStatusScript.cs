@@ -47,7 +47,7 @@ public class PlayerStatusScript : MonoBehaviour
         ResetPlayerStatus();
     }
 
-    private void AfterLevelFinish()
+    public void AfterLevelFinish()
     {
         _diamondsCollectedInLevel = 0;
         _diamondsLeft = _diamondsLevelTarget;
@@ -145,11 +145,10 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft -= 1;
         if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget !=0)
         {
+        _canvas.SetDiamondsLeft(_diamondsLeft);
 //            _levelControl.SetNextLevel();
             _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
-
             _exitControl.OpenGate();
-            AfterLevelFinish();
         }
         _canvas.SetDiamondsLeft(_diamondsLeft);
     }

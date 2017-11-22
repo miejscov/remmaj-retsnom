@@ -450,12 +450,12 @@ public class LevelGeneratorScript : MonoBehaviour {
                     case TILE_PLAYER:
                         if (!CheckObjectExist("Player"))
                         {
-                            Instantiate(Player, new Vector3(x, 0f, z), Quaternion.identity);
+                            Instantiate(Player, new Vector3(x-2, 0f, z), Quaternion.identity);
                         }
                         else
                         {
                             var player = GameObject.Find("Player1(Clone)");
-                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x, 0f, z));
+                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x-2, 0f, z));
                             player.GetComponent<PlayerRbMoveScript>().ResetSpeed();
                             player.GetComponent<PlayerControlScript>().ResetControl();
                         }

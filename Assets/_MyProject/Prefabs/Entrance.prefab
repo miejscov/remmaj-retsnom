@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33807340410707476}
   - component: {fileID: 23692356560715810}
   - component: {fileID: 64568141316470618}
+  - component: {fileID: 65582097239832834}
   m_Layer: 0
-  m_Name: Tunnel_Grate
+  m_Name: Tunnel_Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,6 +76,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4743423743460682}
+  - component: {fileID: 114538401648575836}
   m_Layer: 8
   m_Name: Entrance
   m_TagString: Wall
@@ -282,7 +284,7 @@ MeshCollider:
   m_GameObject: {fileID: 1419289899555338}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0
@@ -310,10 +312,22 @@ BoxCollider:
   m_GameObject: {fileID: 1904507853169072}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 7.210704, y: 8.815096, z: 0.78}
   m_Center: {x: -1.0999984, y: 4.363513, z: -0.49680206}
+--- !u!65 &65582097239832834
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419289899555338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 0.011137656, y: 0.63935375, z: 0.020810107}
 --- !u!65 &65901478706452862
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -326,3 +340,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.210704, y: 8.815096, z: 0.78}
   m_Center: {x: -1.0999984, y: 4.363513, z: -0.49680206}
+--- !u!114 &114538401648575836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942567546811900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397d634d70d734904a3215990c9855d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

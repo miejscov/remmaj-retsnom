@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EntranceControlScript.cs" t="Include" />
         <e p="ExitColliderScript.cs" t="Include" />
         <e p="ExitControlScript.cs" t="Include" />
         <e p="Fruit Pack" t="Include">

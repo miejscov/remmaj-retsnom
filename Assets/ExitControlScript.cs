@@ -14,7 +14,6 @@ public class ExitControlScript : MonoBehaviour
 	
 	private void Start()
 	{
-//		_collider = GetComponentInChildren<Collider>();
 		_gate = getChildGameObject(this.gameObject, "Tunnel_Gate");
 
 	}

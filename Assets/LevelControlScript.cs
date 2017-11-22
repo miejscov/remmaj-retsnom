@@ -54,6 +54,7 @@ public class LevelControlScript : MonoBehaviour
 		_levelGenerator.GenerateLabirynth();
 		_playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
 		_playerStatus.SetDiamondTarget(_targetAmountOfDiamonds);
+		_playerStatus.AfterLevelFinish();
 	}
 
 	public void SetNextLevel()
