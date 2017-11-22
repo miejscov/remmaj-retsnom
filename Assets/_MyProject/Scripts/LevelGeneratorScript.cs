@@ -32,6 +32,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     public GameObject Crate;
     public GameObject Monster;
     public GameObject Entrance;
+    public GameObject Exit;
     public GameObject Ground;
 
     private int _playerX;
@@ -471,7 +472,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_EXIT:
-                        Instantiate(Entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
+                        Instantiate(Exit, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                 }

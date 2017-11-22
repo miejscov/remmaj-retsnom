@@ -14,7 +14,7 @@ public class CrateRayCheck : MonoBehaviour {
 		_objectTag = RayHit(direction);
 		var action = 0;
 
-		if (_objectTag.Equals("Crate") || _objectTag.Equals("Wall") || _objectTag.Equals("Diamond") || _objectTag.Equals("Food") || _objectTag.Equals("Surprise"))
+		if (_objectTag.Equals("Crate") || _objectTag.Equals("Wall") || _objectTag.Equals("Diamond") || _objectTag.Equals("Food") || _objectTag.Equals("Surprise") || _objectTag.Equals("Exit"))
 		{
 			action = 1; //destroy crate
 		}

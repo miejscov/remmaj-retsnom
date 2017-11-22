@@ -13,9 +13,6 @@ public class CanvasScript : MonoBehaviour
 	{
 		_texts = Canvas.gameObject.GetComponentsInChildren <Text> ();
 	}
-
-	
-
 	
 	public void SetLives(int lives)
 	{
@@ -29,13 +26,6 @@ public class CanvasScript : MonoBehaviour
 		Canvas.ForceUpdateCanvases();
 	}
 
-	public void SetDiamonds(int diamonds)
-	{
-//		_texts[3].text = "Diamonds: " + diamonds;
-//		Debug.Log("setdiamond canv");
-//		Canvas.ForceUpdateCanvases();
-	}
-	
 	public void SetDiamondsLeft(int diamonds)
 	{
 		if (diamonds <= 0)
