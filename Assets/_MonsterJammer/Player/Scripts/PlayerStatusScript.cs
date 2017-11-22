@@ -148,7 +148,7 @@ public class PlayerStatusScript : MonoBehaviour
         _canvas.SetDiamondsLeft(_diamondsLeft);
 //            _levelControl.SetNextLevel();
             _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
-            _exitControl.OpenGate();
+            _exitControl.OpenExit();
         }
         _canvas.SetDiamondsLeft(_diamondsLeft);
     }

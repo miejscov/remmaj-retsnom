@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="403ca445-08d0-4713-b5e3-f4da9653f928" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/EntranceControlScript.cs" afterPath="$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/ExitControlScript.cs" afterPath="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,124 +21,28 @@
       <file leaf-file-name="PlayerStatusScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+            <state relative-caret-position="510">
+              <caret line="150" column="33" lean-forward="false" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
               <folding>
-                <marker date="1511376533815" expanded="false" signature="6:56" ph="..." />
-                <marker date="1511376533815" expanded="true" signature="105:5142" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="860:1338" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1206:1310" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1369:1436" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1472:1595" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1641:2045" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2080:2495" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2581:2740" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2782:3100" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="3280:3360" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="3396:3437" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="3606:3915" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="3775:3857" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="4034:4593" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="4297:4539" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="4639:4718" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="4882:4993" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="5024:5140" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LevelCompletedScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <marker date="1511358101152" expanded="false" signature="6:100" ph="..." />
-                <marker date="1511358101152" expanded="true" signature="151:1603" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="393:529" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="559:1060" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="577:988" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1011:1054" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1091:1258" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1285:1438" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1320:1432" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1364:1422" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1475:1518" ph="{...}" />
-                <marker date="1511358101152" expanded="true" signature="1564:1601" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CanvasScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1511372377547" expanded="false" signature="6:100" ph="..." />
-                <marker date="1511372377547" expanded="true" signature="143:962" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="260:330" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="365:441" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="477:557" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="601:729" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="768:850" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="884:960" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExitColliderScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <marker date="1511377092781" expanded="false" signature="6:78" ph="..." />
-                <marker date="1511377092781" expanded="true" signature="127:769" ph="{...}" />
-                <marker date="1511377092781" expanded="true" signature="239:331" ph="{...}" />
-                <marker date="1511377092781" expanded="true" signature="377:702" ph="{...}" />
-                <marker date="1511377092781" expanded="true" signature="434:699" ph="{...}" />
-                <marker date="1511377092781" expanded="true" signature="729:767" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrateRayCheck.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="145" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="145" />
-              <folding>
-                <marker date="1511372377547" expanded="true" signature="309:839" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="551:590" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="668:726" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="752:819" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="883:1060" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="981:1036" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1135:1479" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1171:1476" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntranceControlScript.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <marker date="1511385970258" expanded="false" signature="6:78" ph="..." />
-                <marker date="1511385970258" expanded="true" signature="130:1804" ph="{...}" />
-                <marker date="1511385970258" expanded="true" signature="511:1040" ph="{...}" />
-                <marker date="1511385970258" expanded="true" signature="1065:1228" ph="{...}" />
-                <marker date="1511385970258" expanded="true" signature="1255:1466" ph="{...}" />
-                <marker date="1511385970258" expanded="true" signature="1495:1526" ph="{...}" />
-                <marker date="1511385970258" expanded="true" signature="1611:1802" ph="{...}" />
+                <marker date="1511387161344" expanded="false" signature="6:56" ph="..." />
+                <marker date="1511387161344" expanded="true" signature="105:5142" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="860:1338" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="1206:1310" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="1369:1436" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="1472:1595" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="1641:2045" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="2080:2495" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="2581:2740" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="2782:3100" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="3280:3360" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="3396:3437" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="3606:3915" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="3775:3857" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="4034:4593" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="4297:4539" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="4639:4718" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="4882:4993" ph="{...}" />
+                <marker date="1511387161344" expanded="true" signature="5024:5140" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -161,6 +65,24 @@
                 <marker date="1511376533815" expanded="true" signature="2060:2090" ph="{...}" />
                 <marker date="1511376533815" expanded="true" signature="2131:2162" ph="{...}" />
                 <marker date="1511376533815" expanded="true" signature="2190:2397" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExitControlScript.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+              <folding>
+                <marker date="1511387234841" expanded="false" signature="6:92" ph="..." />
+                <marker date="1511387234841" expanded="true" signature="140:1140" ph="{...}" />
+                <marker date="1511387234841" expanded="true" signature="357:511" ph="{...}" />
+                <marker date="1511387234841" expanded="true" signature="536:597" ph="{...}" />
+                <marker date="1511387234841" expanded="true" signature="623:789" ph="{...}" />
+                <marker date="1511387234841" expanded="true" signature="823:854" ph="{...}" />
+                <marker date="1511387234841" expanded="true" signature="939:1130" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -190,17 +112,17 @@
       <file leaf-file-name="CameraFollowScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="680">
+              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding>
-                <marker date="1511384826346" expanded="false" signature="6:78" ph="..." />
-                <marker date="1511384826346" expanded="true" signature="128:2205" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="677:1205" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="1237:1753" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="1271:1388" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="1789:1925" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="1960:1996" ph="{...}" />
-                <marker date="1511384826346" expanded="true" signature="2027:2193" ph="{...}" />
+                <marker date="1511386876018" expanded="false" signature="6:78" ph="..." />
+                <marker date="1511386876018" expanded="true" signature="128:2304" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="677:1205" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="1237:1753" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="1271:1388" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="1789:1925" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="1960:2095" ph="{...}" />
+                <marker date="1511386876018" expanded="true" signature="2126:2292" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -277,12 +199,12 @@
         <option value="$PROJECT_DIR$/Assets/LabirynthDestroyScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ExitColliderScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelControlScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
         <option value="$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
       </list>
     </option>
   </component>
@@ -370,12 +292,12 @@
       <workItem from="1511347633596" duration="4325000" />
       <workItem from="1511358735340" duration="17682000" />
       <workItem from="1511377087929" duration="2272000" />
-      <workItem from="1511384789979" duration="863000" />
+      <workItem from="1511384789979" duration="2130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89586000" />
+    <option name="totallyTimeSpent" value="90853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,66 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="145" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="145" />
-          <folding>
-            <marker date="1511372377547" expanded="true" signature="309:839" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="551:590" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="668:726" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="752:819" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="883:1060" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="981:1036" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1135:1479" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1171:1476" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1511377092781" expanded="false" signature="6:78" ph="..." />
-            <marker date="1511377092781" expanded="true" signature="127:769" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="239:331" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="377:702" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="434:699" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="729:767" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="452" column="63" lean-forward="false" selection-start-line="452" selection-start-column="63" selection-end-line="452" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511372377547" expanded="false" signature="6:100" ph="..." />
-            <marker date="1511372377547" expanded="true" signature="143:962" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="260:330" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="365:441" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="477:557" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="601:729" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="768:850" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="884:960" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,30 +675,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+        <state relative-caret-position="340">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <marker date="1511376533815" expanded="false" signature="6:56" ph="..." />
-            <marker date="1511376533815" expanded="true" signature="105:5142" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="860:1338" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1206:1310" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1369:1436" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1472:1595" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1641:2045" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2080:2495" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2581:2740" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2782:3100" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="3280:3360" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="3396:3437" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="3606:3915" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="3775:3857" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="4034:4593" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="4297:4539" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="4639:4718" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="4882:4993" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="5024:5140" ph="{...}" />
+            <marker date="1511358101152" expanded="false" signature="6:100" ph="..." />
+            <marker date="1511358101152" expanded="true" signature="151:1603" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="393:529" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="559:1060" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="577:988" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1011:1054" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1091:1258" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1285:1438" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1320:1432" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1364:1422" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1475:1518" ph="{...}" />
+            <marker date="1511358101152" expanded="true" signature="1564:1601" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511372377547" expanded="false" signature="6:100" ph="..." />
+            <marker date="1511372377547" expanded="true" signature="143:962" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="260:330" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="365:441" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="477:557" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="601:729" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="768:850" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="884:960" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1511377092781" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511377092781" expanded="true" signature="127:769" ph="{...}" />
+            <marker date="1511377092781" expanded="true" signature="239:331" ph="{...}" />
+            <marker date="1511377092781" expanded="true" signature="377:702" ph="{...}" />
+            <marker date="1511377092781" expanded="true" signature="434:699" ph="{...}" />
+            <marker date="1511377092781" expanded="true" signature="729:767" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <marker date="1511372377547" expanded="true" signature="63:1481" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="309:839" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="551:590" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="668:726" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="752:819" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="883:1060" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="981:1036" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="1135:1479" ph="{...}" />
+            <marker date="1511372377547" expanded="true" signature="1171:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1511386229391" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511386229391" expanded="true" signature="130:1804" ph="{...}" />
+            <marker date="1511386229391" expanded="true" signature="511:1040" ph="{...}" />
+            <marker date="1511386229391" expanded="true" signature="1065:1228" ph="{...}" />
+            <marker date="1511386229391" expanded="true" signature="1255:1466" ph="{...}" />
+            <marker date="1511386229391" expanded="true" signature="1495:1526" ph="{...}" />
+            <marker date="1511386229391" expanded="true" signature="1611:1802" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -857,56 +782,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <marker date="1511358101152" expanded="false" signature="6:100" ph="..." />
-            <marker date="1511358101152" expanded="true" signature="151:1603" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="393:529" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="559:1060" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="577:988" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1011:1054" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1091:1258" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1285:1438" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1320:1432" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1364:1422" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1475:1518" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1564:1601" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="680">
+          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
-            <marker date="1511384826346" expanded="false" signature="6:78" ph="..." />
-            <marker date="1511384826346" expanded="true" signature="128:2205" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="677:1205" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="1237:1753" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="1271:1388" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="1789:1925" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="1960:1996" ph="{...}" />
-            <marker date="1511384826346" expanded="true" signature="2027:2193" ph="{...}" />
+            <marker date="1511386876018" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511386876018" expanded="true" signature="128:2304" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="677:1205" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="1237:1753" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="1271:1388" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="1789:1925" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="1960:2095" ph="{...}" />
+            <marker date="1511386876018" expanded="true" signature="2126:2292" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="150" column="33" lean-forward="false" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
           <folding>
-            <marker date="1511385970258" expanded="false" signature="6:78" ph="..." />
-            <marker date="1511385970258" expanded="true" signature="130:1804" ph="{...}" />
-            <marker date="1511385970258" expanded="true" signature="511:1040" ph="{...}" />
-            <marker date="1511385970258" expanded="true" signature="1065:1228" ph="{...}" />
-            <marker date="1511385970258" expanded="true" signature="1255:1466" ph="{...}" />
-            <marker date="1511385970258" expanded="true" signature="1495:1526" ph="{...}" />
-            <marker date="1511385970258" expanded="true" signature="1611:1802" ph="{...}" />
+            <marker date="1511387161344" expanded="false" signature="6:56" ph="..." />
+            <marker date="1511387161344" expanded="true" signature="105:5142" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="860:1338" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="1206:1310" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="1369:1436" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="1472:1595" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="1641:2045" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="2080:2495" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="2581:2740" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="2782:3100" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="3280:3360" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="3396:3437" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="3606:3915" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="3775:3857" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="4034:4593" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="4297:4539" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="4639:4718" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="4882:4993" ph="{...}" />
+            <marker date="1511387161344" expanded="true" signature="5024:5140" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <marker date="1511387234841" expanded="false" signature="6:92" ph="..." />
+            <marker date="1511387234841" expanded="true" signature="140:1140" ph="{...}" />
+            <marker date="1511387234841" expanded="true" signature="357:511" ph="{...}" />
+            <marker date="1511387234841" expanded="true" signature="536:597" ph="{...}" />
+            <marker date="1511387234841" expanded="true" signature="623:789" ph="{...}" />
+            <marker date="1511387234841" expanded="true" signature="823:854" ph="{...}" />
+            <marker date="1511387234841" expanded="true" signature="939:1130" ph="{...}" />
           </folding>
         </state>
       </provider>

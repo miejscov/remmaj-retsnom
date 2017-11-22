@@ -60,6 +60,8 @@ public class CameraFollowScript : MonoBehaviour {
     public void SetCameraOnExit()
     {
         target = _exit;
+        offset = new Vector3(-3, 4, -1);
+        transform.rotation = Quaternion.Euler(45, 90, 0);
     }
 
     public void ResetCamera()
