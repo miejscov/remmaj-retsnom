@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntranceControlScript : MonoBehaviour {
+public class EntranceControlScript : MonoBehaviour
+{
 
 	private Collider _collider;
 	private Transform[] ts;
@@ -27,7 +28,6 @@ public class EntranceControlScript : MonoBehaviour {
 		_gate = getChildGameObject(this.gameObject, "Tunnel_Gate");
 		_gateClosePosition = _gate.transform.position;
 		Invoke("OpenGate", 2f);
-
 	}
 
 	public void OpenGate()
@@ -43,6 +43,11 @@ public class EntranceControlScript : MonoBehaviour {
 		_gate.transform.position = _gateClosePosition;
 		_playerRbMove.ResetSpeed();
 		player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
+		Invoke("ResetCamera", 1f);
+	}
+
+	private void ResetCamera()
+	{
 		_camera.ResetCamera();
 	}
 
