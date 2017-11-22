@@ -15,9 +15,11 @@ public class LevelControlScript : MonoBehaviour
 
 	private LevelGeneratorScript _levelGenerator;
 	private LabirynthDestroyScript _labirynthDestroy;
+	private PlayerStatusScript _playerStatus;
 	
 	private void Start ()
 	{
+		
 		SetNextLevel();
 //		SetLevel();
 	}
@@ -34,6 +36,7 @@ public class LevelControlScript : MonoBehaviour
 				var level_1 = GetComponent<Level_1_Script>();
 				_targetAmountOfDiamonds = Level_1_Script.GetTargetAmountOfDiamonds();
 				_levelGenerator.SetLabirynthParameters(level_1.GetLevelGeneratorParametersArray());
+				
 				break;
 			case 2:
 				var level_2 = GetComponent<Level_2_Script>();
@@ -52,6 +55,8 @@ public class LevelControlScript : MonoBehaviour
 				break;
 		}
 		_levelGenerator.GenerateLabirynth();
+		_playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
+		_playerStatus.SetDiamondTarget(_targetAmountOfDiamonds);
 	}
 
 	public void SetNextLevel()

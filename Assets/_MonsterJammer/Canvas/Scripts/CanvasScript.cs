@@ -8,32 +8,52 @@ public class CanvasScript : MonoBehaviour
 	public Canvas Canvas;
 	private Text [] _texts;
 	private PlayerStatusScript _playerStatus;
-	private LevelControlScript _levelControl;
-
+	
 	private void Awake()
 	{
-		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 		_texts = Canvas.gameObject.GetComponentsInChildren <Text> ();
 	}
 
-	private void Update () {
-		ShowGui();
-        if (_playerStatus == null)
+	
 
-        {
-            _playerStatus = GameObject.Find("Player1(Clone)").GetComponent<PlayerStatusScript>();
-        }
-    }
-
-	private void ShowGui()
+	
+	public void SetLives(int lives)
 	{
-		if (_playerStatus == null) return;
-		var numberOfLives = _playerStatus.GetNumberOfLives();
+		_texts[0].text = "Lives: " + lives;
+		Canvas.ForceUpdateCanvases();
+	}
 
-		_texts[0].text = "Lives: " + numberOfLives;
-		_texts[1].text = "Energy: " + _playerStatus.GetAmountOfEnergy();
-		_texts[2].text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
-		_texts[3].text = "Total score: " + _playerStatus.GetPlayerScore();
-		_texts[4].text = "Level: "+ _levelControl.GetCurrentLevel();
+	public void SetEnergy(int energy)
+	{
+		_texts[1].text = "Strength: " + energy;
+		Canvas.ForceUpdateCanvases();
+	}
+
+	public void SetDiamonds(int diamonds)
+	{
+		_texts[3].text = "Diamonds: " + diamonds;
+		Debug.Log("setdiamond canv");
+		Canvas.ForceUpdateCanvases();
+	}
+	
+	public void SetDiamondsLeft(int diamonds)
+	{
+		if (diamonds <= 0)
+			diamonds = 0;
+		
+		_texts[2].text = "Diamonds left: " + diamonds;
+		Canvas.ForceUpdateCanvases();
+	}
+
+	public void SetTotalScore(int score)
+	{
+		_texts[5].text = "Total score: " + score;
+		Canvas.ForceUpdateCanvases();
+	}
+
+	public void SetLevel(int level)
+	{
+		_texts[4].text = "Level: " + level;
+		Canvas.ForceUpdateCanvases();
 	}
 }
