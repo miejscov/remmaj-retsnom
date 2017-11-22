@@ -17,6 +17,7 @@ public class LabirynthDestroyScript : MonoBehaviour {
 		DestroyAllObjectsWithTag("MoveCollider");
 		DestroyAllObjectsWithTag("Food");
 		DestroyAllObjectsWithTag("Diamond");
+		DestroyAllObjectsWithTag("Exit");
 		
 		
 

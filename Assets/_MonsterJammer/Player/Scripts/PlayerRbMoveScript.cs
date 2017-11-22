@@ -72,6 +72,11 @@ public class PlayerRbMoveScript : MonoBehaviour
     {
         transform.position = _targetPosition = position;
     }
+
+    public void SetPlayerTargetPosition(Vector3 pos)
+    {
+        _targetPosition = new Vector3(Mathf.Round(pos.x), transform.position.y, Mathf.Round(pos.z));
+    }
 }
 
 

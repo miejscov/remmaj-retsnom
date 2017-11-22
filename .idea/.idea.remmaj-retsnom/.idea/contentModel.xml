@@ -7,6 +7,9 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EntranceControlScript.cs" t="Include" />
+        <e p="ExitColliderScript.cs" t="Include" />
+        <e p="ExitControlScript.cs" t="Include" />
         <e p="Fruit Pack" t="Include">
           <e p="Shaders" t="Include">
             <e p="ToonLit.shader" t="Include" />
@@ -165,6 +168,10 @@
             <e p="Scripts" t="Include">
               <e p="DeathCanvasScript.cs" t="Include" />
             </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Level.cs" t="Include" />
+            <e p="LevelCompletedScript.cs" t="Include" />
           </e>
         </e>
       </e>
