@@ -85,6 +85,7 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _score += score;
         _extraLifeScore += score;
+        LevelCompletedScript.AddPoints(score);
         if (_extraLifeScore >= _extraLifeScoreThreshold)
         {
             AddPlayerLife();
@@ -100,6 +101,7 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _diamonds += 1;
         _playerAudio.PlayGetDiamondSound();
+        LevelCompletedScript.AddDiamond();
         if (_diamonds >= _levelControl.GetTargetAmountOfDiamonds())
         {
             _levelControl.SetNextLevel();

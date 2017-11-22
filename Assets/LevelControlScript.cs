@@ -37,7 +37,7 @@ public class LevelControlScript : MonoBehaviour
 		switch (_currentLevel)
 		{
 			case 1:
-               SetParametersOfLevel(new Level(17, 150, 2, 10, 1, 1));
+               SetParametersOfLevel(new Level(17, 150, 2, 10, 1, 2));
 				break;
 			case 2:
                 SetParametersOfLevel(new Level(25, 450, 2, 30, 10, 2));
@@ -56,7 +56,10 @@ public class LevelControlScript : MonoBehaviour
 	{
 		Debug.Log("Set next level function");
 		_currentLevel += 1;
-		SetLevel();
+        var obj = GameObject.Find("ButtonCtrl");
+        Time.timeScale = 0f;
+        obj.GetComponent<LevelCompletedScript>().ShowCanvas();
+        SetLevel();
 	}
 
 	public int GetTargetAmountOfDiamonds()
