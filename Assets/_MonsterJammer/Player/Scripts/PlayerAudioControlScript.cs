@@ -7,6 +7,7 @@
 		public AudioClip GetDiamond;
 		public AudioClip PlayerIsDying;
 		public AudioClip GetFood;
+		public AudioClip ExtraLifeSound;
 		private AudioSource _audioSource;
 	
 		private void Start ()
@@ -15,6 +16,11 @@
 		}
 
 
+		public void PlayeExtraLifeSound()
+		{
+			_audioSource.PlayOneShot(ExtraLifeSound);
+		}
+		
 		public void PlayDestroyCrateSound()
 		{
 			_audioSource.PlayOneShot(DestroyCrate);

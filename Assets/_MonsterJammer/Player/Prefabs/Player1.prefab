@@ -2827,6 +2827,7 @@ MonoBehaviour:
   GetDiamond: {fileID: 8300000, guid: 28e9b4a6c3d32174983bf47e70dcb41b, type: 3}
   PlayerIsDying: {fileID: 8300000, guid: 80d5b0dced6d747f8b75945c92fd0875, type: 3}
   GetFood: {fileID: 8300000, guid: 2c7b2c49367d740698e69cb13c62bf1c, type: 3}
+  ExtraLifeSound: {fileID: 8300000, guid: 933dce9d7d21d48d984e5e3bca2a9b23, type: 3}
 --- !u!136 &136083809845492206
 CapsuleCollider:
   m_ObjectHideFlags: 1

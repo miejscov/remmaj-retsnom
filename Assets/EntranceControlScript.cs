@@ -57,13 +57,13 @@ public class EntranceControlScript : MonoBehaviour
 	{
 		_entranceAudio.PlayClosingGateSound();
 		_playerRbMove.ResetSpeed();
-		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
 		_targetPos = _gateClosePosition;
 		Invoke("ResetCamera", 2f);
 	}
 
 	private void ResetCamera()
 	{
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
 		_camera.ResetCamera();
 		_entranceAudio.StopAudio();
 	}

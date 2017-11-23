@@ -20,6 +20,7 @@ public class PlayerStatusScript : MonoBehaviour
 
 
     private CanvasScript _canvas;
+    private PlayerAudioControlScript _audio;
     private LevelControlScript _levelControl;
     private PlayerAudioControlScript _playerAudio;
     private CapsuleCollider _capsuleCollider;
@@ -28,6 +29,7 @@ public class PlayerStatusScript : MonoBehaviour
 
     private void Start()
     {
+        _audio = GetComponent<PlayerAudioControlScript>();
         _serializePlayer = GetComponent<SerializePlayerStatus>();
         _playerAudio = GetComponent<PlayerAudioControlScript>();
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
@@ -129,6 +131,7 @@ public class PlayerStatusScript : MonoBehaviour
         if (_extraLifeScore >= _extraLifeScoreThreshold)
         {
             AddPlayerLife();
+            _audio.PlayeExtraLifeSound();
             _extraLifeScore = 0;
         }
         _canvas.SetTotalScore(_score);
