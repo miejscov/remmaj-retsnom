@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerStatusScript : MonoBehaviour
 {
     private const int DefaultNumberOfLives = 3;
-    private const int DefaultEnergy = 5;
+//    private const int DefaultEnergy = 5;
     private const int DefaultScore = 0;
     
     private int _numberOfLives;
@@ -64,7 +64,8 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsCollectedInLevel = 0;
         _levelControl.SetCurrentLevel(1);
         _numberOfLives = DefaultNumberOfLives;
-        _energy = DefaultEnergy;
+        _energy = _levelControl.EnergyOnLevel;
+        Debug.Log("Energy status:" + _energy);
         _score = DefaultScore;
         _diamondsLevelTarget = _levelControl.GetTargetAmountOfDiamonds();
         _diamondsLeft = _diamondsLevelTarget;
@@ -79,7 +80,8 @@ public class PlayerStatusScript : MonoBehaviour
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 
         _canvas.SetDiamondsLeft(_diamondsLeft);
-        _canvas.SetEnergy(DefaultEnergy);
+        _canvas.SetEnergy(_energy);
+        Debug.Log("Canvas energy" + _energy);
         _canvas.SetTotalScore(DefaultScore);
         _canvas.SetLevel(_levelControl.GetCurrentLevel());
         _canvas.SetLives(_numberOfLives);

@@ -1,10 +1,17 @@
-﻿public class Level {
+﻿public class Level
+{
 
-    private int MapSize, MaxTunelCount, MinTunelLength, AmountOfCrates, AmountsOfMonster, TargetAmountOfDiamonds;
-
+    private int MapSize,
+        MaxTunelCount,
+        MinTunelLength,
+        AmountOfCrates,
+        AmountsOfMonster,
+        TargetAmountOfDiamonds,
+        _energyOnLevel;
+    
     private int[] _levelGeneratorParameters;
 
-    public Level(int mapSize, int maxTunelCount, int minTunelLength, int amountOfCrates, int amountsOfMonster, int targetAmountOfDiamonds)
+    public Level(int mapSize, int maxTunelCount, int minTunelLength, int amountOfCrates, int amountsOfMonster, int targetAmountOfDiamonds, int energyOnLevel)
     {
         MapSize = mapSize;
         MaxTunelCount = maxTunelCount;
@@ -12,11 +19,18 @@
         AmountOfCrates = amountOfCrates;
         AmountsOfMonster = amountsOfMonster;
         TargetAmountOfDiamonds = targetAmountOfDiamonds;
+        _energyOnLevel = energyOnLevel;
     }
 
     public int GetTargetAmountOfDiamonds()
     {
         return TargetAmountOfDiamonds;
+    }
+    
+
+    public int EnergyOnLevel
+    {
+        get { return _energyOnLevel; }
     }
 
     public int[] GetLevelGeneratorParametersArray()
