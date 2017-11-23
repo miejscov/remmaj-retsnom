@@ -79,7 +79,7 @@ MonoBehaviour:
   Wall: {fileID: 1362580146711436, guid: 6466bd5be7a6d1240b6def5d520a9d7a, type: 2}
   Floor: {fileID: 1532231508437338, guid: 76db0abfe4b485d42a82ed92b53315e0, type: 2}
   Crate: {fileID: 1273712240229556, guid: e53c5ed7a6f1043c6a48d6e5ae9c47e9, type: 2}
-  Monster: {fileID: 1339218435755038, guid: 79a91261e1fd05d45b34cccf4f70360e, type: 2}
+  Monster: {fileID: 1000770848790932, guid: 06a300cc68a131d4cab06211bcd01d39, type: 2}
   Entrance: {fileID: 1942567546811900, guid: a0b6259ef21114a5881059b86b266f73, type: 2}
   Exit: {fileID: 1731568868212754, guid: 43097be900dbe44cda22a031560582b0, type: 2}
   Ground: {fileID: 1527573533855514, guid: d5199e50ef7f1b948add928060fb8f18, type: 2}

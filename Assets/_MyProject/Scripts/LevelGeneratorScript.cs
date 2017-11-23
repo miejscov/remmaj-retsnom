@@ -493,8 +493,8 @@ public class LevelGeneratorScript : MonoBehaviour {
         Vector3 scale;
         GameObject grnd = Instantiate(Ground, new Vector3(0f, -.5f, 0f), Quaternion.identity);
         scale.y = .1f;
-        scale.x = mapSize;
-        scale.z = mapSize;
+        scale.x = mapSize - 2;
+        scale.z = mapSize - 2;
         
         grnd.transform.localScale = scale;
         grnd.GetComponent<MeshRenderer>().enabled = false;
