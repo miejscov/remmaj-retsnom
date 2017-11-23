@@ -26,9 +26,11 @@ public class PlayerStatusScript : MonoBehaviour
     private CapsuleCollider _capsuleCollider;
     private SerializePlayerStatus _serializePlayer;
     private ExitControlScript _exitControl;
+    private PlayerControlScript _playerControl;
 
     private void Start()
     {
+        _playerControl = GetComponent<PlayerControlScript>();
         _audio = GetComponent<PlayerAudioControlScript>();
         _serializePlayer = GetComponent<SerializePlayerStatus>();
         _playerAudio = GetComponent<PlayerAudioControlScript>();
@@ -94,6 +96,7 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void SetPlayerDead(bool dead)
     {
+        _playerControl.SetFreezePlayer(true);
         DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
