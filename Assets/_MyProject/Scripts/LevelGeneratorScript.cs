@@ -62,11 +62,11 @@ public class LevelGeneratorScript : MonoBehaviour {
     public void SetLabirynthParameters(int[] paramArray)
     {
         
-        Debug.Log("map size: " + paramArray[0]);
-        Debug.Log("map size: " + paramArray[1]);
-        Debug.Log("map size: " + paramArray[2]);
-        Debug.Log("map size: " + paramArray[3]);
-        Debug.Log("map size: " + paramArray[4]);
+//        Debug.Log("map size: " + paramArray[0]);
+//        Debug.Log("map size: " + paramArray[1]);
+//        Debug.Log("map size: " + paramArray[2]);
+//        Debug.Log("map size: " + paramArray[3]);
+//        Debug.Log("map size: " + paramArray[4]);
         
         mapSize = paramArray[0];
         maxTunnelCount = paramArray[1];

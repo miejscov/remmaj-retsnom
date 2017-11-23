@@ -72,6 +72,5 @@ public class EntranceControlScript : MonoBehaviour
 	private void Update()
 	{
 			_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
-			Debug.Log("!!!");
 	}
 }

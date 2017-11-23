@@ -20,19 +20,15 @@ public class LevelControlScript : MonoBehaviour
 	
 	private void Start ()
 	{
-		
 		SetNextLevel();
-//		SetLevel();
 	}
 
     private void SetParametersOfLevel(Level lvl)
     {
         _targetAmountOfDiamonds = lvl.GetTargetAmountOfDiamonds();
 	    _energyOnLevel = lvl.EnergyOnLevel;
-	    Debug.Log("Energy level"+ EnergyOnLevel + "... " + _energyOnLevel);
         _levelGenerator.SetLabirynthParameters(lvl.GetLevelGeneratorParametersArray());
     }
-
 	
 	public void SetLevel()
 	{

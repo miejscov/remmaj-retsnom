@@ -4,12 +4,11 @@ using UnityEngine;
 public class PlayerStatusScript : MonoBehaviour
 {
     private const int DefaultNumberOfLives = 3;
-//    private const int DefaultEnergy = 5;
     private const int DefaultScore = 0;
     
     private int _numberOfLives;
     private int _extraLifeScore = 0;
-    private int _extraLifeScoreThreshold = 50;
+    private int _extraLifeScoreThreshold = 200;
     
     private bool _isDead = false;
     public int _energy;
@@ -17,7 +16,6 @@ public class PlayerStatusScript : MonoBehaviour
     private int _diamondsCollectedInLevel;
     private int _diamondsLevelTarget;
     private int _diamondsLeft =0;
-
 
     private CanvasScript _canvas;
     private PlayerAudioControlScript _audio;
@@ -65,7 +63,6 @@ public class PlayerStatusScript : MonoBehaviour
         _levelControl.SetCurrentLevel(1);
         _numberOfLives = DefaultNumberOfLives;
         _energy = _levelControl.EnergyOnLevel;
-        Debug.Log("Energy status:" + _energy);
         _score = DefaultScore;
         _diamondsLevelTarget = _levelControl.GetTargetAmountOfDiamonds();
         _diamondsLeft = _diamondsLevelTarget;
@@ -81,7 +78,6 @@ public class PlayerStatusScript : MonoBehaviour
 
         _canvas.SetDiamondsLeft(_diamondsLeft);
         _canvas.SetEnergy(_energy);
-        Debug.Log("Canvas energy" + _energy);
         _canvas.SetTotalScore(DefaultScore);
         _canvas.SetLevel(_levelControl.GetCurrentLevel());
         _canvas.SetLives(_numberOfLives);
@@ -154,7 +150,6 @@ public class PlayerStatusScript : MonoBehaviour
         if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget !=0)
         {
         _canvas.SetDiamondsLeft(_diamondsLeft);
-//            _levelControl.SetNextLevel();
             _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
             _exitControl.OpenExit();
         }

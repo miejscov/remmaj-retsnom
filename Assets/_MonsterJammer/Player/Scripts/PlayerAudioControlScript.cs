@@ -15,7 +15,6 @@
 			_audioSource = GetComponent<AudioSource>();
 		}
 
-
 		public void PlayeExtraLifeSound()
 		{
 			_audioSource.PlayOneShot(ExtraLifeSound);

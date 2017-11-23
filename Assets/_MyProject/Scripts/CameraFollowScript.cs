@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraFollowScript : MonoBehaviour {
 
-    public GameObject target;            // The position that that camera will be following.
-    public float smoothing = 5f;        // The speed with which the camera will be following.
+    public GameObject target;            
+    public float smoothing = 5f;        
     private GameObject _entry;
     private GameObject _exit;
     private GameObject _player;
@@ -14,7 +14,7 @@ public class CameraFollowScript : MonoBehaviour {
     private Quaternion _defaultRotation;
     private Vector3 _defaultOffset;
 
-    Vector3 offset;                     // The initial offset from the target.
+    Vector3 offset;                     
 
     private void Start()
     {
@@ -26,7 +26,6 @@ public class CameraFollowScript : MonoBehaviour {
         target = _player;
         _defaultOffset = transform.position - target.transform.position;
         offset = _defaultOffset;
-        Debug.Log("def off" + _defaultOffset);
     }
 
     private void FixedUpdate()

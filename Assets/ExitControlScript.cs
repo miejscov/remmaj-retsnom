@@ -15,9 +15,8 @@ public class ExitControlScript : MonoBehaviour
 	private CameraFollowScript _camera;
 	private Vector3 _targetPos;
 	private EntranceAudioScript _audio;
-	private bool isExitOpen;
+	private bool _isExitOpen;
 	private bool _cancelAnimation;
-	
 	
 	private void Start()
 	{
@@ -29,7 +28,7 @@ public class ExitControlScript : MonoBehaviour
 
 	public void OpenExit()
 	{
-		isExitOpen = true;
+		_isExitOpen = true;
 		_camera.SetCameraOnExit();
 		Invoke("OpenGate", 1f);
 	}
@@ -41,8 +40,6 @@ public class ExitControlScript : MonoBehaviour
 		Instantiate(Collider, (transform.position - Vector3.right), Quaternion.identity);
 		Invoke("ResetCamera", 2f);
 	}
-	
-	
 	
 	private void ResetCamera()
 	{
@@ -60,11 +57,9 @@ public class ExitControlScript : MonoBehaviour
 	private void Update()
 	{
 		_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
-		if(isExitOpen && !_cancelAnimation)
-			if (Input.anyKeyDown)
-			{
-				_cancelAnimation = true;
-				_camera.ResetCamera();
-			}
+		if (!_isExitOpen || _cancelAnimation) return;
+		if (!Input.anyKeyDown) return;
+		_cancelAnimation = true;
+		_camera.ResetCamera();
 	}
 }
