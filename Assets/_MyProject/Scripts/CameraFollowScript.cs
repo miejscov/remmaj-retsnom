@@ -37,8 +37,7 @@ public class CameraFollowScript : MonoBehaviour {
         }
 
         Vector3 targetCamPos = target.transform.position + offset;
-//        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
-        transform.position = Vector3.MoveTowards(transform.position, targetCamPos, 4f);
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
 
     public void SetCameraOnEntry()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Configuration;
 using UnityEngine;
 
 public class ExitControlScript : MonoBehaviour
@@ -14,6 +15,8 @@ public class ExitControlScript : MonoBehaviour
 	private CameraFollowScript _camera;
 	private Vector3 _targetPos;
 	private EntranceAudioScript _audio;
+	private bool isExitOpen;
+	private bool _cancelAnimation;
 	
 	
 	private void Start()
@@ -26,6 +29,7 @@ public class ExitControlScript : MonoBehaviour
 
 	public void OpenExit()
 	{
+		isExitOpen = true;
 		_camera.SetCameraOnExit();
 		Invoke("OpenGate", 1f);
 	}
@@ -42,8 +46,9 @@ public class ExitControlScript : MonoBehaviour
 	
 	private void ResetCamera()
 	{
-		_camera.ResetCamera();
 		_audio.StopAudio();
+		if (_cancelAnimation) return;
+		_camera.ResetCamera();
 	}
 
 	private GameObject getChildGameObject(GameObject fromGameObject, string withName) {
@@ -54,13 +59,12 @@ public class ExitControlScript : MonoBehaviour
 
 	private void Update()
 	{
-		Move();
-		Debug.Log("target po exi" + _targetPos);
-		Debug.Log("pos ex" + transform.position);
-	}
-
-	private void Move()
-	{
 		_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
+		if(isExitOpen && !_cancelAnimation)
+			if (Input.anyKeyDown)
+			{
+				_cancelAnimation = true;
+				_camera.ResetCamera();
+			}
 	}
 }

@@ -41,6 +41,7 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void OpenGate()
 	{
+		if (_cancelGateAnim) return;
 		_entranceAudio.PlayOpeningGateSound();
 		_targetPos = _gate.transform.position + Vector3.down * 2;
 		if (_cancelGateAnim)
@@ -51,6 +52,7 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void PlayerIsComming()
 	{
+		if (_cancelGateAnim) return;
 		_entranceAudio.StopAudio();
 		_playerRbMove.SetPlayerTargetPosition(_gate.transform.position + Vector3.right);
 		
@@ -64,20 +66,22 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void CloseGate()
 	{
+		if (_cancelGateAnim) return;
 		_entranceAudio.PlayClosingGateSound();
 		_playerRbMove.ResetSpeed();
 		_targetPos = _gateClosePosition;
 		if (_cancelGateAnim) 
 			CancelGateAnim();
 		else
-			Invoke("ResetCamera", 2f);
+			Invoke("SetSceneDefault", 2f);
 	}
 
-	private void ResetCamera()
+	private void SetSceneDefault()
 	{
-		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
+		if (_cancelGateAnim) return;
 		_camera.ResetCamera();
 		_entranceAudio.StopAudio();
+		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
 	}
 
 	private GameObject GetChildGameObject(GameObject fromGameObject, string withName) {
@@ -87,25 +91,23 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void Update()
 	{
-//		if (!_cancelGateAnim)
-//		{
-//			if (Input.anyKeyDown)
-//				CancelGateAnim();
-//		}
-		
-		if (_cancelGateAnim) return;
-		_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
+		if (!_cancelGateAnim)
+		{
+			if (Input.anyKeyDown)
+				CancelGateAnim();
+			_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
+		}
 	}
 
 	private void CancelGateAnim()
 	{
 		_cancelGateAnim = true;
 		_entranceAudio.StopAudio();
-//		ResetCamera();
-		_playerRbMove.SetPlayerPosition(_gateClosePosition + Vector3.right);
 		_gate.transform.position = _gateClosePosition;
+		_playerRbMove.SetPlayerPosition(new Vector3(-7, 0, 0));
+		_camera.ResetCamera();
+		
 		_playerRbMove.ResetSpeed();
 		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
-
 	}
 }
