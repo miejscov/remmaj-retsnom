@@ -15,11 +15,12 @@ public class EntranceControlScript : MonoBehaviour
 	private PlayerRotationScript _playerRotation;
 	private PlayerControlScript _playerControl;
 	private CameraFollowScript _camera;
-	
+	private EntranceAudioScript _entranceAudio;	
 	private Vector3 _targetPos;
 	
 	private void Start()
 	{
+		_entranceAudio = GetComponent<EntranceAudioScript>();
 		_camera = GameObject.Find("Main Camera(Clone)").GetComponent<CameraFollowScript>();
 		_camera.SetCameraOnEntry();
 		
@@ -37,12 +38,14 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void OpenGate()
 	{
+		_entranceAudio.PlayOpeningGateSound();
 		_targetPos = _gate.transform.position + Vector3.down * 2;
 		Invoke("PlayerIsComming", 1f);
 	}
 
 	private void PlayerIsComming()
 	{
+		_entranceAudio.StopAudio();
 		_playerRbMove.SetPlayerTargetPosition(_gate.transform.position + Vector3.right);
 		
 		Invoke("CloseGate", 2f);
@@ -52,6 +55,7 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void CloseGate()
 	{
+		_entranceAudio.PlayClosingGateSound();
 		_playerRbMove.ResetSpeed();
 		_player.GetComponent<PlayerControlScript>().SetFreezePlayer(false);
 		_targetPos = _gateClosePosition;
@@ -61,6 +65,7 @@ public class EntranceControlScript : MonoBehaviour
 	private void ResetCamera()
 	{
 		_camera.ResetCamera();
+		_entranceAudio.StopAudio();
 	}
 
 	private GameObject GetChildGameObject(GameObject fromGameObject, string withName) {

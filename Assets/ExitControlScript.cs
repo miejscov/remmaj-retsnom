@@ -13,10 +13,12 @@ public class ExitControlScript : MonoBehaviour
 	private PlayerRbMoveScript _playerRbMove;
 	private CameraFollowScript _camera;
 	private Vector3 _targetPos;
+	private EntranceAudioScript _audio;
 	
 	
 	private void Start()
 	{
+		_audio = GetComponent<EntranceAudioScript>();
 		_gate = getChildGameObject(this.gameObject, "Tunnel_Gate");
 		_camera = GameObject.Find("Main Camera(Clone)").GetComponent<CameraFollowScript>();
 		_targetPos = _gate.transform.position;
@@ -30,6 +32,7 @@ public class ExitControlScript : MonoBehaviour
 
 	private void OpenGate()
 	{
+		_audio.PlayOpeningGateSound();
 		_targetPos = _gate.transform.position + Vector3.down *2;
 		Instantiate(Collider, (transform.position - Vector3.right), Quaternion.identity);
 		Invoke("ResetCamera", 2f);
@@ -40,6 +43,7 @@ public class ExitControlScript : MonoBehaviour
 	private void ResetCamera()
 	{
 		_camera.ResetCamera();
+		_audio.StopAudio();
 	}
 
 	private GameObject getChildGameObject(GameObject fromGameObject, string withName) {
