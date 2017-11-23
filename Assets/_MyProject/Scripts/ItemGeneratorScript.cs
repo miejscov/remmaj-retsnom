@@ -62,7 +62,7 @@ public class ItemGeneratorScript : MonoBehaviour
 
             pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
             collid.GetComponent<MeshRenderer>().enabled = false;
-            Physics.IgnoreCollision(collid.GetComponent<Collider>(), GameObject.Find("Player1(Clone)").GetComponent < Collider>());
+            Physics.IgnoreCollision(collid.GetComponent<Collider>(), GameObject.Find("Player1(Clone)").GetComponent<CapsuleCollider>());
 
             iTween.MoveAdd(pref, iTween.Hash("amount", wherePutDiamond - transform.position, "time", lobUpTime + lobDownTime, "easeType", iTween.EaseType.linear));
             iTween.MoveBy(pref, iTween.Hash("y", lobHeigh, "time", lobUpTime, "easeType", iTween.EaseType.easeOutQuad));
@@ -90,6 +90,21 @@ public class ItemGeneratorScript : MonoBehaviour
 
         GameObject pref = (GameObject)Instantiate(obj);
         pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
+
+    }
+
+    public void GenerateAtPlayer()
+    {
+        float heigh = heighOfDiamonds;
+        GameObject obj = diamondPref;
+
+       var player = GameObject.Find("Player1(Clone)");
+            GameObject pref = (GameObject)Instantiate(obj);
+        pref.transform.position = new Vector3(transform.position.x, heigh, transform.position.z);
+        iTween.MoveAdd(pref, iTween.Hash("amount", player.transform.position - transform.position, "time", lobUpTime + lobDownTime, "easeType", iTween.EaseType.linear));
+        iTween.MoveBy(pref, iTween.Hash("y", lobHeigh, "time", lobUpTime, "easeType", iTween.EaseType.easeOutQuad));
+        //iTween.MoveBy(pref, iTween.Hash("y", -lobHeigh, "time", lobDownTime, "delay", lobUpTime, "easeType", iTween.EaseType.easeInCubic));
+        iTween.MoveBy(pref, iTween.Hash("y", -lobHeigh, "time", lobDownTime, "delay", lobUpTime, "easeType", iTween.EaseType.easeInCubic));
 
     }
 
