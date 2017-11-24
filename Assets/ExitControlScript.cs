@@ -37,7 +37,7 @@ public class ExitControlScript : MonoBehaviour
 	{
 		_audio.PlayOpeningGateSound();
 		_targetPos = _gate.transform.position + Vector3.down *2;
-		Instantiate(Collider, (transform.position - Vector3.right), Quaternion.identity);
+		Instantiate(Collider, (transform.position), Quaternion.identity);
 		Invoke("ResetCamera", 2f);
 	}
 	

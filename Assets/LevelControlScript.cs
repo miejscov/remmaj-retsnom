@@ -7,6 +7,9 @@ public class LevelControlScript : MonoBehaviour
 
 	public GameObject Generator;
 	private GameObject _generator;
+
+	private int _setting = 1; /// /// ///
+	
 	private int _currentLevel;
 
 	private int _targetAmountOfDiamonds = 0;
@@ -16,6 +19,7 @@ public class LevelControlScript : MonoBehaviour
 	private LevelGeneratorScript _levelGenerator;
 	private LabirynthDestroyScript _labirynthDestroy;
 	private PlayerStatusScript _playerStatus;
+	private GameControlAudioScript _gameControlAudio;
 	
 	private void Start ()
 	{
@@ -54,6 +58,10 @@ public class LevelControlScript : MonoBehaviour
 		_playerStatus.SetDiamondTarget(_targetAmountOfDiamonds);
 		_playerStatus.SetPlayerEnergy(_energyOnLevel);
 		_playerStatus.AfterLevelFinish();
+		
+		_gameControlAudio = GameObject.Find("GameControl").GetComponent<GameControlAudioScript>();
+		if(_gameControlAudio != null)
+			_gameControlAudio.PlaySettingAudioClip(_setting);
 	}
 
 	public void SetNextLevel()

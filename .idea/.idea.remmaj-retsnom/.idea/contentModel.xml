@@ -17,6 +17,7 @@
             <e p="ToonLitTransparent.shader" t="Include" />
           </e>
         </e>
+        <e p="GameControlAudioScript.cs" t="Include" />
         <e p="GameControlScript.cs" t="Include" />
         <e p="Gem" t="Include">
           <e p="Shaders" t="Include">

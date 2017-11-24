@@ -17,8 +17,8 @@ public class ExitColliderScript : MonoBehaviour
 	{
 		if (other.gameObject.name.Equals("Player1(Clone)"))
 		{
-			_playerRbMove = other.gameObject.GetComponent<PlayerRbMoveScript>();
-			_playerRbMove.SetPlayerTargetPosition(transform.position + Vector3.right);
+//			_playerRbMove = other.gameObject.GetComponent<PlayerRbMoveScript>();
+//			_playerRbMove.SetPlayerTargetPosition(transform.position + Vector3.right);
 			other.gameObject.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
 			Invoke("NextLevel", 4f);
 		}
