@@ -132,7 +132,6 @@ public class PlayerStatusScript : MonoBehaviour
 
     // score
     public int GetPlayerScore() { return _score; }
-    public void SetPlayerScore(int score) {_score = score; }
     public void SetPlayerScore(int score) { _score = score; }
 
     public void AddPlayerScore(int score)
