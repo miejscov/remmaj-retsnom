@@ -5,18 +5,22 @@ public class PlayerStatusScript : MonoBehaviour
 {
     private const int DefaultNumberOfLives = 3;
     private const int DefaultScore = 0;
+
     private int _numberOfLives;
     private int _extraLifeScore = 0;
 <<<<<<< HEAD
     private int _extraLifeScoreThreshold = 200;
     
 =======
+    private int _extraLifeScoreThreshold = 50;
+
 >>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
     private bool _isDead = false;
     public int _energy;
     private int _score;
     private int _diamondsCollectedInLevel;
     private int _diamondsLevelTarget;
+    private int _diamondsLeft = 0;
 
     private CanvasScript _canvas;
     private PlayerAudioControlScript _audio;
@@ -36,6 +40,7 @@ public class PlayerStatusScript : MonoBehaviour
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasScript>();
 
+        if (ButtonContolScript.isStarting)
         {
             ResetPlayerStatus();
             ButtonContolScript.isStarting = false;
@@ -55,6 +60,8 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft = _diamondsLevelTarget;
         SetCanvasValue();
     }
+
+
     public void ResetPlayerStatus()
     {
         _diamondsCollectedInLevel = 0;
@@ -65,6 +72,7 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLevelTarget = _levelControl.GetTargetAmountOfDiamonds();
         _diamondsLeft = _diamondsLevelTarget;
         _serializePlayer.SavePlayerStatus();
+
         SetCanvasValue();
     }
 
@@ -100,6 +108,7 @@ public class PlayerStatusScript : MonoBehaviour
 >>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
+        //        GetComponent<Rigidbody>().isKinematic = true;
         _isDead = dead;
 
         var obj = GameObject.Find("ButtonCtrl");
@@ -138,6 +147,7 @@ public class PlayerStatusScript : MonoBehaviour
             _extraLifeScore = 0;
         }
         _canvas.SetTotalScore(_score);
+
     }
 
     // diamonds
@@ -148,6 +158,7 @@ public class PlayerStatusScript : MonoBehaviour
         _playerAudio.PlayGetDiamondSound();
         LevelCompletedScript.AddDiamond();
         _diamondsLeft -= 1;
+        if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget != 0)
         {
 <<<<<<< HEAD
         _canvas.SetDiamondsLeft(_diamondsLeft);
