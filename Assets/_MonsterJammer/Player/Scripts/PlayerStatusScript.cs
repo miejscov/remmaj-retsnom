@@ -9,12 +9,14 @@ public class PlayerStatusScript : MonoBehaviour
     private int _numberOfLives;
     private int _extraLifeScore = 0;
 <<<<<<< HEAD
+
     private int _extraLifeScoreThreshold = 200;
     
 =======
     private int _extraLifeScoreThreshold = 50;
 
 >>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
+
     private bool _isDead = false;
     public int _energy;
     private int _score;
