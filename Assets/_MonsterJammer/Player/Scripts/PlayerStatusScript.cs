@@ -98,7 +98,6 @@ public class PlayerStatusScript : MonoBehaviour
     public void SetPlayerDead(bool dead)
     {
         _playerControl.SetFreezePlayer(true);
-        DeductPlayerLife();
         if (dead)
             DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
