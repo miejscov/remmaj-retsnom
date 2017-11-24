@@ -8,14 +8,10 @@ public class PlayerStatusScript : MonoBehaviour
 
     private int _numberOfLives;
     private int _extraLifeScore = 0;
-<<<<<<< HEAD
 
     private int _extraLifeScoreThreshold = 200;
     
-=======
-    private int _extraLifeScoreThreshold = 50;
 
->>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
 
     private bool _isDead = false;
     public int _energy;
@@ -101,13 +97,10 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void SetPlayerDead(bool dead)
     {
-<<<<<<< HEAD
         _playerControl.SetFreezePlayer(true);
         DeductPlayerLife();
-=======
         if (dead)
             DeductPlayerLife();
->>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
         //        GetComponent<Rigidbody>().isKinematic = true;
@@ -161,12 +154,8 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft -= 1;
         if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget != 0)
         {
-<<<<<<< HEAD
-        _canvas.SetDiamondsLeft(_diamondsLeft);
-=======
             _canvas.SetDiamondsLeft(_diamondsLeft);
             //            _levelControl.SetNextLevel();
->>>>>>> 237adfc0019e5de75c99998993bd39bd773067c5
             _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
             _exitControl.OpenExit();
         }
