@@ -20,6 +20,7 @@ public class ExitColliderScript : MonoBehaviour
 //			_playerRbMove = other.gameObject.GetComponent<PlayerRbMoveScript>();
 //			_playerRbMove.SetPlayerTargetPosition(transform.position + Vector3.right);
 			other.gameObject.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
+			GameObject.Find("GameControl").GetComponent<GameControlAudioScript>().PlayPlayerInExitAudioClip();
 			Invoke("NextLevel", 4f);
 		}
 	}

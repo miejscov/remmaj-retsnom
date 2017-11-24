@@ -7,9 +7,9 @@ public class GameControlAudioScript : MonoBehaviour
 
 
 	public AudioClip MusicSettingOneAudioClip;
-//	public AudioClip PlayerInExitAudioClip;
-//	public AudioClip GameOverAudioClip;
-//	public AudioClip MainMenuAudioClip;
+	public AudioClip PlayerInExitAudioClip;
+	public AudioClip GameOverAudioClip;
+	public AudioClip MainMenuAudioClip;
 
 //	private AudioClip _currentClip;
 	private AudioSource _audio;
@@ -19,23 +19,23 @@ public class GameControlAudioScript : MonoBehaviour
 		_audio = GetComponent<AudioSource>();
 	}
 	
-//	public void PlayerInExitAudioClip1()
-//	{
-//		_audio.Stop();
-//		_audio.PlayOneShot(PlayerInExitAudioClip);
-//	}
-//
-//	public void PlayGameOverCanvasAudioCLip()
-//	{
-//		_audio.Stop();
-//		_audio.PlayOneShot(GameOverAudioClip);
-//	}
-//
-//	public void PlayMainMenuAudioCLip()
-//	{
-//		_audio.Stop();
-//		_audio.PlayOneShot(MainMenuAudioClip);
-//	}
+	public void PlayPlayerInExitAudioClip()
+	{
+		_audio.Stop();
+		_audio.PlayOneShot(PlayerInExitAudioClip);
+	}
+
+	public void PlayGameOverCanvasAudioCLip()
+	{
+		_audio.Stop();
+		_audio.PlayOneShot(GameOverAudioClip);
+	}
+
+	public void PlayMainMenuAudioCLip()
+	{
+		_audio.Stop();
+		_audio.PlayOneShot(MainMenuAudioClip);
+	}
 
 	public void PlaySettingAudioClip(int setting)
 	{
@@ -47,11 +47,5 @@ public class GameControlAudioScript : MonoBehaviour
 			_audio.loop = true;
 			_audio.Play();
 		}
-//		_audio.clip = MusicSettingOneAudioClip;
-//		_audio.loop = true;
-//		_audio.Play();
 	}
-	
-	
-	
 }
