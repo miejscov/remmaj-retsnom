@@ -24,7 +24,7 @@ public class CameraFollowScript : MonoBehaviour {
         
         
         target = _player;
-        _defaultOffset = transform.position - target.transform.position;
+        _defaultOffset = transform.position - target.transform.position - new Vector3(2f, 0f, 1f);
         offset = _defaultOffset;
     }
 

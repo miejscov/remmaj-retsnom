@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="403ca445-08d0-4713-b5e3-f4da9653f928" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/ExitControlScript.cs" afterPath="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Exit.prefab" afterPath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/Exit.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExitControlScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExitControlScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -52,6 +51,25 @@
                 <marker date="1511614256126" expanded="true" signature="1118:1203" ph="{...}" />
                 <marker date="1511614256126" expanded="true" signature="1288:1479" ph="{...}" />
                 <marker date="1511614256126" expanded="true" signature="1503:1750" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraFollowScript.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="98" lean-forward="false" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+              <folding>
+                <marker date="1511615048519" expanded="false" signature="6:78" ph="..." />
+                <marker date="1511615048519" expanded="true" signature="128:1774" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="491:836" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="868:1132" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="902:953" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="1168:1357" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="1392:1575" ph="{...}" />
+                <marker date="1511615048519" expanded="true" signature="1606:1772" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -181,12 +199,12 @@
         <option value="$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAudioControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/GameControlAudioScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ExitColliderScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
       </list>
     </option>
   </component>
@@ -279,12 +297,12 @@
       <workItem from="1511537931991" duration="2322000" />
       <workItem from="1511549053259" duration="2222000" />
       <workItem from="1511558939608" duration="919000" />
-      <workItem from="1511614017980" duration="245000" />
+      <workItem from="1511614017980" duration="1079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115939000" />
+    <option name="totallyTimeSpent" value="116773000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -721,6 +732,23 @@
             <marker date="1511614256126" expanded="true" signature="1118:1203" ph="{...}" />
             <marker date="1511614256126" expanded="true" signature="1288:1479" ph="{...}" />
             <marker date="1511614256126" expanded="true" signature="1503:1750" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="98" lean-forward="false" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+          <folding>
+            <marker date="1511615048519" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511615048519" expanded="true" signature="128:1774" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="491:836" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="868:1132" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="902:953" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="1168:1357" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="1392:1575" ph="{...}" />
+            <marker date="1511615048519" expanded="true" signature="1606:1772" ph="{...}" />
           </folding>
         </state>
       </provider>
