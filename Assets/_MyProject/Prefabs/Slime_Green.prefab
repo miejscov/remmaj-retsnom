@@ -680,7 +680,7 @@ MonoBehaviour:
   _sinkDistance: -1
   _dieTime: 1
   _debugControl: 0
-  _maxThinkingTime: 1
+  _maxThinkingTime: 1.2
   _startTime: 5
   _playerCheckTime: 0.1
   _monsterDir: 0

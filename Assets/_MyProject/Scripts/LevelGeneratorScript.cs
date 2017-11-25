@@ -18,7 +18,8 @@ public class LevelGeneratorScript : MonoBehaviour {
     [Tooltip("Minimal tunnel length during generation.")]
     public int minTunnelLength = 3;
     public int cratesAmount = 32;
-    public int monstersAmount = 8;
+    public int monstersAmountA = 8;
+    public int monstersAmountB = 8;
     [Tooltip("Minimum distance between player and monsters on level start.")]
     [Range(1, 5)]
     public int playerSafeDistance = 2;
@@ -30,7 +31,8 @@ public class LevelGeneratorScript : MonoBehaviour {
     public GameObject Wall;
     public GameObject Floor;
     public GameObject Crate;
-    public GameObject Monster;
+    public GameObject MonsterA;
+    public GameObject MonsterB;
     public GameObject Entrance;
     public GameObject Exit;
     public GameObject Ground;
@@ -45,7 +47,8 @@ public class LevelGeneratorScript : MonoBehaviour {
     const int TILE_CRATE = 2;
     const int TILE_WALL = 1;
     const int TILE_TUNNEL = 0;
-    const int TILE_MONSTER = 10;
+    const int TILE_MONSTERA = 10;
+    const int TILE_MONSTERB = 11;
     const int TILE_PLAYER = 1000;
 
     //const int LASTLOOP = 1024;
@@ -62,17 +65,17 @@ public class LevelGeneratorScript : MonoBehaviour {
     public void SetLabirynthParameters(int[] paramArray)
     {
         
-//        Debug.Log("map size: " + paramArray[0]);
-//        Debug.Log("map size: " + paramArray[1]);
-//        Debug.Log("map size: " + paramArray[2]);
-//        Debug.Log("map size: " + paramArray[3]);
-//        Debug.Log("map size: " + paramArray[4]);
+        Debug.Log("map size: " + paramArray[0]);
+        Debug.Log("map size: " + paramArray[1]);
+        Debug.Log("map size: " + paramArray[2]);
+        Debug.Log("map size: " + paramArray[3]);
+        Debug.Log("map size: " + paramArray[4]);
         
         mapSize = paramArray[0];
         maxTunnelCount = paramArray[1];
         minTunnelLength = paramArray[2];
         cratesAmount = paramArray[3];
-        monstersAmount = paramArray[4];
+        monstersAmountA = paramArray[4];
     }
     
 
@@ -82,7 +85,8 @@ public class LevelGeneratorScript : MonoBehaviour {
         GenerateMap();
         GeneratePlayer();
 //        Player.SetActive(true);
-        GenerateMonsters(monstersAmount);
+        GenerateMonstersA(monstersAmountA);
+        GenerateMonstersB(monstersAmountB);
         GenerateCrates(cratesAmount);
         GenerateExits();
  
@@ -250,10 +254,10 @@ public class LevelGeneratorScript : MonoBehaviour {
             x = Random.Range(1, mapSize - 1);
             y = Random.Range(1, mapSize - 1);
             if (map[y, x] != TILE_TUNNEL) continue;
-            else if (map[y, x - 1] == TILE_MONSTER && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
-            else if (map[y, x + 1] == TILE_MONSTER && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
-            else if (map[y - 1, x] == TILE_MONSTER && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
-            else if (map[y + 1, x] == TILE_MONSTER && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
+            else if ((map[y, x - 1] == TILE_MONSTERA || map[y, x - 1] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
+            else if ((map[y, x + 1] == TILE_MONSTERA || map[y, x + 1] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
+            else if ((map[y - 1, x] == TILE_MONSTERA || map[y - 1, x] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
+            else if ((map[y + 1, x] == TILE_MONSTERA || map[y + 1, x] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
 
             map[y, x] = TILE_CRATE;
             crates++;
@@ -273,13 +277,13 @@ public class LevelGeneratorScript : MonoBehaviour {
         return false;
     }
 
-    void GenerateMonsters(int amount)
+    void GenerateMonstersA(int amount)
     {
-        int monsters;
-        monsters = 0;
+        int monstersA;
+        monstersA = 0;
         int counter;
         counter = 100000;
-        while (monsters < amount)
+        while (monstersA < amount)
         {
             bool isOk;
             isOk = true;
@@ -287,7 +291,7 @@ public class LevelGeneratorScript : MonoBehaviour {
             counter--;
             if (counter <= 0)
             {
-                Debug.LogError("Could not find suitable Monster start position!");
+                Debug.LogError("Could not find suitable Monster-A start position!");
                 return;
             }
             x = Random.Range(1, mapSize - 1);
@@ -302,7 +306,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                 {
                     if (x + ii > 0 && x + ii < mapSize - 1 && y + i > 0 && y + i < mapSize - 1)
                     {
-                        if (map[i + y, ii + x] == TILE_MONSTER)
+                        if (map[i + y, ii + x] == TILE_MONSTERA || map[i + y, ii + x] == TILE_MONSTERB)
                         {
                             isOk = false;
                             break;
@@ -313,8 +317,55 @@ public class LevelGeneratorScript : MonoBehaviour {
             }
             if (isOk)
             {
-                map[y, x] = TILE_MONSTER;
-                monsters++;
+                map[y, x] = TILE_MONSTERA;
+                monstersA++;
+            }
+
+        }
+    }
+
+    void GenerateMonstersB(int amount)
+    {
+        int monstersB;
+        monstersB = 0;
+        int counter;
+        counter = 100000;
+        while (monstersB < amount)
+        {
+            bool isOk;
+            isOk = true;
+            int x, y;
+            counter--;
+            if (counter <= 0)
+            {
+                Debug.LogError("Could not find suitable Monster-B start position!");
+                return;
+            }
+            x = Random.Range(1, mapSize - 1);
+            y = Random.Range(1, mapSize - 1);
+            if (map[y, x] != TILE_TUNNEL) continue;
+            else if (!(y < _playerY - playerSafeDistance || y > _playerY + playerSafeDistance || x < _playerX - playerSafeDistance || x > _playerX + playerSafeDistance)) continue;
+            else if (!(map[y - 1, x] == TILE_TUNNEL || map[y + 1, x] == TILE_TUNNEL || map[y, x - 1] == TILE_TUNNEL || map[y, x + 1] == TILE_TUNNEL)) continue;
+
+            for (int i = -_monsterDistance; i <= _monsterDistance; i++)
+            {
+                for (int ii = -_monsterDistance; ii <= _monsterDistance; ii++)
+                {
+                    if (x + ii > 0 && x + ii < mapSize - 1 && y + i > 0 && y + i < mapSize - 1)
+                    {
+                        if (map[i + y, ii + x] == TILE_MONSTERA || map[i + y, ii + x] == TILE_MONSTERB)
+                        {
+                            isOk = false;
+                            break;
+                        }
+                        if (!isOk) break;
+                    }
+                }
+            }
+            if (isOk)
+            {
+                map[y, x] = TILE_MONSTERB;
+                monstersB++;
             }
 
         }
@@ -412,12 +463,15 @@ public class LevelGeneratorScript : MonoBehaviour {
             {
                 int x = -mapSize / 2 + ii;
                 int z = -mapSize / 2 + i;
-                if (map[i, ii] == TILE_MONSTER)
+                if (map[i, ii] == TILE_MONSTERA)
                 {
-                    //GameObject mob = (GameObject)Instantiate(Monster, new Vector3(x, 0.1f, z), Quaternion.identity);
-                    //mob.GetComponent<ItemGeneratorScript>().ground = Ground.transform;
-                    Instantiate(Monster, new Vector3(x, 0.1f, z), Quaternion.identity);
+                    Instantiate(MonsterA, new Vector3(x, 0.1f, z), Quaternion.identity);
                 }
+                else if (map[i, ii] == TILE_MONSTERB)
+                {
+                    Instantiate(MonsterB, new Vector3(x, 0.1f, z), Quaternion.identity);
+                }
+
             }
         }
     }
@@ -443,9 +497,11 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         Instantiate(Crate, new Vector3(x, 0.5f, z), Quaternion.identity);
                         break;
-                    case TILE_MONSTER:
+                    case TILE_MONSTERA:
                         Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);                      
-                        // Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                        break;
+                    case TILE_MONSTERB:
+                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_PLAYER:
                         if (!CheckObjectExist("Player"))
