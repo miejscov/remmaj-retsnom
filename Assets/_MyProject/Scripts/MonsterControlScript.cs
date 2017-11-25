@@ -96,7 +96,7 @@ public class MonsterControlScript : MonoBehaviour
                 _monsterRbMoveScript.MoveTowardsPlayer();
             }
             else {
-                _monsterRbMoveScript.SetStopped();
+                _monsterRbMoveScript.IsStopped(true);
             }
             _monsterRotationScript.TurnTowardsPlayer();
         } else if (_thinkingTime <= 0f)
@@ -158,7 +158,7 @@ public class MonsterControlScript : MonoBehaviour
     {
         _monsterAudioScript.PlayDie();
         _die = true;
-        _monsterRbMoveScript.SetStopped();
+        _monsterRbMoveScript.IsStopped(true);
         _monsterRotationScript.SetStopped();
         _animator.SetTrigger("IsDying");
     }

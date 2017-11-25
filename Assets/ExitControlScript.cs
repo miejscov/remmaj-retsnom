@@ -17,9 +17,11 @@ public class ExitControlScript : MonoBehaviour
 	private EntranceAudioScript _audio;
 	private bool _isExitOpen;
 	private bool _cancelAnimation;
+	private GameControlScript _gameControl;
 	
 	private void Start()
 	{
+		_gameControl = GameObject.Find("GameControl").GetComponent<GameControlScript>();
 		_audio = GetComponent<EntranceAudioScript>();
 		_gate = getChildGameObject(this.gameObject, "Tunnel_Gate");
 		_camera = GameObject.Find("Main Camera(Clone)").GetComponent<CameraFollowScript>();
@@ -30,6 +32,7 @@ public class ExitControlScript : MonoBehaviour
 	{
 		_isExitOpen = true;
 		_camera.SetCameraOnExit();
+		_gameControl.MonetsrsStopped(true);
 		Invoke("OpenGate", 1f);
 	}
 
@@ -43,6 +46,7 @@ public class ExitControlScript : MonoBehaviour
 	
 	private void ResetCamera()
 	{
+		_gameControl.MonetsrsStopped(false);
 		_audio.StopAudio();
 		if (_cancelAnimation) return;
 		_camera.ResetCamera();

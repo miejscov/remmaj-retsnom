@@ -7,10 +7,10 @@ public class MonsterRbMoveScript : MonoBehaviour
 	//private Rigidbody transform;
 	public Vector3 _target;
     public Transform _player;
-	public float _toVel = 19f; //2.5f;
-	public float _maxVel = 6f; //15.0f;
-	public float _maxForce = 147f; //40.0f;
-	public float _gain = 36f; //5f;
+//	public float _toVel = 19f; //2.5f;
+//	public float _maxVel = 6f; //15.0f;
+//	public float _maxForce = 147f; //40.0f;
+//	public float _gain = 36f; //5f;
     public float _moveSpeed = 10f;
     public bool _stopped;
     private Vector3 velocity = Vector3.zero;
@@ -110,9 +110,9 @@ public class MonsterRbMoveScript : MonoBehaviour
 
     }
 
-    public void SetStopped()
+    public void IsStopped(bool value)
     {
-        _stopped = true;
+        _stopped = value;
     }
 }
 
