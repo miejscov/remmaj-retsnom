@@ -42,7 +42,7 @@ public class CameraFollowScript : MonoBehaviour {
     public void SetCameraOnEntry()
     {
         _entry = GameObject.Find("Entrance(Clone)");
-        offset = new Vector3(3, 4, -1);
+        offset = new Vector3(3, 4, 0);
         target = _entry;
         transform.rotation = Quaternion.Euler(45, -90, 0);
     }
@@ -51,7 +51,7 @@ public class CameraFollowScript : MonoBehaviour {
     {
         _exit = GameObject.Find("Exit(Clone)");
         target = _exit;
-        offset = new Vector3(-3, 4, -1);
+        offset = new Vector3(-3, 4, 0);
         transform.rotation = Quaternion.Euler(45, 90, 0);
     }
 
