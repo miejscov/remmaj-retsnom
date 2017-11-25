@@ -79,7 +79,8 @@ public class PlayerStatusScript : MonoBehaviour
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasScript>();
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 
-        _canvas.SetDiamondsLeft(_diamondsLeft);
+        _canvas.TargetDiamondAmountInLevel = _diamondsLevelTarget;
+        _canvas.SetColectedDiamond(_diamondsCollectedInLevel);
         _canvas.SetEnergy(_energy);
         _canvas.SetTotalScore(DefaultScore);
         _canvas.SetLevel(_levelControl.GetCurrentLevel());
@@ -153,18 +154,17 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft -= 1;
         if (_diamondsLevelTarget - _diamondsLeft == _diamondsLevelTarget && _diamondsLevelTarget != 0)
         {
-            _canvas.SetDiamondsLeft(_diamondsLeft);
+            _canvas.SetColectedDiamond(_diamondsCollectedInLevel);
             //            _levelControl.SetNextLevel();
             _exitControl = GameObject.Find("Exit(Clone)").GetComponent<ExitControlScript>();
             _exitControl.OpenExit();
         }
-        _canvas.SetDiamondsLeft(_diamondsLeft);
+        _canvas.SetColectedDiamond(_diamondsCollectedInLevel);
     }
 
-    public void SetDiamondTarget(int target)
+    public int DiamondsLevelTarget
     {
-        _diamondsLevelTarget = target;
-        AfterLevelFinish();
+        set { _diamondsLevelTarget = value; }
     }
 
     // energy

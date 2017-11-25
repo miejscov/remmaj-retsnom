@@ -8,12 +8,20 @@ public class CanvasScript : MonoBehaviour
 	public Canvas Canvas;
 	private Text [] _texts;
 	private PlayerStatusScript _playerStatus;
+
+	private int _targetDiamondAmountInLevel;
 	
 	private void Awake()
 	{
 		_texts = Canvas.gameObject.GetComponentsInChildren <Text> ();
 	}
 	
+	public int TargetDiamondAmountInLevel
+	{
+		set { _targetDiamondAmountInLevel = value; }
+	}
+
+
 	public void SetLives(int lives)
 	{
 		_texts[0].text = "Lives: " + lives;
@@ -26,14 +34,19 @@ public class CanvasScript : MonoBehaviour
 		Canvas.ForceUpdateCanvases();
 	}
 
-	public void SetDiamondsLeft(int diamonds)
+	public void SetColectedDiamond(int value)
 	{
-		if (diamonds <= 0)
-			diamonds = 0;
-		
-		_texts[2].text = "Diamonds left: " + diamonds;
+		_texts[2].text = "Diamonds: " + value + " / " + _targetDiamondAmountInLevel;
 		Canvas.ForceUpdateCanvases();
 	}
+//	public void SetDiamondsLeft(int diamonds)
+//	{
+//		if (diamonds <= 0)
+//			diamonds = 0;
+//		
+//		_texts[2].text = "Diamonds left: " + diamonds;
+//		Canvas.ForceUpdateCanvases();
+//	}
 
 	public void SetTotalScore(int score)
 	{
