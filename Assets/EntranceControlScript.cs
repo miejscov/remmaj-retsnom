@@ -32,6 +32,7 @@ public class EntranceControlScript : MonoBehaviour
 		_camera.SetCameraOnEntry();
 		_gate = GetChildGameObject(gameObject, "Tunnel_Gate");
 		_targetPos = _gateClosePosition = _gate.transform.position;
+		_playerRbMove._isStopped = true;
 		Invoke("OpenGate", 1f);
 	}
 
@@ -45,6 +46,7 @@ public class EntranceControlScript : MonoBehaviour
 	private void PlayerIsComming()
 	{
 		_entranceAudio.StopAudio();
+		_playerRbMove.IsStopped = false;
 		_playerRbMove.SetPlayerTargetPosition(_gate.transform.position + Vector3.right);
 		Invoke("CloseGate", 2f);
 	}
@@ -73,4 +75,6 @@ public class EntranceControlScript : MonoBehaviour
 	{
 			_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
 	}
+
+	
 }

@@ -511,7 +511,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                         else
                         {
                             var player = GameObject.Find("Player1(Clone)");
-                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x-2, 0f, z));
+                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x-3, 0f, z));
                             player.GetComponent<PlayerRbMoveScript>().ResetSpeed();
                             player.GetComponent<PlayerControlScript>().ResetControl();
                         }

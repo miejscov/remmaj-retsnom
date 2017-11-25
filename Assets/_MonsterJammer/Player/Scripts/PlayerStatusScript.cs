@@ -10,8 +10,8 @@ public class PlayerStatusScript : MonoBehaviour
     private int _extraLifeScore = 0;
 
     private int _extraLifeScoreThreshold = 200;
-    
 
+    private PlayerRbMoveScript _playerRbMove;
 
     private bool _isDead = false;
     public int _energy;
@@ -28,9 +28,14 @@ public class PlayerStatusScript : MonoBehaviour
     private SerializePlayerStatus _serializePlayer;
     private ExitControlScript _exitControl;
     private PlayerControlScript _playerControl;
+    private PlayerCollisionScript _playerCollision;
+    private PlayerAnimationControlScript _playerAnimation;
 
     private void Start()
     {
+        _playerAnimation = GetComponent<PlayerAnimationControlScript>();
+        _playerCollision = GetComponent<PlayerCollisionScript>();
+        _playerRbMove = GetComponent<PlayerRbMoveScript>();
         _playerControl = GetComponent<PlayerControlScript>();
         _audio = GetComponent<PlayerAudioControlScript>();
         _serializePlayer = GetComponent<SerializePlayerStatus>();
@@ -91,20 +96,24 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void SetPlayerAlive()
     {
+        _playerAnimation.PlayerIdle();
+        _playerRbMove._isStopped = true;
+        _playerCollision.ResetOnCrate();
         _playerControl.SetFreezePlayer(true);
-        GetComponent<Rigidbody>().isKinematic = false;
+//        GetComponent<Rigidbody>().isKinematic = false;
         _isDead = false;
         GetComponent<PlayerAnimationControlScript>().PlayerIdle();
     }
 
     public void SetPlayerDead()
     {
+        _playerRbMove.IsStopped = true;
         _playerControl.SetFreezePlayer(true);
         
             DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
-        //        GetComponent<Rigidbody>().isKinematic = true;
+//                GetComponent<Rigidbody>().isKinematic = true;
         _isDead = true;
 
         var obj = GameObject.Find("ButtonCtrl");

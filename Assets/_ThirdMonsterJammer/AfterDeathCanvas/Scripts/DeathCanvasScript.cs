@@ -23,6 +23,7 @@ public class DeathCanvasScript : MonoBehaviour
 
     public void ShowCanvas()
     {
+        keyDown = false;
         _player = GameObject.Find("Player1(Clone)");
         _playerStatus = _player.GetComponent<PlayerStatusScript>();
         if (_playerStatus != null)
@@ -42,25 +43,34 @@ public class DeathCanvasScript : MonoBehaviour
         _isCanvasShowed = false;
     }
 
-    private void Update()
+    private bool keyDown;
+    private void FixedUpdate()
     {
-        if (_isCanvasShowed)
+        if (!_isCanvasShowed) return;
+        if (keyDown) return;
+        if (Input.anyKeyDown)
         {
-            if (Input.anyKeyDown)
-            {
-                HideCanvas();
-                if (_playerStatus.GetNumberOfLives() <= 0)
-                {
-                    _buttonControl.GetComponent<PlayerGameOverScript>().GameOver();
-                }
-                else
-                {
-                    _playerStatus.SetPlayerAlive();
-                    GameObject.Find("LevelControl").GetComponent<LevelControlScript>().ResetLevel();
-                    HideCanvas();
-                }
-//                    ButtonContolScript.LoadStatic("Scene001");
-            }
+            keyDown = true;
+//            Invoke("KeyDown", 2f);
+            KeyDown();
         }
     }
+
+    private void KeyDown()
+    {
+        HideCanvas();
+        if (_playerStatus.GetNumberOfLives() <= 0)
+        {
+            _buttonControl.GetComponent<PlayerGameOverScript>().GameOver();
+        }
+        else
+        {
+            _playerStatus.SetPlayerAlive();
+            GameObject.Find("LevelControl").GetComponent<LevelControlScript>().ResetLevel();
+            HideCanvas();
+        }
+//                    ButtonContolScript.LoadStatic("Scene001");
+    }
+    
+    
 }
