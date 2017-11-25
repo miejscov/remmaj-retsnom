@@ -14,6 +14,8 @@ public class DeathCanvasScript : MonoBehaviour
     private bool _isCanvasShowed = false;
     private GameObject _buttonControl;
     private float _timer = 0f;
+    private bool keyDown;
+
 
     private void Awake()
     {
@@ -43,16 +45,14 @@ public class DeathCanvasScript : MonoBehaviour
         _isCanvasShowed = false;
     }
 
-    private bool keyDown;
-    private void FixedUpdate()
+    private void Update()
     {
         if (!_isCanvasShowed) return;
         if (keyDown) return;
         if (Input.anyKeyDown)
         {
             keyDown = true;
-//            Invoke("KeyDown", 2f);
-            KeyDown();
+            Invoke("KeyDown", 1f);
         }
     }
 
