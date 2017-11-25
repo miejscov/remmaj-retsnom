@@ -66,6 +66,8 @@ public class LevelControlScript : MonoBehaviour
 
 	public void SetNextLevel()
 	{
+		GameObject p = GameObject.Find("Player1(Clone)");
+//		if (p != null) GetComponent<PlayerControlScript>().SetFreezePlayer(true);
 		_currentLevel += 1;
         var obj = GameObject.Find("ButtonCtrl");
         Time.timeScale = 0f;
@@ -98,8 +100,9 @@ public class LevelControlScript : MonoBehaviour
 	{
 		var player = GameObject.Find("Player1(Clone)");
 		player.GetComponent<PlayerAnimationControlScript>().PlayerIdle();
-		player.GetComponent<PlayerStatusScript>().SetPlayerDead(false);
-		
+//		player.GetComponent<PlayerStatusScript>().SetPlayerDead(false);
+		player.GetComponent<PlayerStatusScript>().SetPlayerAlive();
+
 		SetLevel();
 	}
 }

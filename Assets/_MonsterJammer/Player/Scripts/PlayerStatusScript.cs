@@ -91,20 +91,21 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void SetPlayerAlive()
     {
+        _playerControl.SetFreezePlayer(true);
         GetComponent<Rigidbody>().isKinematic = false;
         _isDead = false;
         GetComponent<PlayerAnimationControlScript>().PlayerIdle();
     }
 
-    public void SetPlayerDead(bool dead)
+    public void SetPlayerDead()
     {
         _playerControl.SetFreezePlayer(true);
-        if (dead)
+        
             DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
         //        GetComponent<Rigidbody>().isKinematic = true;
-        _isDead = dead;
+        _isDead = true;
 
         var obj = GameObject.Find("ButtonCtrl");
         obj.GetComponent<DeathCanvasScript>().ShowCanvas();

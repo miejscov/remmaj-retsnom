@@ -14,7 +14,7 @@
 		private bool _isOnDirection = false;
 		
 		private bool _invertControl;
-		private bool _freezePlayer;
+		public bool _freezePlayer;
 
 		public void ResetControl()
 		{

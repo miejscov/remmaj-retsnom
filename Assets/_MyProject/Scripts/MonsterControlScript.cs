@@ -39,6 +39,7 @@ public class MonsterControlScript : MonoBehaviour
     public float _thinkingTime;
     private bool _itemsOnMap = false;
 	private Animator _animator;
+    private bool _stopped;
 
 	private void Start ()
 	{
@@ -57,6 +58,7 @@ public class MonsterControlScript : MonoBehaviour
 
     private void Update()
     {
+        if (_stopped) return;
         if (!_die)
         {
             if (_debugControl)
@@ -87,6 +89,13 @@ public class MonsterControlScript : MonoBehaviour
         }
 	}
 
+
+    public void IsStopped(bool value)
+    {
+        _stopped = value;
+    }
+    
+    
     private void MonsterControl()
     {
         if (_attacking)
@@ -159,7 +168,7 @@ public class MonsterControlScript : MonoBehaviour
         _monsterAudioScript.PlayDie();
         _die = true;
         _monsterRbMoveScript.IsStopped(true);
-        _monsterRotationScript.SetStopped();
+        _monsterRotationScript.IsStopped(true);
         _animator.SetTrigger("IsDying");
     }
 

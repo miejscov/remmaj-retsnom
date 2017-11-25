@@ -70,6 +70,7 @@ public class PlayerRbMoveScript : MonoBehaviour
 
     public void SetPlayerPosition(Vector3 position)
     {
+        SetPlayerTargetPosition(position);
         transform.position = _targetPosition = position;
     }
 

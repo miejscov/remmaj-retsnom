@@ -20,7 +20,7 @@ public class GameControlScript : MonoBehaviour {
 		var monsters = GameObject.FindGameObjectsWithTag("Monster");
 		foreach(var monster in monsters)
 		{
-			monster.GetComponent<MonsterRbMoveScript>().IsStopped(value);
+			monster.GetComponent<MonsterControlScript>().IsStopped(value);
 		}
 	}
 	
