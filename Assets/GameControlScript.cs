@@ -15,15 +15,13 @@ public class GameControlScript : MonoBehaviour {
 		_currentCrateSpeed = DefaultCrateSpeed;
 	}
 
-	public void MonetsrsStopped(bool value)
+	public static void MonetsrsStopped(bool value)
 	{
-			var monsters = GameObject.FindGameObjectsWithTag("Monster");
-
-			foreach(var monster in monsters)
-			{
-				monster.GetComponent<MonsterRbMoveScript>().IsStopped(value);
-			}
-		
+		var monsters = GameObject.FindGameObjectsWithTag("Monster");
+		foreach(var monster in monsters)
+		{
+			monster.GetComponent<MonsterRbMoveScript>().IsStopped(value);
+		}
 	}
 	
 	public float GetDefaultPlayerSpeed(){return DefaultPlayerSpeed;}

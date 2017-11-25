@@ -32,7 +32,7 @@ public class ExitControlScript : MonoBehaviour
 	{
 		_isExitOpen = true;
 		_camera.SetCameraOnExit();
-		_gameControl.MonetsrsStopped(true);
+		GameControlScript.MonetsrsStopped(true);
 		Invoke("OpenGate", 1f);
 	}
 
@@ -46,7 +46,7 @@ public class ExitControlScript : MonoBehaviour
 	
 	private void ResetCamera()
 	{
-		_gameControl.MonetsrsStopped(false);
+		GameControlScript.MonetsrsStopped(false);
 		_audio.StopAudio();
 		if (_cancelAnimation) return;
 		_camera.ResetCamera();
