@@ -8,7 +8,7 @@ public class ExitControlScript : MonoBehaviour
 {
 
 	private Collider _collider;
-	private Transform[] ts;
+//	private Transform[] ts;
 	private GameObject _gate;
 	public GameObject Collider;
 	private PlayerRbMoveScript _playerRbMove;

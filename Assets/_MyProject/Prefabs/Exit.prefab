@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 23694074612079954}
   - component: {fileID: 64010376154505004}
   - component: {fileID: 65179010923403458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tunnel_Gate
   m_TagString: Wall
   m_Icon: {fileID: 0}
