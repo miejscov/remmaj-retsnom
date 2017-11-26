@@ -59,4 +59,9 @@ public class CanvasScript : MonoBehaviour
 		_texts[3].text = "Level: " + level;
 		Canvas.ForceUpdateCanvases();
 	}
+
+	public void SetCanvasVisibility(bool value)
+	{
+		Canvas.enabled = value;
+	}
 }

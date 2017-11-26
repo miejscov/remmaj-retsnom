@@ -38,6 +38,7 @@ public class EntranceControlScript : MonoBehaviour
 
 	private void OpenGate()
 	{
+		GameObject.Find("Canvas").GetComponent<CanvasScript>().SetCanvasVisibility(true);
 		_entranceAudio.PlayOpeningGateSound();
 		_targetPos = _gate.transform.position + Vector3.down * 2;
 		Invoke("PlayerIsComming", 1f);

@@ -83,11 +83,11 @@ public class PlayerStatusScript : MonoBehaviour
     {
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasScript>();
         _levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
-
+//        _canvas.SetCanvasVisibility(true);
         _canvas.TargetDiamondAmountInLevel = _diamondsLevelTarget;
         _canvas.SetColectedDiamond(_diamondsCollectedInLevel);
         _canvas.SetEnergy(_energy);
-        _canvas.SetTotalScore(DefaultScore);
+        _canvas.SetTotalScore(_score);
         _canvas.SetLevel(_levelControl.GetCurrentLevel());
         _canvas.SetLives(_numberOfLives);
     }
@@ -96,13 +96,14 @@ public class PlayerStatusScript : MonoBehaviour
 
     public void SetPlayerAlive()
     {
+        SetCanvasValue();
         _playerAnimation.PlayerIdle();
         _playerRbMove._isStopped = true;
         _playerCollision.ResetOnCrate();
         _playerControl.SetFreezePlayer(true);
 //        GetComponent<Rigidbody>().isKinematic = false;
         _isDead = false;
-        GetComponent<PlayerAnimationControlScript>().PlayerIdle();
+//        GetComponent<PlayerAnimationControlScript>().PlayerIdle();
     }
 
     public void SetPlayerDead()
@@ -110,12 +111,13 @@ public class PlayerStatusScript : MonoBehaviour
         _playerRbMove.IsStopped = true;
         _playerControl.SetFreezePlayer(true);
         
-            DeductPlayerLife();
+        DeductPlayerLife();
         _serializePlayer.SavePlayerStatus();
         _playerAudio.PlayerIsDyingSound();
 //                GetComponent<Rigidbody>().isKinematic = true;
         _isDead = true;
 
+        _canvas.SetCanvasVisibility(false);
         var obj = GameObject.Find("ButtonCtrl");
         obj.GetComponent<DeathCanvasScript>().ShowCanvas();
     }
