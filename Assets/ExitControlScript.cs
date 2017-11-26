@@ -62,7 +62,7 @@ public class ExitControlScript : MonoBehaviour
 	{
 		_gate.transform.position = Vector3.MoveTowards(_gate.transform.position, _targetPos, 1 * Time.deltaTime);
 		if (!_isExitOpen || _cancelAnimation) return;
-		if (!Input.anyKeyDown) return;
+		if (!Input.anyKeyDown || _cancelAnimation) return;
 		_cancelAnimation = true;
 		_camera.ResetCamera();
 	}
