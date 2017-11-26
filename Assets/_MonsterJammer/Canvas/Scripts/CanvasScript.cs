@@ -24,19 +24,22 @@ public class CanvasScript : MonoBehaviour
 
 	public void SetLives(int lives)
 	{
-		_texts[0].text = "Lives: " + lives;
+		_texts[0].text = lives.ToString();
+//		_texts[0].text = "Lives: " + lives;
 		Canvas.ForceUpdateCanvases();
 	}
 
 	public void SetEnergy(int energy)
 	{
-		_texts[1].text = "Strength: " + energy;
+//		_texts[1].text = "Strength: " + energy;
+		_texts[1].text = energy.ToString();
 		Canvas.ForceUpdateCanvases();
 	}
 
 	public void SetColectedDiamond(int value)
 	{
-		_texts[2].text = "Diamonds: " + value + " / " + _targetDiamondAmountInLevel;
+//		_texts[2].text = "Diamonds: " + value + " / " + _targetDiamondAmountInLevel;
+		_texts[2].text = value + " / " + _targetDiamondAmountInLevel;
 		Canvas.ForceUpdateCanvases();
 	}
 //	public void SetDiamondsLeft(int diamonds)
@@ -50,7 +53,8 @@ public class CanvasScript : MonoBehaviour
 
 	public void SetTotalScore(int score)
 	{
-		_texts[4].text = "Total score: " + score;
+//		_texts[4].text = "Total score: " + score;
+		_texts[4].text = score.ToString();
 		Canvas.ForceUpdateCanvases();
 	}
 
