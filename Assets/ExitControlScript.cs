@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Configuration;
 using UnityEngine;
 
 public class ExitControlScript : MonoBehaviour
 {
-
 	private Collider _collider;
-//	private Transform[] ts;
 	private GameObject _gate;
 	public GameObject Collider;
 	private PlayerRbMoveScript _playerRbMove;
@@ -53,9 +52,8 @@ public class ExitControlScript : MonoBehaviour
 	}
 
 	private GameObject getChildGameObject(GameObject fromGameObject, string withName) {
-		Transform[] ts = fromGameObject.transform.GetComponentsInChildren<Transform>(true);
-		foreach (Transform t in ts) if (t.gameObject.name == withName) return t.gameObject;
-		return null;
+		var ts = fromGameObject.transform.GetComponentsInChildren<Transform>(true);
+		return (from t in ts where t.gameObject.name == withName select t.gameObject).FirstOrDefault();
 	}
 
 	private void Update()

@@ -26,6 +26,8 @@ public class LevelGeneratorScript : MonoBehaviour {
     [Tooltip("Minimum distance between monsters. DO NOT SET TOO HIGH!")]
     [Range(0, 3)]
     public int _monsterDistance = 1;
+    
+    
     public GameObject MainCamera;
     public GameObject Player;
     public GameObject Wall;
@@ -61,6 +63,25 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     int[,] map;
 
+    private GameObject[] _setting;
+    private SettingsControlScript _settingsControl;
+    private void GetSetting()
+    {
+        _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
+        _setting = _settingsControl.GetSetting();
+        
+        MainCamera = _setting[0];
+        Player = _setting[1];
+        Wall = _setting[2];
+        Floor = _setting[3];
+        Crate = _setting[4];
+        MonsterA = _setting[5];
+        MonsterB = _setting[6];
+        Entrance = _setting[7];
+        Exit = _setting[8];
+        Ground = _setting[9];
+        
+    }
 
     public void SetLabirynthParameters(int[] paramArray)
     {
@@ -81,6 +102,7 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     public void GenerateLabirynth()
     {
+        GetSetting();
 //        Player.SetActive(false);
         GenerateMap();
         GeneratePlayer();

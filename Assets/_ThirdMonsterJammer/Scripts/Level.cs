@@ -1,6 +1,5 @@
 ﻿public class Level
 {
-
     private readonly int _mapSize;
     private readonly int _maxTunelCount;
     private readonly int _minTunelLength;

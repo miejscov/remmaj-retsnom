@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraFollowScript : MonoBehaviour {
 
-    public GameObject target;            
-    public float smoothing = 5f;        
+    private GameObject _target;
+    private const float Smoothing = 5f;
     private GameObject _entry;
     private GameObject _exit;
     private GameObject _player;
@@ -14,7 +14,7 @@ public class CameraFollowScript : MonoBehaviour {
     private Quaternion _defaultRotation;
     private Vector3 _defaultOffset;
 
-    Vector3 offset;                     
+    Vector3 _offset;                     
 
     private void Start()
     {
@@ -22,43 +22,42 @@ public class CameraFollowScript : MonoBehaviour {
         _defaultCameraPos = transform.position;
         _defaultRotation = transform.rotation;
         
-        
-        target = _player;
-        _defaultOffset = transform.position - target.transform.position - new Vector3(2f, 0f, 1f);
-        offset = _defaultOffset;
+        _target = _player;
+        _defaultOffset = transform.position - _target.transform.position - new Vector3(2f, 0f, 1f);
+        _offset = _defaultOffset;
     }
 
     private void FixedUpdate()
     {
-        if (target == null)
+        if (_target == null)
         {
            SetCameraOnEntry();
         }
 
-        Vector3 targetCamPos = target.transform.position + offset;
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        var targetCamPos = _target.transform.position + _offset;
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, Smoothing * Time.deltaTime);
     }
 
     public void SetCameraOnEntry()
     {
         _entry = GameObject.Find("Entrance(Clone)");
-        offset = new Vector3(3, 4, 0);
-        target = _entry;
+        _offset = new Vector3(3, 4, 0);
+        _target = _entry;
         transform.rotation = Quaternion.Euler(45, -90, 0);
     }
 
     public void SetCameraOnExit()
     {
         _exit = GameObject.Find("Exit(Clone)");
-        target = _exit;
-        offset = new Vector3(-3, 4, 0);
+        _target = _exit;
+        _offset = new Vector3(-3, 4, 0);
         transform.rotation = Quaternion.Euler(45, 90, 0);
     }
 
     public void ResetCamera()
     {
-        target = _player;
-        offset = _defaultOffset;
+        _target = _player;
+        _offset = _defaultOffset;
         transform.rotation = _defaultRotation;
         transform.position = _defaultCameraPos;
     }

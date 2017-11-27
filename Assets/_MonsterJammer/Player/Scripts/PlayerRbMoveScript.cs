@@ -16,12 +16,10 @@ public class PlayerRbMoveScript : MonoBehaviour
         MoveSpeed = _gameControl.GetDefaultPlayerSpeed();
         _actualSpeed = MoveSpeed;
         _targetPosition = transform.position;
-        
     }
    
     private void FixedUpdate ()
     {
-        Debug.Log("target: " + _targetPosition);
         if (_isStopped) return;
         Move();
     }
@@ -90,11 +88,9 @@ public class PlayerRbMoveScript : MonoBehaviour
     {
         set
         {
-           
             _isStopped = value;
             _targetPosition = transform.position;
         }
-        
     }
 }
 
