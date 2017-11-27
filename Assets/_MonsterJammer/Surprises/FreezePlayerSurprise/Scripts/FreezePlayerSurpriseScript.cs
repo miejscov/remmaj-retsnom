@@ -10,7 +10,7 @@ public class FreezePlayerSurpriseScript : MonoBehaviour {
 
 	private Animator _playerAnimator;
 
-	private const float FreezeTime = 300f;
+	private const float FreezeTime = 200f;
 
 	private void Start ()
 	{

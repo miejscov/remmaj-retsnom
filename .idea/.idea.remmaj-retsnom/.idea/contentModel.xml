@@ -7,18 +7,12 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="EntranceAudioScript.cs" t="Include" />
-        <e p="EntranceControlScript.cs" t="Include" />
-        <e p="ExitColliderScript.cs" t="Include" />
-        <e p="ExitControlScript.cs" t="Include" />
         <e p="Fruit Pack" t="Include">
           <e p="Shaders" t="Include">
             <e p="ToonLit.shader" t="Include" />
             <e p="ToonLitTransparent.shader" t="Include" />
           </e>
         </e>
-        <e p="GameControlAudioScript.cs" t="Include" />
-        <e p="GameControlScript.cs" t="Include" />
         <e p="Gem" t="Include">
           <e p="Shaders" t="Include">
             <e p="Gem.shader" t="Include" />
@@ -35,8 +29,6 @@
             <e p="AnimationScript.cs" t="Include" />
           </e>
         </e>
-        <e p="LabirynthDestroyScript.cs" t="Include" />
-        <e p="LevelControlScript.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -49,8 +41,6 @@
             </e>
           </e>
         </e>
-        <e p="SerializePlayerStatus.cs" t="Include" />
-        <e p="SettingsControlScript.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="ParticleSystems" t="Include">
             <e p="Scripts" t="Include">
@@ -87,6 +77,18 @@
               <e p="DiamondControlScript.cs" t="Include" />
             </e>
           </e>
+          <e p="Entrance" t="Include">
+            <e p="Scripst" t="Include">
+              <e p="EntranceAudioScript.cs" t="Include" />
+              <e p="EntranceControlScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Exit" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ExitColliderScript.cs" t="Include" />
+              <e p="ExitControlScript.cs" t="Include" />
+            </e>
+          </e>
           <e p="ExtraLife" t="Include">
             <e p="Scripts" t="Include">
               <e p="ExtraLifeScript.cs" t="Include" />
@@ -97,14 +99,10 @@
               <e p="FoodControlScript.cs" t="Include" />
             </e>
           </e>
-          <e p="FreezePlayerSurprise" t="Include">
+          <e p="GameControl" t="Include">
             <e p="Scripts" t="Include">
-              <e p="FreezePlayerSurpriseScript.cs" t="Include" />
-            </e>
-          </e>
-          <e p="InvertControlSurprise" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="InvertControlSurpriseScript.cs" t="Include" />
+              <e p="GameControlAudioScript.cs" t="Include" />
+              <e p="GameControlScript.cs" t="Include" />
             </e>
           </e>
           <e p="LevelControl" t="Include">
@@ -112,12 +110,15 @@
             <e p="Level_2_Script.cs" t="Include" />
             <e p="Level_3_Script.cs" t="Include" />
             <e p="Level_4_Script.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="LevelControlScript.cs" t="Include" />
+              <e p="SettingsControlScript.cs" t="Include" />
+            </e>
           </e>
           <e p="LevelGenerator" t="Include">
-            <e p="Settings" t="Include">
-              <e p="Setting_1.cs" t="Include" />
-              <e p="Setting_2.cs" t="Include" />
-              <e p="Setting_3.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="LabirynthDestroyScript.cs" t="Include" />
+              <e p="LevelGeneratorScript.cs" t="Include" />
             </e>
           </e>
           <e p="Player" t="Include">
@@ -134,20 +135,33 @@
               <e p="PlayerRbMoveScript.cs" t="Include" />
               <e p="PlayerRotationScript.cs" t="Include" />
               <e p="PlayerStatusScript.cs" t="Include" />
-            </e>
-          </e>
-          <e p="SlowDownPlayerSurprise" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="SlowDownPlayerSurprise.cs" t="Include" />
-            </e>
-          </e>
-          <e p="SpeedUpPlayerSurprise" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="SpeedUpPlayerSurprise.cs" t="Include" />
+              <e p="SerializePlayerStatus.cs" t="Include" />
             </e>
           </e>
           <e p="SurpriseMaker" t="Include">
             <e p="SurpriseMaker.cs" t="Include" />
+          </e>
+          <e p="Surprises" t="Include">
+            <e p="FreezePlayerSurprise" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="FreezePlayerSurpriseScript.cs" t="Include" />
+              </e>
+            </e>
+            <e p="InvertControlSurprise" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="InvertControlSurpriseScript.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SlowDownPlayerSurprise" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="SlowDownPlayerSurprise.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SpeedUpPlayerSurprise" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="SpeedUpPlayerSurprise.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="_MyProject" t="Include">
@@ -157,7 +171,6 @@
             <e p="CrateMovementScript.cs" t="Include" />
             <e p="DiamondControlScript1.cs" t="Include" />
             <e p="ItemGeneratorScript.cs" t="Include" />
-            <e p="LevelGeneratorScript.cs" t="Include" />
             <e p="MonsterAudioScript.cs" t="Include" />
             <e p="MonsterControlScript.cs" t="Include" />
             <e p="MonsterKillPlayerScript.cs" t="Include" />

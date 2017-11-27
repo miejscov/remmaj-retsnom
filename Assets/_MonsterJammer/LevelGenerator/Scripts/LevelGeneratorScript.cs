@@ -28,16 +28,16 @@ public class LevelGeneratorScript : MonoBehaviour {
     public int _monsterDistance = 1;
     
     
-    public GameObject MainCamera;
-    public GameObject Player;
-    public GameObject Wall;
-    public GameObject Floor;
-    public GameObject Crate;
-    public GameObject MonsterA;
-    public GameObject MonsterB;
-    public GameObject Entrance;
-    public GameObject Exit;
-    public GameObject Ground;
+    private GameObject _mainCamera;
+    private GameObject _player;
+    private GameObject _wall;
+    private GameObject _floor;
+    private GameObject _crate;
+    private GameObject _monsterA;
+    private GameObject _monsterB;
+    private GameObject _entrance;
+    private GameObject _exit;
+    private GameObject _ground;
 
     private int _playerX;
     private int _playerY;
@@ -70,16 +70,16 @@ public class LevelGeneratorScript : MonoBehaviour {
         _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
         _setting = _settingsControl.GetSetting();
         
-        MainCamera = _setting[0];
-        Player = _setting[1];
-        Wall = _setting[2];
-        Floor = _setting[3];
-        Crate = _setting[4];
-        MonsterA = _setting[5];
-        MonsterB = _setting[6];
-        Entrance = _setting[7];
-        Exit = _setting[8];
-        Ground = _setting[9];
+        _mainCamera = _setting[0];
+        _player = _setting[1];
+        _wall = _setting[2];
+        _floor = _setting[3];
+        _crate = _setting[4];
+        _monsterA = _setting[5];
+        _monsterB = _setting[6];
+        _entrance = _setting[7];
+        _exit = _setting[8];
+        _ground = _setting[9];
         
     }
 
@@ -487,11 +487,11 @@ public class LevelGeneratorScript : MonoBehaviour {
                 int z = -mapSize / 2 + i;
                 if (map[i, ii] == TILE_MONSTERA)
                 {
-                    Instantiate(MonsterA, new Vector3(x, 0.1f, z), Quaternion.identity);
+                    Instantiate(_monsterA, new Vector3(x, 0.1f, z), Quaternion.identity);
                 }
                 else if (map[i, ii] == TILE_MONSTERB)
                 {
-                    Instantiate(MonsterB, new Vector3(x, 0.1f, z), Quaternion.identity);
+                    Instantiate(_monsterB, new Vector3(x, 0.1f, z), Quaternion.identity);
                 }
 
             }
@@ -510,25 +510,25 @@ public class LevelGeneratorScript : MonoBehaviour {
                 switch (map[i, ii])
                 {
                     case TILE_WALL:
-                        Instantiate(Wall, new Vector3(x, .5f, z), Quaternion.identity);
+                        Instantiate(_wall, new Vector3(x, .5f, z), Quaternion.identity);
                         break;
                     case TILE_TUNNEL:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_CRATE:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
-                        Instantiate(Crate, new Vector3(x, 0.5f, z), Quaternion.identity);
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_crate, new Vector3(x, 0.5f, z), Quaternion.identity);
                         break;
                     case TILE_MONSTERA:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);                      
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);                      
                         break;
                     case TILE_MONSTERB:
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_PLAYER:
                         if (!CheckObjectExist("Player"))
                         {
-                            Instantiate(Player, new Vector3(x-2, 0f, z), Quaternion.identity);
+                            Instantiate(_player, new Vector3(x-2, 0f, z), Quaternion.identity);
                         }
                         else
                         {
@@ -539,19 +539,19 @@ public class LevelGeneratorScript : MonoBehaviour {
                         }
                         if (!CheckObjectExist("MainCamera"))
                         {
-                            Instantiate(MainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
+                            Instantiate(_mainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
                            
                         }
-                            Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                            Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
 
                         break;
                     case TILE_ENTRANCE:
-                        Instantiate(Entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, -90, 0));
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, -90, 0));
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TILE_EXIT:
-                        Instantiate(Exit, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
-                        Instantiate(Floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_exit, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                 }
             }
@@ -569,7 +569,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     private void InstantiateGround()
     {
         Vector3 scale;
-        GameObject grnd = Instantiate(Ground, new Vector3(0f, -.5f, 0f), Quaternion.identity);
+        GameObject grnd = Instantiate(_ground, new Vector3(0f, -.5f, 0f), Quaternion.identity);
         scale.y = .1f;
         scale.x = mapSize - 2;
         scale.z = mapSize - 2;

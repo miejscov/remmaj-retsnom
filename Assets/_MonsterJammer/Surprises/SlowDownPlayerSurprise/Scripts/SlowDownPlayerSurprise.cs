@@ -7,7 +7,7 @@ public class SlowDownPlayerSurprise : MonoBehaviour
 	private MeshRenderer _meshRenderer;
 	private GameControlScript _gameControl;
 
-	private const float SlowMotionTime = 400f;
+	private const float SlowMotionTime = 300f;
 
 	private void Start ()
 	{
