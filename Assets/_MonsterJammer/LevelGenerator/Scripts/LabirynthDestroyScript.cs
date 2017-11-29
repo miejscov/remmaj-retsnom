@@ -6,7 +6,7 @@ public class LabirynthDestroyScript : MonoBehaviour {
 
 	public static void DestroyLabirynth()
 	{
-		Destroy(GameObject.Find("LevelGenerator"));
+		Destroy(GameObject.Find("LevelGenerator(Clone)"));
 		DestroyAllObjectsWithTag("Monster");
 		DestroyAllObjectsWithTag("Crate");
 		DestroyAllObjectsWithTag("Wall");
