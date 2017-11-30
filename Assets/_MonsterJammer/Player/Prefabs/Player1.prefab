@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 114846662413626680}
   - component: {fileID: 114985794945987182}
   - component: {fileID: 114087970039432290}
-  - component: {fileID: 114396742347141818}
   - component: {fileID: 114167150598350954}
   - component: {fileID: 82354813734774710}
   - component: {fileID: 114998438358939968}
@@ -2749,18 +2748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81123d1d7f94c490c98b36eb2d11fb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _energy: 1
---- !u!114 &114396742347141818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082156589962844}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282e85ae5b5084eb6b9f9274cf130d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114622191567477246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2784,11 +2771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0796cc771a345febe4b566775510dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfLives: 0
-  Energy: 0
-  Diamonds: 9
-  Score: 0
-  CurrentLevel: 0
 --- !u!114 &114846662413626680
 MonoBehaviour:
   m_ObjectHideFlags: 1

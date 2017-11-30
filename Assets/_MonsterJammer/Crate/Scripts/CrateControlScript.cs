@@ -9,17 +9,15 @@ using UnityEngine;
 		public GameObject Player;
 		private MeshRenderer _meshRenderer;
 		private const int Score = 5;
-
 		
 		private void Start()
 		{
 			_meshRenderer = GetComponent<MeshRenderer>();
 		}
-	
 
 		public void DestroyCrate()
 		{
-			Player = GameObject.FindWithTag("Player");
+			Player = GameObject.Find("Player1(Clone)");
 
 			ResetPlayerOnCrateCollision();
 			DeductPlayerEnergy();
@@ -32,14 +30,12 @@ using UnityEngine;
 			Invoke("Destroy", .4f);
 		}
 
-
 		private void Destroy()
 		{
 			Destroy(gameObject);
 			_surpriseMaker = GameObject.Find("SurpriseMaker").GetComponent<SurpriseMaker>();
 			_surpriseMaker.PlaceBonus(transform.position);
 		}
-		
 
 		private void ResetPlayerOnCrateCollision()
 		{

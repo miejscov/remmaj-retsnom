@@ -53,7 +53,6 @@ public class PlayerAnimationControlScript : MonoBehaviour
 
 		public void PlayCantPush()
 		{
-//			_animator.StopPlayback();
 			_animator.Play("CantPush");
 		}
 

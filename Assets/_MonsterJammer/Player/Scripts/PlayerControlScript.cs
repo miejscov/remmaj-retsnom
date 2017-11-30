@@ -9,8 +9,8 @@
 		private PlayerAnimationControlScript _playerAnimation;
 		private Animator _animator;
 		
-		Vector3 direction;
-		Quaternion rotation;
+		private Vector3 _direction;
+		private Quaternion _rotation;
 		private bool _isOnDirection = false;
 		
 		private bool _invertControl;
@@ -105,16 +105,16 @@
 
 		private void MoveForward()
 		{
-			direction = Vector3.forward;
-			rotation = Quaternion.Euler(0, 0, 0);
+			_direction = Vector3.forward;
+			_rotation = Quaternion.Euler(0, 0, 0);
 				
 			_playerRotation.Forward();
-			if (_playerRay.CheckActionInDirection(direction, rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
+			if (_playerRay.CheckActionInDirection(_direction, _rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
 			{
 				_playerAnimation.PlayHitAnimation();
 				_playerRay.HitObject().GetComponent<CrateControlScript>().DestroyCrate();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 2) //can move
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 2) //can move
 			{
 				if (_playerRay.HitObject() != null && _playerRay.HitObject().gameObject.tag.Equals("Crate"))
 				{
@@ -122,7 +122,7 @@
 				}
 				_playerRbMove.MoveForward();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 0) //can't move
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 0) //can't move
 			{
 				_playerAnimation.PlayCantPush();
 			}
@@ -130,17 +130,17 @@
 
 		private void MoveBack()
 		{
-			direction = Vector3.back;
-			rotation = Quaternion.Euler(0, 180, 0);
+			_direction = Vector3.back;
+			_rotation = Quaternion.Euler(0, 180, 0);
 				
 			_playerRotation.TurnBack();
-			if (_playerRay.CheckActionInDirection(direction, rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
+			if (_playerRay.CheckActionInDirection(_direction, _rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
 			{
 				_playerAnimation.PlayHitAnimation();
 				_playerRay.HitObject().GetComponent<CrateControlScript>().DestroyCrate();
 					
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 2) // can move
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 2) // can move
 			{
 				if (_playerRay.HitObject() != null && _playerRay.HitObject().gameObject.tag.Equals("Crate"))
 				{
@@ -148,7 +148,7 @@
 				}
 				_playerRbMove.MoveBackward();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 0)
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 0)
 			{
 				_playerAnimation.PlayCantPush();
 			}
@@ -156,16 +156,16 @@
 
 		private void MoveRight()
 		{
-			direction = Vector3.right;
-			rotation = Quaternion.Euler(0, 90, 0);
+			_direction = Vector3.right;
+			_rotation = Quaternion.Euler(0, 90, 0);
 				
 			_playerRotation.TurnRight();
-			if (_playerRay.CheckActionInDirection(direction, rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
+			if (_playerRay.CheckActionInDirection(_direction, _rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
 			{
 				_playerAnimation.PlayHitAnimation();
 				_playerRay.HitObject().GetComponent<CrateControlScript>().DestroyCrate();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 2)
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 2)
 			{
 				if (_playerRay.HitObject() != null && _playerRay.HitObject().gameObject.tag.Equals("Crate"))
 				{
@@ -173,7 +173,7 @@
 				}
 				_playerRbMove.MoveRight();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 0)
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 0)
 			{
 				_playerAnimation.PlayCantPush();
 			}
@@ -181,16 +181,16 @@
 		
 		private void MoveLeft()
 		{
-			direction = Vector3.left;
-			rotation = Quaternion.Euler(0, -90, 0);
+			_direction = Vector3.left;
+			_rotation = Quaternion.Euler(0, -90, 0);
 				
 			_playerRotation.TurnLeft();
-			if (_playerRay.CheckActionInDirection(direction, rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
+			if (_playerRay.CheckActionInDirection(_direction, _rotation) == 1 && _playerStatus.GetAmountOfEnergy() > 0) // can hit
 			{
 				_playerAnimation.PlayHitAnimation();
 				_playerRay.HitObject().GetComponent<CrateControlScript>().DestroyCrate();
 			}
-			else if (_playerRay.CheckActionInDirection(direction, rotation) == 2)
+			else if (_playerRay.CheckActionInDirection(_direction, _rotation) == 2)
 			{
 				if (_playerRay.HitObject() != null && _playerRay.HitObject().gameObject.tag.Equals("Crate"))
 				{
@@ -198,7 +198,7 @@
 				}
 				_playerRbMove.MoveLeft();
 			}
-			else if(_playerRay.CheckActionInDirection(direction, rotation) == 0)
+			else if(_playerRay.CheckActionInDirection(_direction, _rotation) == 0)
 			{
 				_playerAnimation.PlayCantPush();
 			}

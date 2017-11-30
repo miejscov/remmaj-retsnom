@@ -67,7 +67,6 @@
           </e>
           <e p="Crate" t="Include">
             <e p="Scripts" t="Include">
-              <e p="CrateCollisionScript.cs" t="Include" />
               <e p="CrateControlScript.cs" t="Include" />
               <e p="CrateRayCheck.cs" t="Include" />
             </e>
@@ -126,7 +125,6 @@
               <e p="AudioControlScript.cs" t="Include" />
               <e p="PlayerAnimationControlScript.cs" t="Include" />
               <e p="PlayerAudioControlScript.cs" t="Include" />
-              <e p="PlayerBlendAnimationScript.cs" t="Include" />
               <e p="PlayerCollisionScript.cs" t="Include" />
               <e p="PlayerControlScript.cs" t="Include" />
               <e p="PlayerGameOverScript.cs" t="Include" />

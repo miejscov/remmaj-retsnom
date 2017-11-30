@@ -4,67 +4,43 @@ using UnityEngine;
 
 public class LevelGeneratorScript : MonoBehaviour {
 
-    //    public Text debugText;
-    //    public Transform plane_green;
-    //    public Transform plane_darkgray;
-    //
-    private float cameraDistanceY = 8;
-    private float cameraDistanceZ = 2;
-    private float cameraRotationX = 80f;
-    private int mapSize = 21;
-    private int seed;
+    private const float CameraDistanceY = 8;
+    private const float CameraDistanceZ = 2;
+    private const float CameraRotationX = 80f;
+    private int _mapSize;// = 21;
+    private int _seed;
     [Tooltip("Number of empty tiles on the map.")]
-    private int maxTunnelCount = 64;
+    private int _maxTunnelCount;// = 64;
     [Tooltip("Minimal tunnel length during generation.")]
-    private int minTunnelLength = 3;
-    private int cratesAmount = 32;
-    private int monstersAmountA = 8;
-    private int monstersAmountB = 1;
+    private int _minTunnelLength;// = 3;
+    private int _cratesAmount;// = 32;
+    private int _monstersAmountA;// = 8;
+    private int _monstersAmountB;// = 1;
     [Tooltip("Minimum distance between player and monsters on level start.")]
     [Range(1, 5)]
-    private int playerSafeDistance = 2;
+    private int _playerSafeDistance = 2;
     [Tooltip("Minimum distance between monsters. DO NOT SET TOO HIGH!")]
     [Range(0, 3)]
     private int _monsterDistance = 1;
     
+
+    private int _playerX, _playerY;
+    private int _tunnelCount = 0;
+    private const int TileEntrance = 3;
+    private const int TileExit = 4;
+    private const int TileCrate = 2;
+    private const int TileWall = 1;
+    private const int TileTunnel = 0;
+    private const int TileMonstera = 10;
+    private const int TileMonsterb = 11;
+    private const int TilePlayer = 1000;
+    private const int DirLeft = 0;
+    private const int DirDown = 1;
+    private int[,] _map;
     
-    private GameObject _mainCamera;
-    private GameObject _player;
-    private GameObject _wall;
-    private GameObject _floor;
-    private GameObject _crate;
-    private GameObject _monsterA;
-    private GameObject _monsterB;
-    private GameObject _entrance;
-    private GameObject _exit;
-    private GameObject _ground;
-
-    private int _playerX;
-    private int _playerY;
-
-    private int tunnelCount = 0;
-    //    const int TILESIZE = 8;
-    const int TILE_ENTRANCE = 3;
-    const int TILE_EXIT = 4;
-    const int TILE_CRATE = 2;
-    const int TILE_WALL = 1;
-    const int TILE_TUNNEL = 0;
-    const int TILE_MONSTERA = 10;
-    const int TILE_MONSTERB = 11;
-    const int TILE_PLAYER = 1000;
-
-    //const int LASTLOOP = 1024;
-    const int DIR_LEFT = 0;
-    const int DIR_DOWN = 1;
-
-    //private int[] mapIndexX;
-    //private int[] mapIndexY;
-    //private int[] mapIndexTile;
-
-    int[,] map;
-
-    private GameObject[] _setting;
     private SettingsControlScript _settingsControl;
+    private GameObject[] _setting;
+    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _entrance, _exit, _ground;
     private void GetSetting()
     {
         _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
@@ -80,190 +56,132 @@ public class LevelGeneratorScript : MonoBehaviour {
         _entrance = _setting[7];
         _exit = _setting[8];
         _ground = _setting[9];
-        
     }
 
     public void SetLabirynthParameters(int[] paramArray)
     {
-        
-//        Debug.Log("map size: " + paramArray[0]);
-//        Debug.Log("map size: " + paramArray[1]);
-//        Debug.Log("map size: " + paramArray[2]);
-//        Debug.Log("map size: " + paramArray[3]);
-//        Debug.Log("map size: " + paramArray[4]);
-        
-        mapSize = paramArray[0];
-        maxTunnelCount = paramArray[1];
-        minTunnelLength = paramArray[2];
-        cratesAmount = paramArray[3];
-        monstersAmountA = paramArray[4];
-        monstersAmountB = paramArray[5];
+        _mapSize = paramArray[0];
+        _maxTunnelCount = paramArray[1];
+        _minTunnelLength = paramArray[2];
+        _cratesAmount = paramArray[3];
+        _monstersAmountA = paramArray[4];
+        _monstersAmountB = paramArray[5];
     }
-    
 
     public void GenerateLabirynth()
     {
         GetSetting();
-//        Player.SetActive(false);
         GenerateMap();
         GeneratePlayer();
-//        Player.SetActive(true);
-        GenerateMonstersA(monstersAmountA);
-        GenerateMonstersB(monstersAmountB);
-        GenerateCrates(cratesAmount);
+        GenerateMonstersA(_monstersAmountA);
+        GenerateMonstersB(_monstersAmountB);
+        GenerateCrates(_cratesAmount);
         GenerateExits();
- 
-
         InstantiateGround();
         InstantiateMonsters();
         InstantiateMap();
-        
-        //		plane.transform.Translate (1, 1, 1);
     }
 
 
-    void GenerateMap()
+    private void GenerateMap()
     {
-        int startPos = mapSize / 2;
-        int maxTunnelLength = mapSize / 2;
+        var startPos = _mapSize / 2;
+        var maxTunnelLength = _mapSize / 2;
 
-        int tunnelLength = Random.Range(1, mapSize - 2);
-        int x, y;
-
-        //mapIndexTile = new int[mapSize * mapSize];
-        //mapIndexX = new int[mapSize * mapSize];
-        //mapIndexY = new int[mapSize * mapSize];
-
-        /*
-        for (int i = 0; i < (mapSize * mapSize); i++)
+        _map = new int[_mapSize, _mapSize];
+        for (var i = 0; i < _mapSize; i++)
         {
-            mapIndexTile[i] = 0;
-            mapIndexX[i] = 0;
-            mapIndexY[i] = 0;
-        }
-        */
-
-        //        Random.seed = seed;
-        map = new int[mapSize, mapSize];
-        for (int i = 0; i < mapSize; i++)
-        {
-            for (int ii = 0; ii < mapSize; ii++)
+            for (var ii = 0; ii < _mapSize; ii++)
             {
-                map[i, ii] = TILE_WALL;
+                _map[i, ii] = TileWall;
             }
         }
 
-
-        x = 1;
-        y = mapSize / 2;
-        tunnelLength = mapSize;
-        CreateTunnel(x, y, DIR_LEFT, tunnelLength);
+        var x = 1;
+        var y = _mapSize / 2;
+        var tunnelLength = _mapSize;
+        CreateTunnel(x, y, DirLeft, tunnelLength);
         y = 1;
-        x = mapSize / 2;
-        tunnelLength = mapSize - 2;
-        CreateTunnel(x, y, DIR_DOWN, tunnelLength);
+        x = _mapSize / 2;
+        tunnelLength = _mapSize - 2;
+        CreateTunnel(x, y, DirDown, tunnelLength);
 
-
-
-        while (tunnelCount < maxTunnelCount)
+        while (_tunnelCount < _maxTunnelCount)
         {
-//            int chosenIndex = Random.Range(0, tunnelCount);
-            int dir = Random.Range(0, 2);
-            tunnelLength = Random.Range(minTunnelLength, maxTunnelLength);
-            //            Debug.Log("Dir = " + dir);
-            x = Random.Range(1, mapSize - 3);
-            y = Random.Range(1, mapSize - 3);
-            //Debug.Log("x = " + x + "   y = " + y);
+            var dir = Random.Range(0, 2);
+            tunnelLength = Random.Range(_minTunnelLength, maxTunnelLength);
+            x = Random.Range(1, _mapSize - 3);
+            y = Random.Range(1, _mapSize - 3);
             if (CheckTunnel(x, y, dir, tunnelLength))
             {
-                //Debug.Log("x = " + x + "   y = " + y);
                 CreateTunnel(x, y, dir, tunnelLength);
             }
-//            CreateTunnel(mapIndexX[chosenIndex], mapIndexY[chosenIndex], dir, tunnelLength);
-//            tunnelCount++;
         }
-
     }
 
-    bool CheckTunnel(int x, int y, int dir, int length)
+    private bool CheckTunnel(int x, int y, int dir, int length)
     {
-        bool tunnelOk;
-        tunnelOk = false;
-        if (dir == DIR_LEFT)
+        var tunnelOk = false;
+        switch (dir)
         {
-            for (int i = x; i < length + x; i++)
-            {
-                if (map[y, i] == TILE_TUNNEL) tunnelOk = true;
-                if (i > mapSize - 3) break;
-            }
-
-        }
-        else if (dir == DIR_DOWN)
-        {
-            for (int i = y; i < length + y; i++)
-            {
-                if (map[i, x] == TILE_TUNNEL) tunnelOk = true;
-                if (i > mapSize - 3) break;
-            }
-
+            case DirLeft:
+                for (var i = x; i < length + x; i++)
+                {
+                    if (_map[y, i] == TileTunnel) tunnelOk = true;
+                    if (i > _mapSize - 3) break;
+                }
+                break;
+            case DirDown:
+                for (var i = y; i < length + y; i++)
+                {
+                    if (_map[i, x] == TileTunnel) tunnelOk = true;
+                    if (i > _mapSize - 3) break;
+                }
+                break;
         }
         return tunnelOk;
     }
-    void CreateTunnel(int x, int y, int dir, int length)
+
+    private void CreateTunnel(int x, int y, int dir, int length)
     {
-        if (dir == DIR_LEFT)
+        if (dir == DirLeft)
         {
-
-            for (int i = x; i < length + x; i++)
+            for (var i = x; i < length + x; i++)
             {
-                //mapIndexTile[tunnelCount] = TILE_TUNNEL;
-                //mapIndexX[tunnelCount] = i;
-                //mapIndexY[tunnelCount] = y;
-//                OnDrawGizmos();
-//                Wait(0.1f);
-
-                if (map[y, i] == TILE_WALL)
+                if (_map[y, i] == TileWall)
                 {
-                    tunnelCount++;
-                    map[y, i] = TILE_TUNNEL;
+                    _tunnelCount++;
+                    _map[y, i] = TileTunnel;
                 }
-                if (i > mapSize - 3) return;
+                if (i > _mapSize - 3) return;
             }
 
         }
-        else if (dir == DIR_DOWN)
+        else if (dir == DirDown)
         {
-            for (int i = y; i < length + y; i++)
+            for (var i = y; i < length + y; i++)
             {
-                //mapIndexTile[tunnelCount] = TILE_TUNNEL;
-                //mapIndexX[tunnelCount] = i;
-                //mapIndexY[tunnelCount] = y;
-                //                OnDrawGizmos();
-                //                Wait(0.1f);
-
-                if (map[i, x] == TILE_WALL)
+                if (_map[i, x] == TileWall)
                 {
-                    tunnelCount++;
-                    map[i, x] = TILE_TUNNEL;
+                    _tunnelCount++;
+                    _map[i, x] = TileTunnel;
                 }
-                if (i > mapSize - 3) return;
+                if (i > _mapSize - 3) return;
             }
 
         }
     }
 
-    void GenerateExits()
+    private void GenerateExits()
     {
-        map[mapSize / 2, 0] = TILE_ENTRANCE;
-        map[mapSize / 2, mapSize - 1] = TILE_EXIT;
+        _map[_mapSize / 2, 0] = TileEntrance;
+        _map[_mapSize / 2, _mapSize - 1] = TileExit;
     }
 
-    void GenerateCrates(int amount)
+    private void GenerateCrates(int amount)
     {
-        int crates;
-        crates = 0;
-        int counter;
-        counter = 100000;
+        var crates = 0;
+        var counter = 100000;
         while (crates < amount)
         {
             counter--;
@@ -272,285 +190,204 @@ public class LevelGeneratorScript : MonoBehaviour {
                 Debug.LogError("Could not find suitable Crate position!");
                 break;
             }
-            int x, y;
-            
-            x = Random.Range(1, mapSize - 1);
-            y = Random.Range(1, mapSize - 1);
-            if (map[y, x] != TILE_TUNNEL) continue;
-            else if ((map[y, x - 1] == TILE_MONSTERA || map[y, x - 1] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
-            else if ((map[y, x + 1] == TILE_MONSTERA || map[y, x + 1] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
-            else if ((map[y - 1, x] == TILE_MONSTERA || map[y - 1, x] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
-            else if ((map[y + 1, x] == TILE_MONSTERA || map[y + 1, x] == TILE_MONSTERB) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
+            var x = Random.Range(1, _mapSize - 1);
+            var y = Random.Range(1, _mapSize - 1);
+            if (_map[y, x] != TileTunnel) continue;
+            else if ((_map[y, x - 1] == TileMonstera || _map[y, x - 1] == TileMonsterb) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
+            else if ((_map[y, x + 1] == TileMonstera || _map[y, x + 1] == TileMonsterb) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
+            else if ((_map[y - 1, x] == TileMonstera || _map[y - 1, x] == TileMonsterb) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
+            else if ((_map[y + 1, x] == TileMonstera || _map[y + 1, x] == TileMonsterb) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
 
-            map[y, x] = TILE_CRATE;
+            _map[y, x] = TileCrate;
             crates++;
-            
         }
     }
 
     private bool CheckForAdjacentTunnels(int x, int y, int minTunnels)
     {
-        int tunnels;
-        tunnels = 0;
-        if (map[y, x - 1] == TILE_TUNNEL) tunnels++;
-        if (map[y, x + 1] == TILE_TUNNEL) tunnels++;
-        if (map[y - 1, x] == TILE_TUNNEL) tunnels++;
-        if (map[y + 1, x] == TILE_TUNNEL) tunnels++;
-        if (tunnels >= minTunnels) return true;
-        return false;
+        var tunnels = 0;
+        if (_map[y, x - 1] == TileTunnel) tunnels++;
+        if (_map[y, x + 1] == TileTunnel) tunnels++;
+        if (_map[y - 1, x] == TileTunnel) tunnels++;
+        if (_map[y + 1, x] == TileTunnel) tunnels++;
+        return tunnels >= minTunnels;
     }
 
-    void GenerateMonstersA(int amount)
+    private void GenerateMonstersA(int amount)
     {
-        int monstersA;
-        monstersA = 0;
-        int counter;
-        counter = 100000;
+        var monstersA = 0;
+        var counter = 100000;
         while (monstersA < amount)
         {
-            bool isOk;
-            isOk = true;
-            int x, y;
+            var isOk = true;
             counter--;
             if (counter <= 0)
             {
                 Debug.LogError("Could not find suitable Monster-A start position!");
                 return;
             }
-            x = Random.Range(1, mapSize - 1);
-            y = Random.Range(1, mapSize - 1);
-            if (map[y, x] != TILE_TUNNEL) continue;
-            else if (!(y < _playerY - playerSafeDistance || y > _playerY + playerSafeDistance || x < _playerX - playerSafeDistance || x > _playerX + playerSafeDistance)) continue;
-            else if (!(map[y - 1, x] == TILE_TUNNEL || map[y + 1, x] == TILE_TUNNEL || map[y, x - 1] == TILE_TUNNEL || map[y, x + 1] == TILE_TUNNEL)) continue;
+            var x = Random.Range(1, _mapSize - 1);
+            var y = Random.Range(1, _mapSize - 1);
+            if (_map[y, x] != TileTunnel) continue;
+            if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
+            if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
 
-            for (int i = -_monsterDistance; i <= _monsterDistance; i++)
+            for (var i = -_monsterDistance; i <= _monsterDistance; i++)
             {
-                for (int ii = -_monsterDistance; ii <= _monsterDistance; ii++)
+                for (var ii = -_monsterDistance; ii <= _monsterDistance; ii++)
                 {
-                    if (x + ii > 0 && x + ii < mapSize - 1 && y + i > 0 && y + i < mapSize - 1)
+                    if (x + ii <= 0 || x + ii >= _mapSize - 1 || y + i <= 0 || y + i >= _mapSize - 1) continue;
+                    if (_map[i + y, ii + x] == TileMonstera || _map[i + y, ii + x] == TileMonsterb)
                     {
-                        if (map[i + y, ii + x] == TILE_MONSTERA || map[i + y, ii + x] == TILE_MONSTERB)
-                        {
-                            isOk = false;
-                            break;
-                        }
-                        if (!isOk) break;
+                        isOk = false;
+                        break;
                     }
+                    if (!isOk) break;
                 }
             }
-            if (isOk)
-            {
-                map[y, x] = TILE_MONSTERA;
-                monstersA++;
-            }
-
+            if (!isOk) continue;
+            _map[y, x] = TileMonstera;
+            monstersA++;
         }
     }
 
-    void GenerateMonstersB(int amount)
+    private void GenerateMonstersB(int amount)
     {
-        int monstersB;
-        monstersB = 0;
-        int counter;
-        counter = 100000;
+        var monstersB = 0;
+        var counter = 100000;
         while (monstersB < amount)
         {
-            bool isOk;
-            isOk = true;
-            int x, y;
+            var isOk = true;
             counter--;
             if (counter <= 0)
             {
                 Debug.LogError("Could not find suitable Monster-B start position!");
                 return;
             }
-            x = Random.Range(1, mapSize - 1);
-            y = Random.Range(1, mapSize - 1);
-            if (map[y, x] != TILE_TUNNEL) continue;
-            else if (!(y < _playerY - playerSafeDistance || y > _playerY + playerSafeDistance || x < _playerX - playerSafeDistance || x > _playerX + playerSafeDistance)) continue;
-            else if (!(map[y - 1, x] == TILE_TUNNEL || map[y + 1, x] == TILE_TUNNEL || map[y, x - 1] == TILE_TUNNEL || map[y, x + 1] == TILE_TUNNEL)) continue;
+            var x = Random.Range(1, _mapSize - 1);
+            var y = Random.Range(1, _mapSize - 1);
+            if (_map[y, x] != TileTunnel) continue;
+            else if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
+            else if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
 
-            for (int i = -_monsterDistance; i <= _monsterDistance; i++)
+            for (var i = -_monsterDistance; i <= _monsterDistance; i++)
             {
-                for (int ii = -_monsterDistance; ii <= _monsterDistance; ii++)
+                for (var ii = -_monsterDistance; ii <= _monsterDistance; ii++)
                 {
-                    if (x + ii > 0 && x + ii < mapSize - 1 && y + i > 0 && y + i < mapSize - 1)
+                    if (x + ii <= 0 || x + ii >= _mapSize - 1 || y + i <= 0 || y + i >= _mapSize - 1) continue;
+                    if (_map[i + y, ii + x] == TileMonstera || _map[i + y, ii + x] == TileMonsterb)
                     {
-                        if (map[i + y, ii + x] == TILE_MONSTERA || map[i + y, ii + x] == TILE_MONSTERB)
-                        {
-                            isOk = false;
-                            break;
-                        }
-                        if (!isOk) break;
+                        isOk = false;
+                        break;
                     }
+                    if (!isOk) break;
                 }
             }
-            if (isOk)
-            {
-                map[y, x] = TILE_MONSTERB;
-                monstersB++;
-            }
-
+            if (!isOk) continue;
+            _map[y, x] = TileMonsterb;
+            monstersB++;
         }
     }
 
-    void GeneratePlayer()
+    private void GeneratePlayer()
     {
-        //for(int i = 0; i < 100000; i++)
-        //{
-        //    int x = Random.Range(playerSafeDistance + 1, mapSize - playerSafeDistance - 2);
-        //    int y = Random.Range(playerSafeDistance + 1, mapSize - playerSafeDistance - 2);
-        //    Debug.Log("x = " + x + "   y = " + y);
-        //    if (map[y, x] == TILE_TUNNEL)
-        //    {
-        //        bool isOk;
-        //        isOk = true;
-        //        for (i = y - playerSafeDistance; i <= y + playerSafeDistance; i++)
-        //        {
-        //            for (int ii = x - playerSafeDistance; ii <= x + playerSafeDistance; ii++)
-        //            {
-        //                if (map[i, ii] == TILE_MONSTER)
-        //                {
-        //                    isOk = false;
-        //                    break;
-        //                }
-        //            }
-        //            if (!isOk) break;
-        //        }
-        //        if (isOk)
-        //        {
-        //            map[y, x] = TILE_PLAYER;
-        //            _playerX = x;
-        //            _playerY = y;
-        //            SurroundPlayerWithCrates(y, x);
-        //            return;
-        //        }
-        //    }
-        //}
-        //Debug.LogError("Could not find suitable player start position!");
         _playerX = 1;
-        _playerY = mapSize / 2;
-        map[_playerY, _playerX] = TILE_PLAYER;
+        _playerY = _mapSize / 2;
+        _map[_playerY, _playerX] = TilePlayer;
         SurroundPlayerWithCrates(_playerY, _playerX);
     }
 
-    void SurroundPlayerWithCrates(int y, int x)
+    private void SurroundPlayerWithCrates(int y, int x)
     {
-        if (map[y - 1,x] == TILE_TUNNEL)
+        if (_map[y - 1,x] == TileTunnel)
         {
-            map[y - 1, x] = TILE_CRATE;
-            cratesAmount--;
+            _map[y - 1, x] = TileCrate;
+            _cratesAmount--;
         }
-        if (map[y + 1, x] == TILE_TUNNEL)
+        if (_map[y + 1, x] == TileTunnel)
         {
-            map[y + 1, x] = TILE_CRATE;
-            cratesAmount--;
+            _map[y + 1, x] = TileCrate;
+            _cratesAmount--;
         }
-        if (map[y, x - 1] == TILE_TUNNEL)
+        if (_map[y, x - 1] == TileTunnel)
         {
-            map[y, x - 1] = TILE_CRATE;
-            cratesAmount--;
+            _map[y, x - 1] = TileCrate;
+            _cratesAmount--;
         }
-        if (map[y, x + 1] == TILE_TUNNEL)
-        {
-            map[y, x + 1] = TILE_CRATE;
-            cratesAmount--;
-        }
-    }
-
-    void Wait(float waitTime)
-    {
-        float counter = 0f;
-        while (counter < waitTime)
-        {
-            //Increment Timer until counter >= waitTime
-            counter += Time.deltaTime;
-            //                       Debug.Log("We have waited for: " + counter + " seconds");
-            //Wait for a frame so that Unity doesn't freeze
-            //Check if we want to quit this function
-            //if (Ap)
-            //{
-            //    //Quit function
-            //    yield break;
-            //}
-            //                       yield return null;
-        }
-
+        if (_map[y, x + 1] != TileTunnel) return;
+        _map[y, x + 1] = TileCrate;
+        _cratesAmount--;
     }
 
     private void InstantiateMonsters() 
     {
-       for (int i = 0; i < mapSize; i++)
+       for (var i = 0; i < _mapSize; i++)
         {
-            for (int ii = 0; ii < mapSize; ii++)
+            for (var ii = 0; ii < _mapSize; ii++)
             {
-                int x = -mapSize / 2 + ii;
-                int z = -mapSize / 2 + i;
-                if (map[i, ii] == TILE_MONSTERA)
-                {
+                var x = -_mapSize / 2 + ii;
+                var z = -_mapSize / 2 + i;
+                if (_map[i, ii] == TileMonstera)
                     Instantiate(_monsterA, new Vector3(x, 0.1f, z), Quaternion.identity);
-                }
-                else if (map[i, ii] == TILE_MONSTERB)
+                else if (_map[i, ii] == TileMonsterb)
                 {
                     Instantiate(_monsterB, new Vector3(x, 0.1f, z), Quaternion.identity);
                 }
-
             }
         }
     }
 
-    void InstantiateMap()
+    private void InstantiateMap()
     {
-        for (int i = 0; i < mapSize; i++)
+        for (var i = 0; i < _mapSize; i++)
         {
-            for (int ii = 0; ii < mapSize; ii++)
+            for (var ii = 0; ii < _mapSize; ii++)
             {
-                int x = -mapSize / 2 + ii;
-                int z = -mapSize / 2 + i;
+                var x = -_mapSize / 2 + ii;
+                var z = -_mapSize / 2 + i;
 
-                switch (map[i, ii])
+                switch (_map[i, ii])
                 {
-                    case TILE_WALL:
+                    case TileWall:
                         Instantiate(_wall, new Vector3(x, .5f, z), Quaternion.identity);
                         break;
-                    case TILE_TUNNEL:
+                    case TileTunnel:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-                    case TILE_CRATE:
+                    case TileCrate:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         Instantiate(_crate, new Vector3(x, 0.5f, z), Quaternion.identity);
                         break;
-                    case TILE_MONSTERA:
-                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);                      
-                        break;
-                    case TILE_MONSTERB:
+                    case TileMonstera:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-                    case TILE_PLAYER:
+                    case TileMonsterb:
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        break;
+                    case TilePlayer:
                         if (!CheckObjectExist("Player"))
                         {
-                            Instantiate(_player, new Vector3(x-2, 0f, z), Quaternion.identity);
+                            Instantiate(_player, new Vector3(x - 2, 0f, z), Quaternion.identity);
                         }
                         else
                         {
                             var player = GameObject.Find("Player1(Clone)");
-                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x-2, 0f, z));
+                            player.GetComponent<PlayerRbMoveScript>().SetPlayerPosition(new Vector3(x - 2, 0f, z));
                             player.GetComponent<PlayerRbMoveScript>().ResetSpeed();
                             player.GetComponent<PlayerControlScript>().ResetControl();
                         }
                         if (!CheckObjectExist("MainCamera"))
                         {
-                            Instantiate(_mainCamera, new Vector3(x, cameraDistanceY, z - cameraDistanceZ), Quaternion.Euler(cameraRotationX, 0f, 0f));
-                           
+                            Instantiate(_mainCamera, new Vector3(x, CameraDistanceY, z - CameraDistanceZ),
+                                Quaternion.Euler(CameraRotationX, 0f, 0f));
                         }
-                            Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
-
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-                    case TILE_ENTRANCE:
+                    case TileEntrance:
                         Instantiate(_entrance, new Vector3(x, 0f, z), Quaternion.Euler(0, -90, 0));
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-                    case TILE_EXIT:
+                    case TileExit:
                         Instantiate(_exit, new Vector3(x, 0f, z), Quaternion.Euler(0, 90, 0));
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
@@ -566,54 +403,15 @@ public class LevelGeneratorScript : MonoBehaviour {
         return exist;
     }
 
-
     private void InstantiateGround()
     {
         Vector3 scale;
-        GameObject grnd = Instantiate(_ground, new Vector3(0f, -.5f, 0f), Quaternion.identity);
+        var grnd = Instantiate(_ground, new Vector3(0f, -.5f, 0f), Quaternion.identity);
         scale.y = .1f;
-        scale.x = mapSize - 2;
-        scale.z = mapSize - 2;
+        scale.x = _mapSize - 2;
+        scale.z = _mapSize - 2;
         
         grnd.transform.localScale = scale;
         grnd.GetComponent<MeshRenderer>().enabled = false;
-//        Ground = grnd;
     }
-    /*
-    void OnDrawGizmos()
-    {
-
-
-
-
-        if (map != null)
-        {
-            for (int x = 0; x < mapSize; x++)
-            {
-                for (int y = 0; y < mapSize; y++)
-                {
-                    switch (map[y, x]) {
-                        case TILE_TUNNEL:
-                            Gizmos.color = Color.gray;
-                            break;
-                        case TILE_WALL:
-                            Gizmos.color = Color.red;
-                            break;
-                        case TILE_CRATE:
-                            Gizmos.color = new Color(.5f, .5f, 0f, 1f);
-                            break;
-                        case TILE_MONSTER:
-                            Gizmos.color = Color.green;
-                            break;
-                    }
-                    Vector3 pos = new Vector3(-mapSize / 2 + x, 0, -mapSize / 2 + y );
-                    Gizmos.DrawCube(pos, new Vector3(.8f, .8f, .8f));
-
-
-                }
-            }
-        }
-
-    }
-    */
 }

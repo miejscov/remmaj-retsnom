@@ -6,7 +6,6 @@ public class PlayerRbMoveScript : MonoBehaviour
     private Vector3 _targetPosition;
     private GameControlScript _gameControl;
     public float MoveSpeed;
-
     private float _actualSpeed;
     public bool _isStopped;
     
@@ -82,7 +81,6 @@ public class PlayerRbMoveScript : MonoBehaviour
     {
         _targetPosition = new Vector3(Mathf.Round(pos.x), transform.position.y, Mathf.Round(pos.z));
     }
-    
 
     public bool IsStopped
     {

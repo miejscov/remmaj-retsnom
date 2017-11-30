@@ -6,11 +6,10 @@ public class SerializePlayerStatus : MonoBehaviour
 	private PlayerStatusScript _playerStatus;
 	private LevelControlScript _levelControl;
 	
-	public int NumberOfLives;
-	public int Energy;
-	public int Diamonds;
-	public int Score;
-	public int CurrentLevel;
+	private int _numberOfLives;
+	private int _energy;
+	private int _score;
+	private int _currentLevel;
 
 	private void Start()
 	{
@@ -25,19 +24,19 @@ public class SerializePlayerStatus : MonoBehaviour
 
         var outputPath = Application.persistentDataPath + @"/PlayerStatus.json";
 	    
-	    Energy = _playerStatus.GetAmountOfEnergy();
-	    NumberOfLives = _playerStatus.GetNumberOfLives();
-	    Score = _playerStatus.GetPlayerScore();
+	    _energy = _playerStatus.GetAmountOfEnergy();
+	    _numberOfLives = _playerStatus.GetNumberOfLives();
+	    _score = _playerStatus.GetPlayerScore();
 	    
 		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
-	    CurrentLevel = _levelControl.GetCurrentLevel();
+	    _currentLevel = _levelControl.GetCurrentLevel();
 	    
 	    var writter = new StreamWriter (outputPath);
     	writter.WriteLine (JsonUtility.ToJson (this));
     	writter.Close ();
    	}
 
-	public void LoadObject()
+	private void LoadObject()
    	{
    		var inputPath = Application.persistentDataPath + @"/PlayerStatus.json";
    		var reader = new StreamReader (inputPath);
@@ -45,11 +44,11 @@ public class SerializePlayerStatus : MonoBehaviour
    		JsonUtility.FromJsonOverwrite (stringJson, this);
    		reader.Close();
 		   
-		_playerStatus.SetPlayerEnergy(Energy);
-		_playerStatus.SetNumberOfLives(NumberOfLives);
-		_playerStatus.SetPlayerScore(Score);
+		_playerStatus.SetPlayerEnergy(_energy);
+		_playerStatus.SetNumberOfLives(_numberOfLives);
+		_playerStatus.SetPlayerScore(_score);
 		   
 		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
-		_levelControl.SetCurrentLevel(CurrentLevel);
+		_levelControl.SetCurrentLevel(_currentLevel);
     }
 }

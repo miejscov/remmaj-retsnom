@@ -6,8 +6,7 @@ using UnityEngine;
 	{
 		private GameControlScript _gameControl;
 		private Vector3 _targetPosition;
-		public float _moveSpeed = 4f;
-
+		private float _moveSpeed = 4f;
 
 		private void Start()
 		{
@@ -16,11 +15,6 @@ using UnityEngine;
 		}
 	
 		private void Update () 
-		{
-			Move();
-		}
-	
-		private void Move()
 		{
 			transform.position = Vector3.Lerp(transform.position, _targetPosition, _moveSpeed * Time.deltaTime);
 		}

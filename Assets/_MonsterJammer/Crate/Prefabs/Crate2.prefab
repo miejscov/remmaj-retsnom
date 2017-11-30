@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 54013516181603102}
   - component: {fileID: 114863128361072124}
   - component: {fileID: 114332669123389310}
-  - component: {fileID: 114952916929825940}
   m_Layer: 8
   m_Name: Crate2
   m_TagString: Crate
@@ -181,16 +180,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7814f6d0f644b4074b80c679ef0d7444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 4
---- !u!114 &114952916929825940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1432379047788822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 823fa1290ec9c40b7aa2ef4bfaeb4b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectInTrigger: {fileID: 0}

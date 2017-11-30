@@ -9,22 +9,16 @@ public class PlayerStatusScript : MonoBehaviour
     private int _numberOfLives;
     private int _extraLifeScore = 0;
 
-    private int _extraLifeScoreThreshold = 200;
+    private const int ExtraLifeScoreThreshold = 200;
 
-    private PlayerRbMoveScript _playerRbMove;
-
-    private bool _isDead = false;
-    public int _energy;
-    private int _score;
-    private int _diamondsCollectedInLevel;
-    private int _diamondsLevelTarget;
-    private int _diamondsLeft = 0;
+    private bool _isDead;
+    private int _energy, _score, _diamondsCollectedInLevel, _diamondsLevelTarget, _diamondsLeft;
 
     private CanvasScript _canvas;
     private PlayerAudioControlScript _audio;
     private LevelControlScript _levelControl;
     private PlayerAudioControlScript _playerAudio;
-    private CapsuleCollider _capsuleCollider;
+    private PlayerRbMoveScript _playerRbMove;
     private SerializePlayerStatus _serializePlayer;
     private ExitControlScript _exitControl;
     private PlayerControlScript _playerControl;
@@ -63,7 +57,6 @@ public class PlayerStatusScript : MonoBehaviour
         _diamondsLeft = _diamondsLevelTarget;
         SetCanvasValue();
     }
-
 
     public void ResetPlayerStatus()
     {
@@ -130,7 +123,7 @@ public class PlayerStatusScript : MonoBehaviour
         _canvas.SetLives(_numberOfLives);
     }
 
-    public void DeductPlayerLife()
+    private void DeductPlayerLife()
     {
         _numberOfLives -= 1;
     }
@@ -144,7 +137,7 @@ public class PlayerStatusScript : MonoBehaviour
         _score += score;
         _extraLifeScore += score;
         LevelCompletedScript.AddPoints(score);
-        if (_extraLifeScore >= _extraLifeScoreThreshold)
+        if (_extraLifeScore >= ExtraLifeScoreThreshold)
         {
             AddPlayerLife();
             _audio.PlayeExtraLifeSound();

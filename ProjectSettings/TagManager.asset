@@ -17,6 +17,7 @@ TagManager:
   - Exit
   - Entrance
   - GameControl
+  - CrateCollider
   layers:
   - Default
   - TransparentFX
