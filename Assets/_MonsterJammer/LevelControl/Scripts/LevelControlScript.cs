@@ -34,18 +34,18 @@ public class LevelControlScript : MonoBehaviour
 		switch (_currentLevel)
 		{
 			case 1:
-			// mapSize, maxTunelCount, minTunelLength, amountOfCrates, amountsOfMonster, targetAmountOfDiamonds, energyOnLevelStart
-               SetParametersOfLevel(new Level(17, 150, 2, 14, 1, 1, 3)); 
+			// mapSize, maxTunelCount, minTunelLength, amountOfCrates, amountsOfMonsterA, amountsOfMonsterB, targetAmountOfDiamonds, energyOnLevelStart
+               SetParametersOfLevel(new Level(17, 150, 2, 22, 3, 2, 2, 3)); 
 				break;
 			case 2:
 				SetNextSetting();
-                SetParametersOfLevel(new Level(25, 450, 2, 30, 10, 2, 5));
+                SetParametersOfLevel(new Level(25, 450, 2, 30, 4, 2, 2, 5));
                 break;
 			case 3:
-                SetParametersOfLevel(new Level(31, 450, 2, 50, 10, 8, 7));
+                SetParametersOfLevel(new Level(31, 450, 2, 50, 10, 4, 8, 7));
                 break;
 			case 4:
-                SetParametersOfLevel(new Level(31, 450, 2, 50, 14, 10, 3));
+                SetParametersOfLevel(new Level(31, 450, 2, 50, 14, 3, 10, 3));
                 break;
 				default: Debug.Log("no more level");
 					break;

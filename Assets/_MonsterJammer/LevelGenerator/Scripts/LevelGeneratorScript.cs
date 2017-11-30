@@ -8,24 +8,24 @@ public class LevelGeneratorScript : MonoBehaviour {
     //    public Transform plane_green;
     //    public Transform plane_darkgray;
     //
-    public float cameraDistanceY = 8;
-    public float cameraDistanceZ = 2;
-    public float cameraRotationX = 80f;
-    public int mapSize = 21;
-    public int seed;
+    private float cameraDistanceY = 8;
+    private float cameraDistanceZ = 2;
+    private float cameraRotationX = 80f;
+    private int mapSize = 21;
+    private int seed;
     [Tooltip("Number of empty tiles on the map.")]
-    public int maxTunnelCount = 64;
+    private int maxTunnelCount = 64;
     [Tooltip("Minimal tunnel length during generation.")]
-    public int minTunnelLength = 3;
-    public int cratesAmount = 32;
-    public int monstersAmountA = 8;
-    public int monstersAmountB = 8;
+    private int minTunnelLength = 3;
+    private int cratesAmount = 32;
+    private int monstersAmountA = 8;
+    private int monstersAmountB = 1;
     [Tooltip("Minimum distance between player and monsters on level start.")]
     [Range(1, 5)]
-    public int playerSafeDistance = 2;
+    private int playerSafeDistance = 2;
     [Tooltip("Minimum distance between monsters. DO NOT SET TOO HIGH!")]
     [Range(0, 3)]
-    public int _monsterDistance = 1;
+    private int _monsterDistance = 1;
     
     
     private GameObject _mainCamera;
@@ -86,17 +86,18 @@ public class LevelGeneratorScript : MonoBehaviour {
     public void SetLabirynthParameters(int[] paramArray)
     {
         
-        Debug.Log("map size: " + paramArray[0]);
-        Debug.Log("map size: " + paramArray[1]);
-        Debug.Log("map size: " + paramArray[2]);
-        Debug.Log("map size: " + paramArray[3]);
-        Debug.Log("map size: " + paramArray[4]);
+//        Debug.Log("map size: " + paramArray[0]);
+//        Debug.Log("map size: " + paramArray[1]);
+//        Debug.Log("map size: " + paramArray[2]);
+//        Debug.Log("map size: " + paramArray[3]);
+//        Debug.Log("map size: " + paramArray[4]);
         
         mapSize = paramArray[0];
         maxTunnelCount = paramArray[1];
         minTunnelLength = paramArray[2];
         cratesAmount = paramArray[3];
         monstersAmountA = paramArray[4];
+        monstersAmountB = paramArray[5];
     }
     
 
