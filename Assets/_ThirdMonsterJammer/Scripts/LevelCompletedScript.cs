@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelCompletedScript : MonoBehaviour
 {
@@ -28,11 +29,13 @@ public class LevelCompletedScript : MonoBehaviour
             if (!player.PlayerIsDead())
             {
                 int numberOfLives = player.GetNumberOfLives();
-                _texts[1].text = "Collected diamonds: " + numberOfDiamonds;
-                _texts[2].text = "Collected score: " + score;
-                _texts[3].text = "Lives: " + numberOfLives;
 
                 canvas.gameObject.SetActive(true);
+
+                GameObject.FindGameObjectWithTag("Diamonds").GetComponent<TextMeshProUGUI>().text = "Diamonds: " + numberOfDiamonds;
+                GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Points: " + score;
+                GameObject.FindGameObjectWithTag("Lives").GetComponent<TextMeshProUGUI>().text = "Lives: " + numberOfLives;
+
                 _isCanvasShowed = true;
             }
         }
