@@ -6,8 +6,8 @@ public class PlayerRbMoveScript : MonoBehaviour
     private Vector3 _targetPosition;
     private GameControlScript _gameControl;
     public float MoveSpeed;
-
     private float _actualSpeed;
+    public bool _isStopped;
     
     private void Start()
     {
@@ -17,8 +17,9 @@ public class PlayerRbMoveScript : MonoBehaviour
         _targetPosition = transform.position;
     }
    
-    private void FixedUpdate () 
+    private void FixedUpdate ()
     {
+        if (_isStopped) return;
         Move();
     }
 		
@@ -70,12 +71,24 @@ public class PlayerRbMoveScript : MonoBehaviour
 
     public void SetPlayerPosition(Vector3 position)
     {
-        transform.position = _targetPosition = position;
+        SetPlayerTargetPosition(position);
+        var pos = new Vector3(Mathf.Round(position.x), 0f, Mathf.Round(position.z));
+        transform.position = pos;
+        _targetPosition = transform.position;
     }
 
     public void SetPlayerTargetPosition(Vector3 pos)
     {
         _targetPosition = new Vector3(Mathf.Round(pos.x), transform.position.y, Mathf.Round(pos.z));
+    }
+
+    public bool IsStopped
+    {
+        set
+        {
+            _isStopped = value;
+            _targetPosition = transform.position;
+        }
     }
 }
 

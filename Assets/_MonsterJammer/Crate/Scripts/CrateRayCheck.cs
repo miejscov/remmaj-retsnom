@@ -42,11 +42,9 @@ public class CrateRayCheck : MonoBehaviour {
 	
 	private void CreateCubeCollider(Vector3 direction, Quaternion rotation)
 	{
-		if (_tempCubeCollider == null)
-		{
-			const float yPos = 0.5f;
-			_tempCubeCollider = Instantiate(CubeCollider, new Vector3(Mathf.Round(transform.position.x), yPos, Mathf.Round(transform.position.z)) + direction, rotation);
-//			Physics.IgnoreCollision(_tempCubeCollider.GetComponent<Collider>(), GetComponentInParent<Collider>());
-		}
+		if (_tempCubeCollider != null) return;
+		const float yPos = 0.5f;
+		_tempCubeCollider = Instantiate(CubeCollider, new Vector3(Mathf.Round(transform.position.x), yPos, Mathf.Round(transform.position.z)) + direction, rotation);
+//		Physics.IgnoreCollision(_tempCubeCollider.GetComponent<Collider>(), GetComponentInParent<Collider>());
 	}
 }

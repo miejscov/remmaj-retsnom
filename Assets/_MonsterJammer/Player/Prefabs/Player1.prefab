@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 114846662413626680}
   - component: {fileID: 114985794945987182}
   - component: {fileID: 114087970039432290}
-  - component: {fileID: 114396742347141818}
   - component: {fileID: 114167150598350954}
   - component: {fileID: 82354813734774710}
   - component: {fileID: 114998438358939968}
@@ -2588,7 +2587,7 @@ Rigidbody:
   m_GameObject: {fileID: 1082156589962844}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 100
   m_AngularDrag: Infinity
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -2749,18 +2748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81123d1d7f94c490c98b36eb2d11fb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _energy: 1
---- !u!114 &114396742347141818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082156589962844}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282e85ae5b5084eb6b9f9274cf130d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114622191567477246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2784,10 +2771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0796cc771a345febe4b566775510dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfLives: 0
-  Energy: 0
-  Diamonds: 9
-  Score: 0
 --- !u!114 &114846662413626680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2800,6 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 0
+  _isStopped: 0
 --- !u!114 &114985794945987182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2811,6 +2795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4457a4c3931432e9fb1a2302c9708d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _freezePlayer: 0
 --- !u!114 &114998438358939968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2824,8 +2809,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyCrate: {fileID: 8300000, guid: 89e0f69e3ad999a4aa99111f0765d6b7, type: 3}
   GetDiamond: {fileID: 8300000, guid: 28e9b4a6c3d32174983bf47e70dcb41b, type: 3}
-  PlayerIsDying: {fileID: 8300000, guid: 1b6269b3ea023754eba2452f564971b2, type: 3}
+  PlayerIsDying: {fileID: 8300000, guid: 80d5b0dced6d747f8b75945c92fd0875, type: 3}
   GetFood: {fileID: 8300000, guid: 2c7b2c49367d740698e69cb13c62bf1c, type: 3}
+  ExtraLifeSound: {fileID: 8300000, guid: 933dce9d7d21d48d984e5e3bca2a9b23, type: 3}
 --- !u!136 &136083809845492206
 CapsuleCollider:
   m_ObjectHideFlags: 1

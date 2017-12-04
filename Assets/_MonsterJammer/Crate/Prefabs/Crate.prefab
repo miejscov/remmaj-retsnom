@@ -90,7 +90,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 46be5f15e363aac4381cc9eb6efc673f, type: 2}
+  - {fileID: 2100000, guid: 2b7586c3dde70244d8cf2918aed636c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,7 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7814f6d0f644b4074b80c679ef0d7444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 4
 --- !u!114 &114996433440230314
 MonoBehaviour:
   m_ObjectHideFlags: 1

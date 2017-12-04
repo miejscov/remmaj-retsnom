@@ -4,73 +4,61 @@ using UnityEngine;
 
 public class CameraFollowScript : MonoBehaviour {
 
-    private GameObject target;            // The position that that camera will be following.
-    public float smoothing = 5f;        // The speed with which the camera will be following.
+    private GameObject _target;
+    private const float Smoothing = 5f;
     private GameObject _entry;
     private GameObject _exit;
     private GameObject _player;
-    
 
     private Vector3 _defaultCameraPos;
     private Quaternion _defaultRotation;
     private Vector3 _defaultOffset;
-    private Transform thisTransform;
 
-    Vector3 offset;                     // The initial offset from the target.
-
+    Vector3 _offset;                     
 
     private void Start()
     {
-        thisTransform = GetComponent<Transform>();
-        _defaultCameraPos = this.transform.position;
-        _defaultRotation = this.transform.rotation;
-        
         _player = GameObject.FindGameObjectWithTag("Player");
-        _entry = GameObject.Find("Entrance(Clone)");
-        _exit = GameObject.Find("Exit(Clone)");
+        _defaultCameraPos = transform.position;
+        _defaultRotation = transform.rotation;
         
-        target = _player;
-        _defaultOffset = transform.position - target.transform.position;
-        offset = _defaultOffset;
-        Debug.Log("def off" + _defaultOffset);
+        _target = _player;
+        _defaultOffset = transform.position - _target.transform.position - new Vector3(2f, 0f, 1f);
+        _offset = _defaultOffset;
     }
 
     private void FixedUpdate()
     {
-        if (target == null)
+        if (_target == null)
         {
-            _player = GameObject.FindGameObjectWithTag("Player");
-
-            target = _player;
+           SetCameraOnEntry();
         }
-        // Create a postion the camera is aiming for based on the offset from the target.
-        Vector3 targetCamPos = target.transform.position + offset;
 
-        // Smoothly interpolate between the camera's current position and it's target position.
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        var targetCamPos = _target.transform.position + _offset;
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, Smoothing * Time.deltaTime);
     }
 
     public void SetCameraOnEntry()
     {
-        offset = new Vector3(3, 4, -1);
-        target = _entry;
+        _entry = GameObject.Find("Entrance(Clone)");
+        _offset = new Vector3(3, 4, 0);
+        _target = _entry;
         transform.rotation = Quaternion.Euler(45, -90, 0);
     }
 
     public void SetCameraOnExit()
     {
-        target = _exit;
-        offset = new Vector3(-3, 4, -1);
+        _exit = GameObject.Find("Exit(Clone)");
+        _target = _exit;
+        _offset = new Vector3(-3, 4, 0);
         transform.rotation = Quaternion.Euler(45, 90, 0);
     }
 
     public void ResetCamera()
     {
-        target = _player;
-        offset = _defaultOffset;
+        _target = _player;
+        _offset = _defaultOffset;
         transform.rotation = _defaultRotation;
         transform.position = _defaultCameraPos;
     }
-    
-    
 }

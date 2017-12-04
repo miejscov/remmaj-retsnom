@@ -14,9 +14,9 @@ public class MonsterKillPlayerScript : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{
-			other.gameObject.GetComponent<PlayerStatusScript>().SetPlayerDead(true);
-            _monsterRbMoveScript.SetStopped();
-            _monsterRotationScript.SetStopped();
+			other.gameObject.GetComponent<PlayerStatusScript>().SetPlayerDead();
+            _monsterRbMoveScript.IsStopped(true);
+            _monsterRotationScript.IsStopped(true);
         }
     }
 }

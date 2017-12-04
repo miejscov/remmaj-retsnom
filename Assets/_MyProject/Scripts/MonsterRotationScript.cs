@@ -80,9 +80,9 @@ public class MonsterRotationScript : MonoBehaviour
 //            Debug.Log("Rotation difference to forward = " + Vector3.Angle(transform.forward, Vector3.forward));
         return isRotationOk;
     }
-    public void SetStopped()
+    public void IsStopped(bool value)
     {
-        _stopped = true;
+	    _stopped = value;
     }
 }
 

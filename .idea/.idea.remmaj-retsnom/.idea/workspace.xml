@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="403ca445-08d0-4713-b5e3-f4da9653f928" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateCollisionScript.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateCollisionScript.cs.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerBlendAnimationScript.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerBlendAnimationScript.cs.meta" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/contentModel.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.remmaj-retsnom/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/EntranceControlScript.cs" afterPath="$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/ExitControlScript.cs" afterPath="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/_Scenes/Scene001.unity" afterPath="$PROJECT_DIR$/Assets/_MyProject/_Scenes/Scene001.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Prefabs/Crate2.prefab" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Prefabs/Crate2.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Prefabs/MoveColliderBoxCrate.prefab" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Prefabs/MoveColliderBoxCrate.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Scripts/LevelGeneratorScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Scripts/LevelGeneratorScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Prefabs/Player1.prefab" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Prefabs/Player1.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAnimationControlScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAnimationControlScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/SerializePlayerStatus.cs" afterPath="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/SerializePlayerStatus.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/MoveColliderBox.prefab" afterPath="$PROJECT_DIR$/Assets/_MyProject/Prefabs/MoveColliderBox.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRbMoveScript.cs" afterPath="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRbMoveScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,53 +36,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerStatusScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
+      <file leaf-file-name="PlayerPushingScript.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerPushingScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="150" column="33" lean-forward="false" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
+            <state relative-caret-position="-102">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1511387375109" expanded="false" signature="6:56" ph="..." />
-                <marker date="1511387375109" expanded="true" signature="105:5142" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="860:1338" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1206:1310" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1369:1436" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1472:1595" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1641:2045" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="2080:2495" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="2581:2740" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="2782:3100" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="3280:3360" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="3396:3437" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="3606:3915" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="3775:3857" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="4034:4593" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="4297:4539" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="4639:4718" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="4882:4993" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="5024:5140" ph="{...}" />
+                <marker date="1510851929117" expanded="true" signature="69:472" ph="{...}" />
+                <marker date="1510851929117" expanded="true" signature="127:176" ph="{...}" />
+                <marker date="1510851929117" expanded="true" signature="225:328" ph="{...}" />
+                <marker date="1510851929117" expanded="true" signature="270:324" ph="{...}" />
+                <marker date="1510851929117" expanded="true" signature="375:469" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelControlScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/LevelControlScript.cs">
+      <file leaf-file-name="EntranceControlScript.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Entrance/Scripst/EntranceControlScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            <state relative-caret-position="186">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <marker date="1511376533815" expanded="false" signature="6:97" ph="..." />
-                <marker date="1511376533815" expanded="true" signature="146:2399" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="479:522" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="572:739" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="766:1690" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="947:1465" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1719:1948" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="1989:2029" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2060:2090" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2131:2162" ph="{...}" />
-                <marker date="1511376533815" expanded="true" signature="2190:2397" ph="{...}" />
+                <marker date="1511998916974" expanded="false" signature="6:97" ph="..." />
+                <marker date="1511998916974" expanded="true" signature="149:2429" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="581:1219" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="1245:1469" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="1502:1683" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="1711:1856" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="1889:2020" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="2105:2285" ph="{...}" />
+                <marker date="1511998916974" expanded="true" signature="2309:2424" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -74,104 +75,126 @@
       <file leaf-file-name="PlayerRbMoveScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="66" />
+            <state relative-caret-position="187">
+              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
-                <marker date="1511372377547" expanded="false" signature="6:32" ph="..." />
-                <marker date="1511372377547" expanded="true" signature="81:1913" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="255:494" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="531:559" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="589:867" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="893:1023" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1054:1133" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1165:1244" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1272:1351" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1380:1459" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1504:1546" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1576:1622" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1675:1744" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1798:1911" ph="{...}" />
-                <marker date="1511372377547" expanded="true" signature="1954:3707" ph="/* using System; ... */" />
+                <marker date="1512005142668" expanded="false" signature="6:32" ph="..." />
+                <marker date="1512005142668" expanded="true" signature="81:2275" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="282:521" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="557:617" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="647:925" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="951:1081" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1112:1191" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1223:1302" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1330:1409" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1438:1517" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1562:1604" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1634:1680" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="1733:1953" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="2007:2120" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="2147:2273" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="2165:2267" ph="{...}" />
+                <marker date="1512005142668" expanded="true" signature="2316:4069" ph="/* using System; ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerCollisionScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
+      <file leaf-file-name="CrateRayCheck.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="416">
+              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
-                <marker date="1511370127596" expanded="true" signature="391:451" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="500:1929" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="622:783" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="831:975" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1031:1160" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1221:1340" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1400:1518" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1578:1720" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1785:1926" ph="{...}" />
-                <marker date="1511370127596" expanded="true" signature="1977:2048" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="63:1478" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="309:839" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="551:590" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="668:726" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="752:819" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="883:1060" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="981:1036" ph="{...}" />
+                <marker date="1512005893309" expanded="true" signature="1135:1476" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntranceControlScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs">
+      <file leaf-file-name="MonsterControlScript.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+            <state relative-caret-position="382">
+              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
               <folding>
-                <marker date="1511390449126" expanded="false" signature="6:97" ph="..." />
-                <marker date="1511390449126" expanded="true" signature="149:2030" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="537:1087" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1113:1212" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1245:1364" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1395:1565" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1594:1625" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1710:1890" ph="{...}" />
-                <marker date="1511390449126" expanded="true" signature="1914:2028" ph="{...}" />
+                <marker date="1511647975519" expanded="false" signature="6:78" ph="..." />
+                <marker date="1511647975519" expanded="true" signature="148:8839" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="1448:2072" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2099:2965" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2154:2335" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2195:2258" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2263:2325" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2348:2962" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2385:2951" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2458:2936" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="2514:2771" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3005:3043" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3087:4048" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3117:3413" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3174:3260" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3260:3347" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3443:3942" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="3947:4042" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="4082:5364" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="4367:4524" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="4604:4761" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="4844:5000" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5081:5237" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5272:5336" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5388:5595" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5627:5732" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5767:5901" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="5936:6238" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="6149:6232" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="6271:6430" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="6461:6905" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="6935:7386" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="7415:7869" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="7898:8348" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8384:8703" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8424:8460" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8504:8536" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8581:8614" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8658:8700" ph="{...}" />
+                <marker date="1511647975519" expanded="true" signature="8732:8837" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExitControlScript.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
+      <file leaf-file-name="PlayerStatusScript.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="135">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
-                <marker date="1511390479941" expanded="false" signature="6:92" ph="..." />
-                <marker date="1511390479941" expanded="true" signature="140:1479" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="388:583" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="608:669" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="695:873" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="907:938" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="1023:1214" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="1238:1341" ph="{...}" />
-                <marker date="1511390479941" expanded="true" signature="1363:1477" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraFollowScript.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-              <folding>
-                <marker date="1511387375109" expanded="false" signature="6:78" ph="..." />
-                <marker date="1511387375109" expanded="true" signature="128:2304" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="677:1205" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1237:1753" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1271:1388" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1789:1925" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="1960:2095" ph="{...}" />
-                <marker date="1511387375109" expanded="true" signature="2126:2292" ph="{...}" />
+                <marker date="1512004741887" expanded="false" signature="6:56" ph="..." />
+                <marker date="1512004741887" expanded="true" signature="105:5872" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="947:1746" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="1614:1718" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="1777:1844" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="1880:2003" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="2040:2450" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="2485:2969" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="3055:3342" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="3375:3840" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="4020:4100" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="4137:4178" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="4348:4685" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="4516:4640" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="4804:5354" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="5068:5285" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="5390:5448" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="5612:5723" ph="{...}" />
+                <marker date="1512004741887" expanded="true" signature="5754:5870" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -185,43 +208,55 @@
       <find>item</find>
       <find>ground</find>
       <find>groun</find>
+      <find>Debug</find>
+      <find>sto</find>
+      <find>movecoll</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LabirynthDestroyScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerGameOverScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRayCastHit.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ItemGeneratorScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/SerializePlayerStatus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ButtonContolScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LevelControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Scripts/LevelControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterKillPlayerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Scripts/LevelGeneratorScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerFrontScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Entrance/Scripst/EntranceControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerRightScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/AfterDeathCanvas/Scripts/DeathCanvasScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SerializePlayerStatus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_3_Script.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_2_Script.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_4_Script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerPivotScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_1_Script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ButtonContolScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ItemGeneratorScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAudioControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_4_Script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAnimationControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerBackScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_3_Script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRayCastHit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRotationScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerGameOverScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_2_Script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRbMoveScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRotationScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/SlowDownPlayerSurprise/Scripts/SlowDownPlayerSurprise.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MoveColliderTriggerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerPushingScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerLeftScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -229,31 +264,48 @@
         <option value="$PROJECT_DIR$/Assets/Level_1_Script.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Levels/Level_1/Scripts/LevelScript.cs" />
         <option value="$PROJECT_DIR$/../../Projects/OurPipeRunner/Assets/collider.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_4_Script.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_2_Script.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRayCastHit.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_3_Script.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_ThirdMonsterJammer/AfterDeathCanvas/Scripts/DeathCanvasScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_1_Script.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs" />
         <option value="$PROJECT_DIR$/Assets/SerializePlayerStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" />
         <option value="$PROJECT_DIR$/Assets/LabirynthDestroyScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/ExitColliderScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/LevelControlScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/EntranceAudioScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAudioControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameControlAudioScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRotationScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterKillPlayerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_ThirdMonsterJammer/AfterDeathCanvas/Scripts/DeathCanvasScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/ExitColliderScript.cs" />
         <option value="$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Settings/Setting_1.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ExitControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/SettingsControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/LevelControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/SlowDownPlayerSurprise/Scripts/SlowDownPlayerSurprise.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Scripts/LevelControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Scripts/LevelGeneratorScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAnimationControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerGameOverScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/SerializePlayerStatus.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRbMoveScript.cs" />
       </list>
     </option>
   </component>
@@ -264,10 +316,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1595" />
-    <option name="y" value="269" />
-    <option name="width" value="1024" />
-    <option name="height" value="562" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1928" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -341,12 +393,23 @@
       <workItem from="1511347633596" duration="4325000" />
       <workItem from="1511358735340" duration="17682000" />
       <workItem from="1511377087929" duration="2272000" />
-      <workItem from="1511384789979" duration="5373000" />
+      <workItem from="1511384789979" duration="12220000" />
+      <workItem from="1511431576769" duration="9288000" />
+      <workItem from="1511537931991" duration="2322000" />
+      <workItem from="1511549053259" duration="2222000" />
+      <workItem from="1511558939608" duration="919000" />
+      <workItem from="1511614017980" duration="1334000" />
+      <workItem from="1511615651131" duration="9912000" />
+      <workItem from="1511648476483" duration="4048000" />
+      <workItem from="1511653477234" duration="3187000" />
+      <workItem from="1511731069857" duration="874000" />
+      <workItem from="1511780815094" duration="9160000" />
+      <workItem from="1511999749784" duration="7168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94096000" />
+    <option name="totallyTimeSpent" value="151377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,8 +421,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1595" y="269" width="1928" height="1208" extended-state="6" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1374" height="754" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -369,8 +431,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08199122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -380,7 +443,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -417,182 +479,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Projects/OurPipeRunner/Assets/collider.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6851">
-          <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LevelControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1511376533815" expanded="false" signature="6:97" ph="..." />
-            <marker date="1511376533815" expanded="true" signature="146:2399" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="479:522" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="572:739" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="766:1690" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="947:1465" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1719:1948" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1989:2029" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2060:2090" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2131:2162" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2190:2397" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_3_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_2_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_1_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/GameControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6851">
-          <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6851">
-          <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Level_1_Script.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Levels/Level_1/Scripts/LevelScript.cs" />
-    <entry file="file://$PROJECT_DIR$/../../Projects/OurPipeRunner/Assets/collider.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/GameControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ItemGeneratorScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_4_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRayCastHit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_3_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_2_Script.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -600,55 +486,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="182" column="5" lean-forward="false" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterKillPlayerScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ButtonContolScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerGameOverScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/AfterDeathCanvas/Scripts/DeathCanvasScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Level_1_Script.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -656,259 +494,651 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/SerializePlayerStatus.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LabirynthDestroyScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/Level.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="137" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="452" column="63" lean-forward="false" selection-start-line="452" selection-start-column="63" selection-end-line="452" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SerializePlayerStatus.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerCollisionScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511370127596" expanded="true" signature="391:451" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="500:1929" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="622:783" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="831:975" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1031:1160" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1221:1340" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1400:1518" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1578:1720" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1785:1926" ph="{...}" />
-            <marker date="1511370127596" expanded="true" signature="1977:2048" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GameControlAudioScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAudioControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/EntranceAudioScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/LabirynthDestroyScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/GameControlScript.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/LevelCompletedScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <marker date="1511358101152" expanded="false" signature="6:100" ph="..." />
-            <marker date="1511358101152" expanded="true" signature="151:1603" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="393:529" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="559:1060" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="577:988" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1011:1054" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1091:1258" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1285:1438" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1320:1432" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1364:1422" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1475:1518" ph="{...}" />
-            <marker date="1511358101152" expanded="true" signature="1564:1601" ph="{...}" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/AfterDeathCanvas/Scripts/DeathCanvasScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Settings/Setting_1.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/ButtonContolScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Canvas/Scripts/CanvasScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511372377547" expanded="false" signature="6:100" ph="..." />
-            <marker date="1511372377547" expanded="true" signature="143:962" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="260:330" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="365:441" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="477:557" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="601:729" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="768:850" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="884:960" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/ExitColliderScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1511377092781" expanded="false" signature="6:78" ph="..." />
-            <marker date="1511377092781" expanded="true" signature="127:769" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="239:331" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="377:702" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="434:699" ph="{...}" />
-            <marker date="1511377092781" expanded="true" signature="729:767" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <marker date="1511372377547" expanded="true" signature="63:1481" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="309:839" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="551:590" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="668:726" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="752:819" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="883:1060" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="981:1036" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1135:1479" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1171:1476" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LevelControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-          <folding>
-            <marker date="1511376533815" expanded="false" signature="6:97" ph="..." />
-            <marker date="1511376533815" expanded="true" signature="146:2399" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="479:522" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="572:739" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="766:1690" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="947:1465" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1719:1948" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="1989:2029" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2060:2090" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2131:2162" ph="{...}" />
-            <marker date="1511376533815" expanded="true" signature="2190:2397" ph="{...}" />
-          </folding>
+        <state relative-caret-position="464">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CameraFollowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <marker date="1511387375109" expanded="false" signature="6:78" ph="..." />
-            <marker date="1511387375109" expanded="true" signature="128:2304" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="677:1205" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1237:1753" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1271:1388" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1789:1925" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1960:2095" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="2126:2292" ph="{...}" />
+            <marker date="1511788854345" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511788854345" expanded="true" signature="128:1761" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="481:820" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="852:1115" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="887:938" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="1151:1341" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="1376:1560" ph="{...}" />
+            <marker date="1511788854345" expanded="true" signature="1591:1759" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/LevelControlScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/LevelGeneratorScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SettingsControlScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/SlowDownPlayerSurprise/Scripts/SlowDownPlayerSurprise.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Surprises/FreezePlayerSurprise/Scripts/FreezePlayerSurpriseScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_ThirdMonsterJammer/Scripts/Level.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <marker date="1512002331262" expanded="true" signature="18:1618" ph="{...}" />
+            <marker date="1512002331262" expanded="true" signature="590:948" ph="{...}" />
+            <marker date="1512002331262" expanded="true" signature="992:1044" ph="{...}" />
+            <marker date="1512002331262" expanded="true" signature="1074:1125" ph="{...}" />
+            <marker date="1512002331262" expanded="true" signature="1178:1616" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateCollisionScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1512004116627" expanded="false" signature="6:32" ph="..." />
+            <marker date="1512004116627" expanded="true" signature="82:1460" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="329:386" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="416:794" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="820:986" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="1032:1105" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="1142:1279" ph="{...}" />
+            <marker date="1512004116627" expanded="true" signature="1312:1457" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/CrateMovementScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1512004160751" expanded="false" signature="7:33" ph="..." />
+            <marker date="1512004160751" expanded="true" signature="84:1069" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="221:354" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="382:494" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="523:639" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="665:781" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="807:923" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="950:1066" ph="{...}" />
+            <marker date="1512004160751" expanded="true" signature="1100:3516" ph="/* using System; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerAnimationControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding>
+            <marker date="1512004222087" expanded="true" signature="77:1224" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="267:481" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="507:794" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="545:588" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="623:673" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="680:791" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="828:915" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="943:988" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="1017:1091" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="1121:1160" ph="{...}" />
+            <marker date="1512004222087" expanded="true" signature="1186:1221" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRayCastHit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511220791319" expanded="false" signature="6:133" ph="..." />
+            <marker date="1511220791319" expanded="true" signature="180:1579" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="408:902" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="504:771" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="596:767" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="934:961" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="1011:1362" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="1131:1337" ph="{...}" />
+            <marker date="1511220791319" expanded="true" signature="1433:1577" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRotationScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929121" expanded="false" signature="6:32" ph="..." />
+            <marker date="1510851929121" expanded="true" signature="84:884" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="234:403" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="434:474" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="503:536" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="564:597" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="623:654" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="679:713" ph="{...}" />
+            <marker date="1510851929121" expanded="true" signature="769:881" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelGenerator/Scripts/LevelGeneratorScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1666">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <marker date="1512003820258" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512003820258" expanded="true" signature="130:14765" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="1624:2117" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="2175:2427" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="2464:2787" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="2820:3823" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="2995:3133" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="3055:3123" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="3448:3817" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="3724:3807" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="3888:4504" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="3945:4473" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4034:4186" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4288:4440" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4570:5253" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4604:4909" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4663:4898" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4721:4838" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="4942:5247" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5001:5236" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5059:5176" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5287:5398" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5443:6513" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5535:6507" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="5598:5724" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="6585:6872" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="6920:8427" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="7018:8421" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="7110:7247" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="7808:8314" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="7901:8300" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="8131:8244" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="8475:9992" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="8573:9986" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="8665:8802" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="9373:9879" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="9466:9865" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="9696:9809" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10027:10195" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10252:10767" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10299:10388" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10430:10519" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10561:10650" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10808:11366" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10856:11360" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="10916:11350" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="11210:11336" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="11401:14219" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="11450:14213" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="11510:14203" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="11649:14189" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="12646:12796" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="12825:13240" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="13301:13536" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="14276:14403" ph="{...}" />
+            <marker date="1512003820258" expanded="true" signature="14441:14763" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <marker date="1512004944131" expanded="true" signature="69:5409" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="531:592" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="639:675" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="719:754" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="779:1125" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1153:1230" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1265:2074" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1477:1590" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1515:1547" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1556:1585" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1639:1752" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1677:1706" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1715:1747" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1802:1913" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1840:1870" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1879:1908" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1959:2070" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="1997:2026" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2035:2065" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2104:2925" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2340:2469" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2555:2786" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2657:2748" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2874:2921" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="2952:3765" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="3188:3323" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="3410:3639" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="3512:3600" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="3714:3761" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="3793:4587" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4030:4159" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4234:4461" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4336:4425" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4536:4583" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4616:5406" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="4852:4981" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="5056:5281" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="5158:5246" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="5355:5402" ph="{...}" />
+            <marker date="1512004944131" expanded="true" signature="5464:10172" ph="/* using System.Runtime.Remoting.Messaging; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerGameOverScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <marker date="1511613395005" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511613395005" expanded="true" signature="129:444" ph="{...}" />
+            <marker date="1511613395005" expanded="true" signature="189:244" ph="{...}" />
+            <marker date="1511613395005" expanded="true" signature="271:442" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/LevelControl/Scripts/LevelControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <marker date="1512002331258" expanded="true" signature="67:2920" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="477:501" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="551:758" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="784:2084" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="965:1626" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2113:2302" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2343:2383" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2414:2444" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2485:2516" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2592:2793" ph="{...}" />
+            <marker date="1512002331258" expanded="true" signature="2825:2918" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/SerializePlayerStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1512005074779" expanded="false" signature="6:35" ph="..." />
+            <marker date="1512005074779" expanded="true" signature="87:1618" ph="{...}" />
+            <marker date="1512005074779" expanded="true" signature="300:387" ph="{...}" />
+            <marker date="1512005074779" expanded="true" signature="427:1055" ph="{...}" />
+            <marker date="1512005074779" expanded="true" signature="1083:1616" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerPushingScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929117" expanded="true" signature="69:472" ph="{...}" />
+            <marker date="1510851929117" expanded="true" signature="127:176" ph="{...}" />
+            <marker date="1510851929117" expanded="true" signature="225:328" ph="{...}" />
+            <marker date="1510851929117" expanded="true" signature="270:324" ph="{...}" />
+            <marker date="1510851929117" expanded="true" signature="375:469" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Entrance/Scripst/EntranceControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1511998916974" expanded="false" signature="6:97" ph="..." />
+            <marker date="1511998916974" expanded="true" signature="149:2429" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="581:1219" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="1245:1469" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="1502:1683" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="1711:1856" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="1889:2020" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="2105:2285" ph="{...}" />
+            <marker date="1511998916974" expanded="true" signature="2309:2424" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerStatusScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="150" column="33" lean-forward="false" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <marker date="1511387375109" expanded="false" signature="6:56" ph="..." />
-            <marker date="1511387375109" expanded="true" signature="105:5142" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="860:1338" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1206:1310" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1369:1436" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1472:1595" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="1641:2045" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="2080:2495" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="2581:2740" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="2782:3100" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="3280:3360" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="3396:3437" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="3606:3915" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="3775:3857" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="4034:4593" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="4297:4539" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="4639:4718" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="4882:4993" ph="{...}" />
-            <marker date="1511387375109" expanded="true" signature="5024:5140" ph="{...}" />
+            <marker date="1512004741887" expanded="false" signature="6:56" ph="..." />
+            <marker date="1512004741887" expanded="true" signature="105:5872" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="947:1746" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="1614:1718" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="1777:1844" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="1880:2003" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="2040:2450" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="2485:2969" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="3055:3342" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="3375:3840" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="4020:4100" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="4137:4178" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="4348:4685" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="4516:4640" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="4804:5354" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="5068:5285" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="5390:5448" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="5612:5723" ph="{...}" />
+            <marker date="1512004741887" expanded="true" signature="5754:5870" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Player/Scripts/PlayerRbMoveScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="66" />
+        <state relative-caret-position="187">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <marker date="1511372377547" expanded="false" signature="6:32" ph="..." />
-            <marker date="1511372377547" expanded="true" signature="81:1913" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="255:494" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="531:559" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="589:867" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="893:1023" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1054:1133" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1165:1244" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1272:1351" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1380:1459" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1504:1546" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1576:1622" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1675:1744" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1798:1911" ph="{...}" />
-            <marker date="1511372377547" expanded="true" signature="1954:3707" ph="/* using System; ... */" />
+            <marker date="1512005142668" expanded="false" signature="6:32" ph="..." />
+            <marker date="1512005142668" expanded="true" signature="81:2275" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="282:521" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="557:617" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="647:925" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="951:1081" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1112:1191" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1223:1302" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1330:1409" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1438:1517" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1562:1604" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1634:1680" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="1733:1953" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="2007:2120" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="2147:2273" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="2165:2267" ph="{...}" />
+            <marker date="1512005142668" expanded="true" signature="2316:4069" ph="/* using System; ... */" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EntranceControlScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <marker date="1511390449126" expanded="false" signature="6:97" ph="..." />
-            <marker date="1511390449126" expanded="true" signature="149:2030" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="537:1087" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1113:1212" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1245:1364" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1395:1565" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1594:1625" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1710:1890" ph="{...}" />
-            <marker date="1511390449126" expanded="true" signature="1914:2028" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/ExitControlScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerRightScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
           <folding>
-            <marker date="1511390479941" expanded="false" signature="6:92" ph="..." />
-            <marker date="1511390479941" expanded="true" signature="140:1479" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="388:583" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="608:669" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="695:873" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="907:938" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="1023:1214" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="1238:1341" ph="{...}" />
-            <marker date="1511390479941" expanded="true" signature="1363:1477" ph="{...}" />
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="135:1401" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="195:261" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="310:626" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="632:1399" ph="/* private void OnTriggerStay(Collider other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerPivotScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="135:391" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="227:278" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="338:389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerLeftScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="134:1397" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="194:260" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="309:624" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="630:1395" ph="/* private void OnTriggerStay(Collider other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerFrontScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="135:1401" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="195:261" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="310:626" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="632:1399" ph="/* private void OnTriggerStay(Collider other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterTriggerBackScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="134:1397" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="194:260" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="309:624" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="630:1395" ph="/* private void OnTriggerStay(Collider other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterKillPlayerScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRotationScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <marker date="1511633913022" expanded="true" signature="71:2127" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="438:755" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="780:897" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="934:1096" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1121:1150" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1176:1206" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1231:1260" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1284:1316" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1366:1398" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1453:1563" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1590:1678" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="1710:2052" ph="{...}" />
+            <marker date="1511633913022" expanded="true" signature="2090:2125" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterRbMoveScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <marker date="1512006499974" expanded="false" signature="6:32" ph="..." />
+            <marker date="1512006499974" expanded="true" signature="83:2023" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="253:443" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="469:545" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="495:542" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="572:667" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="694:789" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="814:1031" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="981:1009" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1061:1170" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1207:1282" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1313:1451" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1480:1617" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1642:1780" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1806:1944" ph="{...}" />
+            <marker date="1512006499974" expanded="true" signature="1983:2021" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MoveColliderTriggerScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510851929125" expanded="false" signature="6:78" ph="..." />
+            <marker date="1510851929125" expanded="true" signature="135:245" ph="{...}" />
+            <marker date="1510851929125" expanded="true" signature="185:243" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MonsterJammer/Crate/Scripts/CrateRayCheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <marker date="1512005893309" expanded="true" signature="63:1478" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="309:839" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="551:590" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="668:726" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="752:819" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="883:1060" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="981:1036" ph="{...}" />
+            <marker date="1512005893309" expanded="true" signature="1135:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyProject/Scripts/MonsterControlScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+          <folding>
+            <marker date="1511647975519" expanded="false" signature="6:78" ph="..." />
+            <marker date="1511647975519" expanded="true" signature="148:8839" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="1448:2072" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2099:2965" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2154:2335" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2195:2258" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2263:2325" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2348:2962" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2385:2951" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2458:2936" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="2514:2771" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3005:3043" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3087:4048" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3117:3413" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3174:3260" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3260:3347" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3443:3942" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="3947:4042" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="4082:5364" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="4367:4524" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="4604:4761" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="4844:5000" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5081:5237" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5272:5336" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5388:5595" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5627:5732" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5767:5901" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="5936:6238" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="6149:6232" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="6271:6430" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="6461:6905" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="6935:7386" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="7415:7869" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="7898:8348" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8384:8703" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8424:8460" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8504:8536" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8581:8614" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8658:8700" ph="{...}" />
+            <marker date="1511647975519" expanded="true" signature="8732:8837" ph="{...}" />
           </folding>
         </state>
       </provider>
