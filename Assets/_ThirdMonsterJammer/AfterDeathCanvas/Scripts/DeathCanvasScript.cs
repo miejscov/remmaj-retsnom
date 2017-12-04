@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class DeathCanvasScript : MonoBehaviour
 {
     public Canvas canvas;
-    private Text[] _texts;
+    private TextMesh[] _texts;
 
     private PlayerStatusScript _playerStatus;
     private GameObject _player;
@@ -20,7 +21,6 @@ public class DeathCanvasScript : MonoBehaviour
     private void Awake()
     {
         _buttonControl = GameObject.Find("ButtonCtrl");
-        _texts = canvas.gameObject.GetComponentsInChildren<Text>();
     }
 
     public void ShowCanvas()
@@ -28,14 +28,15 @@ public class DeathCanvasScript : MonoBehaviour
         keyDown = false;
         _player = GameObject.Find("Player1(Clone)");
         _playerStatus = _player.GetComponent<PlayerStatusScript>();
+       
+                canvas.gameObject.SetActive(true);
+
         if (_playerStatus != null)
         {
-            _texts[1].text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
-            _texts[2].text = "Total score: " + _playerStatus.GetPlayerScore();
-            _texts[3].text = "Lives: " + _playerStatus.GetNumberOfLives();
+            GameObject.FindGameObjectWithTag("Diamonds").GetComponent<TextMeshProUGUI>().text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
+            GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Points: " + _playerStatus.GetPlayerScore();
+            GameObject.FindGameObjectWithTag("Lives").GetComponent<TextMeshProUGUI>().text = "Lives: " + _playerStatus.GetNumberOfLives();
         }
-
-        canvas.gameObject.SetActive(true);
         _isCanvasShowed = true;
     }
 

@@ -18,6 +18,9 @@ TagManager:
   - Entrance
   - GameControl
   - CrateCollider
+  - Diamonds
+  - Points
+  - Lives
   layers:
   - Default
   - TransparentFX
