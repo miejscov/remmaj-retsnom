@@ -96,8 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188db96299e21fe4daf0a5f67bd32ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1532191695894534, guid: 79a91261e1fd05d45b34cccf4f70360e, type: 2}
-  smoothing: 5
 --- !u!124 &124373919653880070
 Behaviour:
   m_ObjectHideFlags: 1
