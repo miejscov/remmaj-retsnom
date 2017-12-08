@@ -726,7 +726,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   RotationSpeed: 10
   _rotationThreshold: 30
-  _rotationOk: 0
+  _rotationOk: 1
   _rotationComparison: 0
   _stopped: 0
 --- !u!114 &114714368228436644

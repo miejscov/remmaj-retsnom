@@ -34,7 +34,7 @@ public class DeathCanvasScript : MonoBehaviour
         if (_playerStatus != null)
         {
             GameObject.FindGameObjectWithTag("Diamonds").GetComponent<TextMeshProUGUI>().text = "Diamonds: " + _playerStatus.GetDiamondsAmount();
-            GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Points: " + _playerStatus.GetPlayerScore();
+            GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Score: " + _playerStatus.GetPlayerScore();
             GameObject.FindGameObjectWithTag("Lives").GetComponent<TextMeshProUGUI>().text = "Lives: " + _playerStatus.GetNumberOfLives();
         }
         _isCanvasShowed = true;

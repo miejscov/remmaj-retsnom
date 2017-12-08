@@ -47,4 +47,10 @@ public class ButtonContolScript : MonoBehaviour
         isStarting = true;
         Load("Scene001");
     }
+
+    public void NewGame()
+    {
+        isStarting = false;
+        Load("Scene001");
+    }
 }

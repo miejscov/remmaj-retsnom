@@ -33,7 +33,7 @@ public class LevelCompletedScript : MonoBehaviour
                 canvas.gameObject.SetActive(true);
 
                 GameObject.FindGameObjectWithTag("Diamonds").GetComponent<TextMeshProUGUI>().text = "Diamonds: " + numberOfDiamonds;
-                GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Points: " + score;
+                GameObject.FindGameObjectWithTag("Points").GetComponent<TextMeshProUGUI>().text = "Score: " + score;
                 GameObject.FindGameObjectWithTag("Lives").GetComponent<TextMeshProUGUI>().text = "Lives: " + numberOfLives;
 
                 _isCanvasShowed = true;

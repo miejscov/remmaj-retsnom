@@ -5,7 +5,7 @@ public class LevelControlScript : MonoBehaviour
 	public GameObject Generator;
 
 	private GameObject _generator;
-	private int _setting = 1; 
+	private int _setting = 0; 
 	private int _currentLevel;
 	private int _targetAmountOfDiamonds = 0;
 	private int _numberOfLevels;
@@ -26,7 +26,7 @@ public class LevelControlScript : MonoBehaviour
         _levelGenerator.SetLabirynthParameters(lvl.GetLevelGeneratorParametersArray());
     }
 
-	private void SetLevel()
+	public void SetLevel()
 	{
 		LabirynthDestroyScript.DestroyLabirynth();
 		_generator = Instantiate(Generator);
@@ -38,7 +38,6 @@ public class LevelControlScript : MonoBehaviour
                 SetParametersOfLevel(new Level(17, 150, 2, 22, 2, 0, 2, 2, 3)); 
 				break;
 			case 2:
-				SetNextSetting();
                 SetParametersOfLevel(new Level(25, 450, 2, 30, 4, 2, 1, 2, 5));
                 break;
 			case 3:
@@ -67,6 +66,7 @@ public class LevelControlScript : MonoBehaviour
         var obj = GameObject.Find("ButtonCtrl");
         Time.timeScale = 0f;
         obj.GetComponent<LevelCompletedScript>().ShowCanvas();
+        SetNextSetting();
         SetLevel();
 	}
 
@@ -84,6 +84,11 @@ public class LevelControlScript : MonoBehaviour
 	{
 		_currentLevel = level;
 	}
+
+    public void SetCurrentSetting(int setting)
+    {
+        _setting = setting;
+    }
 
 	public int EnergyOnLevel { get; private set; }
 
