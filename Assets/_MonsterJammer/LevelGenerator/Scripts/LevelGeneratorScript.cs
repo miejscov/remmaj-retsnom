@@ -16,6 +16,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     private int _cratesAmount;// = 32;
     private int _monstersAmountA;// = 8;
     private int _monstersAmountB;// = 1;
+    private int _monstersAmountC;// = 1;
     [Tooltip("Minimum distance between player and monsters on level start.")]
     [Range(1, 5)]
     private int _playerSafeDistance = 2;
@@ -31,8 +32,9 @@ public class LevelGeneratorScript : MonoBehaviour {
     private const int TileCrate = 2;
     private const int TileWall = 1;
     private const int TileTunnel = 0;
-    private const int TileMonstera = 10;
-    private const int TileMonsterb = 11;
+    private const int TileMonsterA = 10;
+    private const int TileMonsterB = 11;
+    private const int TileMonsterC = 12;
     private const int TilePlayer = 1000;
     private const int DirLeft = 0;
     private const int DirDown = 1;
@@ -40,7 +42,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     
     private SettingsControlScript _settingsControl;
     private GameObject[] _setting;
-    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _entrance, _exit, _ground;
+    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _monsterC, _entrance, _exit, _ground;
     private void GetSetting()
     {
         _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
@@ -53,9 +55,10 @@ public class LevelGeneratorScript : MonoBehaviour {
         _crate = _setting[4];
         _monsterA = _setting[5];
         _monsterB = _setting[6];
-        _entrance = _setting[7];
-        _exit = _setting[8];
-        _ground = _setting[9];
+        _monsterC = _setting[7];
+        _entrance = _setting[8];
+        _exit = _setting[9];
+        _ground = _setting[10];
     }
 
     public void SetLabirynthParameters(int[] paramArray)
@@ -66,6 +69,7 @@ public class LevelGeneratorScript : MonoBehaviour {
         _cratesAmount = paramArray[3];
         _monstersAmountA = paramArray[4];
         _monstersAmountB = paramArray[5];
+        _monstersAmountC = paramArray[6];
     }
 
     public void GenerateLabirynth()
@@ -75,6 +79,7 @@ public class LevelGeneratorScript : MonoBehaviour {
         GeneratePlayer();
         GenerateMonstersA(_monstersAmountA);
         GenerateMonstersB(_monstersAmountB);
+        GenerateMonstersC(_monstersAmountC);
         GenerateCrates(_cratesAmount);
         GenerateExits();
         InstantiateGround();
@@ -193,10 +198,10 @@ public class LevelGeneratorScript : MonoBehaviour {
             var x = Random.Range(1, _mapSize - 1);
             var y = Random.Range(1, _mapSize - 1);
             if (_map[y, x] != TileTunnel) continue;
-            else if ((_map[y, x - 1] == TileMonstera || _map[y, x - 1] == TileMonsterb) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
-            else if ((_map[y, x + 1] == TileMonstera || _map[y, x + 1] == TileMonsterb) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
-            else if ((_map[y - 1, x] == TileMonstera || _map[y - 1, x] == TileMonsterb) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
-            else if ((_map[y + 1, x] == TileMonstera || _map[y + 1, x] == TileMonsterb) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
+            else if ((_map[y, x - 1] == TileMonsterA || _map[y, x - 1] == TileMonsterB || _map[y, x - 1] == TileMonsterC) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
+            else if ((_map[y, x + 1] == TileMonsterA || _map[y, x + 1] == TileMonsterB || _map[y, x + 1] == TileMonsterC) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
+            else if ((_map[y - 1, x] == TileMonsterA || _map[y - 1, x] == TileMonsterB || _map[y - 1, x] == TileMonsterC) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
+            else if ((_map[y + 1, x] == TileMonsterA || _map[y + 1, x] == TileMonsterB || _map[y + 1, x] == TileMonsterC) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
 
             _map[y, x] = TileCrate;
             crates++;
@@ -237,7 +242,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                 for (var ii = -_monsterDistance; ii <= _monsterDistance; ii++)
                 {
                     if (x + ii <= 0 || x + ii >= _mapSize - 1 || y + i <= 0 || y + i >= _mapSize - 1) continue;
-                    if (_map[i + y, ii + x] == TileMonstera || _map[i + y, ii + x] == TileMonsterb)
+                    if (_map[i + y, ii + x] == TileMonsterA || _map[i + y, ii + x] == TileMonsterB)
                     {
                         isOk = false;
                         break;
@@ -246,7 +251,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                 }
             }
             if (!isOk) continue;
-            _map[y, x] = TileMonstera;
+            _map[y, x] = TileMonsterA;
             monstersA++;
         }
     }
@@ -275,7 +280,7 @@ public class LevelGeneratorScript : MonoBehaviour {
                 for (var ii = -_monsterDistance; ii <= _monsterDistance; ii++)
                 {
                     if (x + ii <= 0 || x + ii >= _mapSize - 1 || y + i <= 0 || y + i >= _mapSize - 1) continue;
-                    if (_map[i + y, ii + x] == TileMonstera || _map[i + y, ii + x] == TileMonsterb)
+                    if (_map[i + y, ii + x] == TileMonsterA || _map[i + y, ii + x] == TileMonsterB)
                     {
                         isOk = false;
                         break;
@@ -284,8 +289,46 @@ public class LevelGeneratorScript : MonoBehaviour {
                 }
             }
             if (!isOk) continue;
-            _map[y, x] = TileMonsterb;
+            _map[y, x] = TileMonsterB;
             monstersB++;
+        }
+    }
+
+    private void GenerateMonstersC(int amount)
+    {
+        var monstersC = 0;
+        var counter = 100000;
+        while (monstersC < amount)
+        {
+            var isOk = true;
+            counter--;
+            if (counter <= 0)
+            {
+                Debug.LogError("Could not find suitable Monster-C start position!");
+                return;
+            }
+            var x = Random.Range(1, _mapSize - 1);
+            var y = Random.Range(1, _mapSize - 1);
+            if (_map[y, x] != TileTunnel) continue;
+            else if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
+            else if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
+
+            for (var i = -_monsterDistance; i <= _monsterDistance; i++)
+            {
+                for (var ii = -_monsterDistance; ii <= _monsterDistance; ii++)
+                {
+                    if (x + ii <= 0 || x + ii >= _mapSize - 1 || y + i <= 0 || y + i >= _mapSize - 1) continue;
+                    if (_map[i + y, ii + x] == TileMonsterA || _map[i + y, ii + x] == TileMonsterB || _map[i + y, ii + x] == TileMonsterB)
+                    {
+                        isOk = false;
+                        break;
+                    }
+                    if (!isOk) break;
+                }
+            }
+            if (!isOk) continue;
+            _map[y, x] = TileMonsterC;
+            monstersC++;
         }
     }
 
@@ -327,11 +370,15 @@ public class LevelGeneratorScript : MonoBehaviour {
             {
                 var x = -_mapSize / 2 + ii;
                 var z = -_mapSize / 2 + i;
-                if (_map[i, ii] == TileMonstera)
+                if (_map[i, ii] == TileMonsterA)
                     Instantiate(_monsterA, new Vector3(x, 0.1f, z), Quaternion.identity);
-                else if (_map[i, ii] == TileMonsterb)
+                else if (_map[i, ii] == TileMonsterB)
                 {
                     Instantiate(_monsterB, new Vector3(x, 0.1f, z), Quaternion.identity);
+                }
+                else if (_map[i, ii] == TileMonsterC)
+                {
+                    Instantiate(_monsterC, new Vector3(x, 0.1f, z), Quaternion.identity);
                 }
             }
         }
@@ -358,10 +405,13 @@ public class LevelGeneratorScript : MonoBehaviour {
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         Instantiate(_crate, new Vector3(x, 0.5f, z), Quaternion.identity);
                         break;
-                    case TileMonstera:
+                    case TileMonsterA:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
-                    case TileMonsterb:
+                    case TileMonsterB:
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        break;
+                    case TileMonsterC:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         break;
                     case TilePlayer:
