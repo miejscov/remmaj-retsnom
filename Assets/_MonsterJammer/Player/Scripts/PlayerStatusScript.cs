@@ -47,8 +47,8 @@ public class PlayerStatusScript : MonoBehaviour
 
     private void Initialize()
     {
+        _serializePlayer.LoadObject();
         SetCanvasValue();
-        ResetPlayerStatus();
     }
 
     public void AfterLevelFinish()
@@ -80,8 +80,8 @@ public class PlayerStatusScript : MonoBehaviour
         _canvas.SetColectedDiamond(_diamondsCollectedInLevel);
         _canvas.SetEnergy(_energy);
         _canvas.SetTotalScore(_score);
-        _canvas.SetLevel(_levelControl.GetCurrentLevel());
         _canvas.SetLives(_numberOfLives);
+        _canvas.SetLevel(_levelControl.GetCurrentLevel());
     }
 
     public bool PlayerIsDead() { return _isDead; }
@@ -115,7 +115,7 @@ public class PlayerStatusScript : MonoBehaviour
 
     // lives
     public int GetNumberOfLives() { return _numberOfLives; }
-    public void SetNumberOfLives(int lives) { _numberOfLives = lives; }
+    public void SetNumberOfLives(int lives) { _numberOfLives = lives; _canvas.SetLives(_numberOfLives); }
 
     public void AddPlayerLife()
     {
@@ -123,14 +123,15 @@ public class PlayerStatusScript : MonoBehaviour
         _canvas.SetLives(_numberOfLives);
     }
 
-    private void DeductPlayerLife()
+    public void DeductPlayerLife()
     {
         _numberOfLives -= 1;
+        _canvas.SetLives(_numberOfLives);
     }
 
     // score
     public int GetPlayerScore() { return _score; }
-    public void SetPlayerScore(int score) { _score = score; }
+    public void SetPlayerScore(int score) { _score = score; _canvas.SetTotalScore(_score); }
 
     public void AddPlayerScore(int score)
     {
