@@ -506,7 +506,7 @@ MonoBehaviour:
   diamondPref: {fileID: 1775191308137868, guid: 3e6f4e46523270e4a9016a5cc7516385,
     type: 2}
   numberOfDiamonds: 4
-  numberOfFood: 1
+  numberOfFood: 0
   heighOfDiamonds: 0.3
   heighOfFood: 0
 --- !u!114 &114259561464461188

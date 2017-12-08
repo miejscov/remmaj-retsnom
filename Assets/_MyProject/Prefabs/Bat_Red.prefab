@@ -1447,7 +1447,7 @@ MonoBehaviour:
   diamondPref: {fileID: 1775191308137868, guid: 3e6f4e46523270e4a9016a5cc7516385,
     type: 2}
   numberOfDiamonds: 3
-  numberOfFood: 1
+  numberOfFood: 0
   heighOfDiamonds: 0.3
   heighOfFood: 0
 --- !u!114 &114525325789073830
@@ -1474,10 +1474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {x: 0, y: 0, z: 0}
   _player: {fileID: 0}
-  _toVel: 19
-  _maxVel: 6
-  _maxForce: 147
-  _gain: 36
   _moveSpeed: 8
   _stopped: 0
 --- !u!114 &114745312633219428
