@@ -8,11 +8,13 @@ public class ExitColliderScript : MonoBehaviour
 	private LevelControlScript _levelControl;
 	private PlayerRbMoveScript _playerRbMove;
 	private CanvasScript _canvas;
+	private GameControlAudioScript _gameControlAudio;
 
 	private void Start()
 	{
 		_levelControl = GameObject.Find("LevelControl").GetComponent<LevelControlScript>();
 		_canvas = GameObject.Find("Canvas").GetComponent<CanvasScript>();
+		_gameControlAudio = GameObject.Find("GameControl").GetComponent<GameControlAudioScript>();
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -22,7 +24,8 @@ public class ExitColliderScript : MonoBehaviour
 //			_playerRbMove.SetPlayerTargetPosition(transform.position + Vector3.right);
 		other.gameObject.GetComponent<PlayerControlScript>().SetFreezePlayer(true);
 		_canvas.SetCanvasVisibility(false);
-		Invoke("NextLevel", 2f);
+		_gameControlAudio.PlayAudioPlayerInExit();
+		Invoke("NextLevel", 4f);
 	}
 
 	private void NextLevel()

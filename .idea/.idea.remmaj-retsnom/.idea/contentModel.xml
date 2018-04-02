@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2017.2/system/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_remmaj-retsnom.-1875373473.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2017.2/system/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_remmaj-retsnom.-1459804053.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -140,7 +140,7 @@
             </e>
           </e>
           <e p="Entrance" t="Include">
-            <e p="Scripst" t="Include">
+            <e p="Scripts" t="Include">
               <e p="EntranceAudioScript.cs" t="Include" />
               <e p="EntranceControlScript.cs" t="Include" />
             </e>

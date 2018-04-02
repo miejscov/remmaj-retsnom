@@ -389,6 +389,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114086521367187432, guid: 528d48220f1c84d059e31f24405ff58f,
+        type: 2}
+      propertyPath: MusicSettingTwoAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9475d4b3ea54584ab25076f7379c55c, type: 3}
+    - target: {fileID: 114086521367187432, guid: 528d48220f1c84d059e31f24405ff58f,
+        type: 2}
+      propertyPath: PlayerInExitAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18ce8ea2eb37f2e4685d9a6346640fbd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 528d48220f1c84d059e31f24405ff58f, type: 2}
   m_IsPrefabParent: 0
@@ -556,12 +566,12 @@ Prefab:
     - target: {fileID: 224947037036352836, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 510.5
+      value: 598
       objectReference: {fileID: 0}
     - target: {fileID: 224947037036352836, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 268
+      value: 530
       objectReference: {fileID: 0}
     - target: {fileID: 224947037036352836, guid: f62081edcdc82408e9b372e34e1ef461,
         type: 2}
@@ -1950,6 +1960,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114439004556294236, guid: d642537b8292345e29a769de7a03496b,
+        type: 2}
+      propertyPath: Setting1.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439004556294236, guid: d642537b8292345e29a769de7a03496b,
+        type: 2}
+      propertyPath: Setting2.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4562952356231982, guid: d642537b8292345e29a769de7a03496b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1981,6 +2001,16 @@ Prefab:
     - target: {fileID: 4562952356231982, guid: d642537b8292345e29a769de7a03496b, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439004556294236, guid: d642537b8292345e29a769de7a03496b,
+        type: 2}
+      propertyPath: Setting1.Array.data[11]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439004556294236, guid: d642537b8292345e29a769de7a03496b,
+        type: 2}
+      propertyPath: Setting2.Array.data[11]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d642537b8292345e29a769de7a03496b, type: 2}

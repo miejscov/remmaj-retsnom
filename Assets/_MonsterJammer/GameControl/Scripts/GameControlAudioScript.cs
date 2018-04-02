@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class GameControlAudioScript : MonoBehaviour
 {
-
-
 	public AudioClip MusicSettingOneAudioClip;
-//	public AudioClip PlayerInExitAudioClip;
+	public AudioClip MusicSettingTwoAudioClip;
+	public AudioClip PlayerInExitAudioClip;
 //	public AudioClip GameOverAudioClip;
 //	public AudioClip MainMenuAudioClip;
 
@@ -19,11 +18,12 @@ public class GameControlAudioScript : MonoBehaviour
 		_audio = GetComponent<AudioSource>();
 	}
 	
-//	public void PlayerInExitAudioClip1()
-//	{
-//		_audio.Stop();
-//		_audio.PlayOneShot(PlayerInExitAudioClip);
-//	}
+	public void PlayAudioPlayerInExit()
+	{
+		_audio.Stop();
+		_audio.volume = 1f;
+		_audio.PlayOneShot(PlayerInExitAudioClip);
+	}
 //
 //	public void PlayGameOverCanvasAudioCLip()
 //	{
@@ -39,19 +39,23 @@ public class GameControlAudioScript : MonoBehaviour
 
 	public void PlaySettingAudioClip(int setting)
 	{
-		if (setting == 1)
+		switch (setting)  //zrobię to ładniej jak ogarnę sterowanie wsyztskimi dźwękami
 		{
-			_audio.Stop();
-			_audio.volume = .3f;
-			_audio.clip = MusicSettingOneAudioClip;
-			_audio.loop = true;
-			_audio.Play();
+			case 1:
+				_audio.volume = .3f;
+				_audio.clip = MusicSettingOneAudioClip;
+				_audio.loop = true;
+				if (_audio.isPlaying == false) _audio.Play();
+				break;
+			case 2:
+				_audio.volume = .3f;
+				_audio.clip = MusicSettingTwoAudioClip;
+				_audio.loop = true;
+				_audio.Play();
+				break;
 		}
 //		_audio.clip = MusicSettingOneAudioClip;
 //		_audio.loop = true;
 //		_audio.Play();
 	}
-	
-	
-	
 }
