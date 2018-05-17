@@ -27,8 +27,11 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     private int _playerX, _playerY;
     private int _tunnelCount = 0;
+    private const int LessCratesDistance = 4;
+    private const int LessCratesDistanceProbability = 50; // % of probability to spawn a crate in this area
     private const int TileEntrance = 3;
     private const int TileExit = 4;
+    private const int TileDebugCrate = 5;
     private const int TileCrate = 2;
     private const int TileWall = 1;
     private const int TileTunnel = 0;
@@ -42,7 +45,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     
     private SettingsControlScript _settingsControl;
     private GameObject[] _setting;
-    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _monsterC, _entrance, _exit, _ground;
+    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _monsterC, _entrance, _exit, _ground, _debugCrate;
     private void GetSetting()
     {
         _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
@@ -197,12 +200,20 @@ public class LevelGeneratorScript : MonoBehaviour {
             }
             var x = Random.Range(1, _mapSize - 1);
             var y = Random.Range(1, _mapSize - 1);
+            var lessCratesRandomRange = Random.Range(1, 100);
+            
             if (_map[y, x] != TileTunnel) continue;
             else if ((_map[y, x - 1] == TileMonsterA || _map[y, x - 1] == TileMonsterB || _map[y, x - 1] == TileMonsterC) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
             else if ((_map[y, x + 1] == TileMonsterA || _map[y, x + 1] == TileMonsterB || _map[y, x + 1] == TileMonsterC) && !CheckForAdjacentTunnels(x + 1, y, 2)) continue;
             else if ((_map[y - 1, x] == TileMonsterA || _map[y - 1, x] == TileMonsterB || _map[y - 1, x] == TileMonsterC) && !CheckForAdjacentTunnels(x, y - 1, 2)) continue;
             else if ((_map[y + 1, x] == TileMonsterA || _map[y + 1, x] == TileMonsterB || _map[y + 1, x] == TileMonsterC) && !CheckForAdjacentTunnels(x, y + 1, 2)) continue;
+            else if (y == _mapSize / 2 && (x <= LessCratesDistance || x >= _mapSize - LessCratesDistance - 1))
+            {
+                Debug.Log("LessCratesRandomRange = " + lessCratesRandomRange +" of Probability = "+LessCratesDistanceProbability);
 
+                //_map[y, x] = TileDebugCrate;
+                if (lessCratesRandomRange < LessCratesDistanceProbability) continue;
+            }
             _map[y, x] = TileCrate;
             crates++;
         }
@@ -404,6 +415,10 @@ public class LevelGeneratorScript : MonoBehaviour {
                     case TileCrate:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
                         Instantiate(_crate, new Vector3(x, 0.5f, z), Quaternion.identity);
+                        break;
+                    case TileDebugCrate:
+                        Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);
+                        Instantiate(_crate, new Vector3(x, 0.05f, z), Quaternion.identity);
                         break;
                     case TileMonsterA:
                         Instantiate(_floor, new Vector3(x, -.5f, z), Quaternion.identity);

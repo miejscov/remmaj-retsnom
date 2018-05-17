@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76f8029f9856c840afd237915b47bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioAttack: {fileID: 8300000, guid: 63f62286096f54969bff5f40ad98f158, type: 3}
-  _audioDie: {fileID: 8300000, guid: 79c7e6438f53d4e40a98fdab64d943dc, type: 3}
+  _audioAttack: {fileID: 8300000, guid: 734e4d70c8c084b6ba214e8314ec02b5, type: 3}
+  _audioDie: {fileID: 8300000, guid: 4f4addfe5b3d7446cb4a03c581dc1ec8, type: 3}
 --- !u!114 &114642103717116664
 MonoBehaviour:
   m_ObjectHideFlags: 1
