@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,7 +46,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     
     private SettingsControlScript _settingsControl;
     private GameObject[] _setting;
-    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _monsterC, _entrance, _exit, _ground, _debugCrate;
+    private GameObject _mainCamera, _player, _wall, _floor, _crate, _monsterA, _monsterB, _monsterC, _entrance, _exit, _ground, _debugCrate, _outerPlane;
     private void GetSetting()
     {
         _settingsControl = GameObject.Find("LevelControl").GetComponentInChildren<SettingsControlScript>();
@@ -62,6 +63,7 @@ public class LevelGeneratorScript : MonoBehaviour {
         _entrance = _setting[8];
         _exit = _setting[9];
         _ground = _setting[10];
+        _outerPlane = _setting[11];
     }
 
     public void SetLabirynthParameters(int[] paramArray)
@@ -86,9 +88,11 @@ public class LevelGeneratorScript : MonoBehaviour {
         GenerateCrates(_cratesAmount);
         GenerateExits();
         InstantiateGround();
+        InstantiateOuterPlane();
         InstantiateMonsters();
         InstantiateMap();
     }
+
 
 
     private void GenerateMap()
@@ -116,10 +120,10 @@ public class LevelGeneratorScript : MonoBehaviour {
 
         while (_tunnelCount < _maxTunnelCount)
         {
-            var dir = Random.Range(0, 2);
-            tunnelLength = Random.Range(_minTunnelLength, maxTunnelLength);
-            x = Random.Range(1, _mapSize - 3);
-            y = Random.Range(1, _mapSize - 3);
+            var dir = UnityEngine.Random.Range(0, 2);
+            tunnelLength = UnityEngine.Random.Range(_minTunnelLength, maxTunnelLength);
+            x = UnityEngine.Random.Range(1, _mapSize - 3);
+            y = UnityEngine.Random.Range(1, _mapSize - 3);
             if (CheckTunnel(x, y, dir, tunnelLength))
             {
                 CreateTunnel(x, y, dir, tunnelLength);
@@ -198,9 +202,9 @@ public class LevelGeneratorScript : MonoBehaviour {
                 Debug.LogError("Could not find suitable Crate position!");
                 break;
             }
-            var x = Random.Range(1, _mapSize - 1);
-            var y = Random.Range(1, _mapSize - 1);
-            var lessCratesRandomRange = Random.Range(1, 100);
+            var x = UnityEngine.Random.Range(1, _mapSize - 1);
+            var y = UnityEngine.Random.Range(1, _mapSize - 1);
+            var lessCratesRandomRange = UnityEngine.Random.Range(1, 100);
             
             if (_map[y, x] != TileTunnel) continue;
             else if ((_map[y, x - 1] == TileMonsterA || _map[y, x - 1] == TileMonsterB || _map[y, x - 1] == TileMonsterC) && !CheckForAdjacentTunnels(x - 1, y, 2)) continue;
@@ -242,8 +246,8 @@ public class LevelGeneratorScript : MonoBehaviour {
                 Debug.LogError("Could not find suitable Monster-A start position!");
                 return;
             }
-            var x = Random.Range(1, _mapSize - 1);
-            var y = Random.Range(1, _mapSize - 1);
+            var x = UnityEngine.Random.Range(1, _mapSize - 1);
+            var y = UnityEngine.Random.Range(1, _mapSize - 1);
             if (_map[y, x] != TileTunnel) continue;
             if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
             if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
@@ -280,8 +284,8 @@ public class LevelGeneratorScript : MonoBehaviour {
                 Debug.LogError("Could not find suitable Monster-B start position!");
                 return;
             }
-            var x = Random.Range(1, _mapSize - 1);
-            var y = Random.Range(1, _mapSize - 1);
+            var x = UnityEngine.Random.Range(1, _mapSize - 1);
+            var y = UnityEngine.Random.Range(1, _mapSize - 1);
             if (_map[y, x] != TileTunnel) continue;
             else if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
             else if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
@@ -318,8 +322,8 @@ public class LevelGeneratorScript : MonoBehaviour {
                 Debug.LogError("Could not find suitable Monster-C start position!");
                 return;
             }
-            var x = Random.Range(1, _mapSize - 1);
-            var y = Random.Range(1, _mapSize - 1);
+            var x = UnityEngine.Random.Range(1, _mapSize - 1);
+            var y = UnityEngine.Random.Range(1, _mapSize - 1);
             if (_map[y, x] != TileTunnel) continue;
             else if (!(y < _playerY - _playerSafeDistance || y > _playerY + _playerSafeDistance || x < _playerX - _playerSafeDistance || x > _playerX + _playerSafeDistance)) continue;
             else if (!(_map[y - 1, x] == TileTunnel || _map[y + 1, x] == TileTunnel || _map[y, x - 1] == TileTunnel || _map[y, x + 1] == TileTunnel)) continue;
@@ -478,5 +482,10 @@ public class LevelGeneratorScript : MonoBehaviour {
         
         grnd.transform.localScale = scale;
         grnd.GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    private void InstantiateOuterPlane()
+    {
+        Instantiate(_outerPlane, new Vector3(0f, -.1f, 0f), Quaternion.identity);
     }
 }
